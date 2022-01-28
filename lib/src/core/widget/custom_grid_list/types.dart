@@ -1,6 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:super_module/src/core/widget/custom_grid_list/paginated_gridview.dart';
-import 'package:super_module/src/core/widget/custom_grid_list/paginated_listview.dart';
 
 class LoadErrorDetails {
   final Object error;

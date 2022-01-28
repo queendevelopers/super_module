@@ -2,6 +2,8 @@ library super_module;
 
 // export 'package:super_module/src/features/auth/data/repositories/auth_remote_repository.dart';
 export 'package:super_module/src/DI/module_injection.dart';
+export 'package:super_module/src/core/super_keys.dart';
+export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';
 export 'package:super_module/src/features/auth/biometric/bloc/biometric_bloc.dart';
 export 'package:super_module/src/features/auth/data/models/user_model.dart';
 export 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
@@ -15,8 +17,6 @@ export 'package:super_module/src/features/auth/social/data/repository/i_social_r
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
 export 'package:super_module/src/features/user/data/model/address_model.dart';
+export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 export 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
-export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
-export 'package:super_module/src/core/super_keys.dart';
-export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';

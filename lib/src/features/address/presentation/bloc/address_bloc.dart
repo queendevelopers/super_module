@@ -9,7 +9,6 @@ import 'package:super_module/src/features/address/data/request/add_address_reque
 import 'package:super_module/src/features/address/domain/controller/i_address_controller.dart';
 
 part 'address_event.dart';
-
 part 'address_state.dart';
 
 @injectable

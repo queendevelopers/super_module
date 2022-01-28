@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_response_model.dart';
 import 'package:super_module/src/features/auth/data/models/encrypted_access_token_response_model.dart';

@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,8 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:meta/meta.dart';
-import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
-import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
