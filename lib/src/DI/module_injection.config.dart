@@ -59,13 +59,13 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
       () => _i5.AddressRepository(get<_i6.IHttpHelper>()));
   gh.factory<_i7.IAppManager>(
       () => _i8.AppManager(get<_i9.SharedPreferences>()));
-  gh.factory<_i10.ISessionManager>(
-      () => _i11.SessionManager(get<_i12.FlutterSecureStorage>()));
+  gh.factory<_i10.ISessionManager>(() => _i11.SessionManager(
+      get<_i12.FlutterSecureStorage>(), get<_i9.SharedPreferences>()));
   gh.factory<_i13.IUserRemoteRepository>(() => _i14.UserRemoteRepository(
       get<_i6.IHttpHelper>(), get<_i10.ISessionManager>()));
   gh.factory<_i15.RegisterPhoneByOtpBloc>(() => _i15.RegisterPhoneByOtpBloc());
   gh.factory<_i16.SocialBloc>(() => _i16.SocialBloc(
-      get<_i17.ISocialAuthRepository>(), get<_i10.ISessionManager>()));
+      get<_i17.ISocialAuthRepository>(), get<_i17.ISessionManager>()));
   gh.factory<_i18.IAddressController>(
       () => _i18.CheckoutController(get<_i4.IAddressRepository>()));
   gh.factory<_i19.IAuthRemoteRepository>(() => _i20.AuthRemoteRepository(

@@ -16,7 +16,7 @@ part 'verify_otp_state.dart';
 class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
   final IAuthLoginController controller;
   final ISessionManager sessionManager;
-  GlobalResponseModel? response;
+  late GlobalResponseModel response;
   ForgotPasswordPinVerificationResponseModel? forgotPasswordRequestModel;
 
   VerifyOtpBloc(this.controller, this.sessionManager)
@@ -31,16 +31,16 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
       yield VerifyOtpLoading();
       if (event.navigateToHome) {
         response = await controller.verifyOtp(otpCode: event.otpCode);
-        if (response!.ok!) {
+        if (response.ok!) {
           final UserModel? user = await sessionManager.getCurrentUser();
           if (user != null) {
-            debugPrint(response?.user.toString());
-            await sessionManager.saveCurrentUser(user: response?.user);
+            debugPrint(response.user.toString());
+            await sessionManager.saveCurrentUser(user: response.user);
           }
-          yield VerifyOtpSuccess(message: response!.message!);
+          yield VerifyOtpSuccess(message: response.message!);
           debugPrint('otp success without token');
         } else {
-          yield VerifyOtpLoadFailure(errorMessage: response?.message!);
+          yield VerifyOtpLoadFailure(errorMessage: response.message!);
         }
       } else {
         forgotPasswordRequestModel = await controller.verifyForgotPasswordOtp(
@@ -48,7 +48,7 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
             navigateToHome: event.navigateToHome,
             key: event.key);
         debugPrint('response from token ${forgotPasswordRequestModel?.token}');
-        if (forgotPasswordRequestModel!.ok!) {
+        if (forgotPasswordRequestModel!.ok) {
           final UserModel? user = await sessionManager.getCurrentUser();
           if (user != null) {
             user.phoneVerified = true;

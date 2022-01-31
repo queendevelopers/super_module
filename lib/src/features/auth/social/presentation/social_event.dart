@@ -4,7 +4,7 @@ part of 'social_bloc.dart';
 abstract class SocialEvent {}
 
 class SocialLoginTapEvent extends SocialEvent {
-  final String type;
+  final SocialType socialType;
 
-  SocialLoginTapEvent({required this.type});
+  SocialLoginTapEvent({required this.socialType});
 }

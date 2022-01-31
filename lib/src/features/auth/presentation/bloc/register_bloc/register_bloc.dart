@@ -33,7 +33,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           phone: event.phone);
       if (response.ok) {
         if (response.user != null) {
-          await sessionManager.saveCurrentUser(user: response.user);
+          await sessionManager.saveCurrentUser(user: response.user!);
         }
         if (response.accessToken != null) {
           await sessionManager.saveToken(accessToken: response.accessToken!);

@@ -8,9 +8,9 @@ class VerifyOtpInitial extends VerifyOtpState {}
 class VerifyOtpLoading extends VerifyOtpState {}
 
 class VerifyOtpLoadFailure extends VerifyOtpState {
-  final String? errorMessage;
+  final String errorMessage;
 
-  VerifyOtpLoadFailure({this.errorMessage});
+  VerifyOtpLoadFailure({required this.errorMessage});
 }
 
 class VerifyOtpSuccess extends VerifyOtpState {

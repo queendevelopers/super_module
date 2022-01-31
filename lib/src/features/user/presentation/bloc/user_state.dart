@@ -8,9 +8,9 @@ class UserInitial extends UserState {}
 class UserRankFetching extends UserState {}
 
 class UserRankFetchFailure extends UserState {
-  final String? errorMessage;
+  final String errorMessage;
 
-  UserRankFetchFailure({this.errorMessage});
+  UserRankFetchFailure({required this.errorMessage});
 }
 
 class UserInformationUpdating extends UserState {}
