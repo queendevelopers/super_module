@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum ImageType { SVG, PNG }
+
 Widget AppIcon(
     {required String assetName,
     double iconSize = 28.0,

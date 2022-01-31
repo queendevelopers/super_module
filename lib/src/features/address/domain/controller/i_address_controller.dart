@@ -7,8 +7,11 @@ import 'package:super_module/src/features/address/domain/repository/i_address_re
 
 abstract class IAddressController {
   Future<AddAddressModel> addAddress(AddAddressRequestModel requestModel);
+
   Future<ShippingAddressList> deleteAddress(String id);
+
   Future<ShippingAddressResponse> setDefaultAddress(String id);
+
   Future<ShippingAddressResponse> getDefaultAddress();
 }
 

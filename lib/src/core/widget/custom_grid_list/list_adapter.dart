@@ -1,5 +1,3 @@
-
-
 class ListItems {
   final Iterable items;
   final bool reachedToEnd;

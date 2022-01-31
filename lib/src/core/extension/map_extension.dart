@@ -98,7 +98,7 @@ int toInt(Object value) {
 ///
 double toDouble(Object value) {
   try {
-    double number = double.parse('$value') ?? 0.0;
+    double number = double.parse('$value');
     return number;
   } on Exception catch (e, s) {
     print("toDouble Exception : $e\n$s");

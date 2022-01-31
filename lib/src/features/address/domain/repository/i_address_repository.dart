@@ -5,7 +5,10 @@ import 'package:super_module/src/features/address/data/request/add_address_reque
 
 abstract class IAddressRepository {
   Future<AddAddressModel> addAddress(AddAddressRequestModel requestModel);
+
   Future<ShippingAddressList> deleteAddress(String id);
+
   Future<ShippingAddressResponse> setDefaultAddress(String id);
+
   Future<ShippingAddressResponse> getDefaultAddress();
 }

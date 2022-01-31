@@ -23,7 +23,7 @@ class ResetPasswordBloc extends Bloc<ResetPasswordEvent, ResetPasswordState> {
       yield ResetPasswordLoading();
       final response =
           await controller.resetPasswordByPhone(phone: event.phone);
-      if (response.ok!) {
+      if (response.ok) {
         yield ResetPasswordLoadSuccess(response);
         return;
       }

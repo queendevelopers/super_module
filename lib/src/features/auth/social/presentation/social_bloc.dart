@@ -11,14 +11,14 @@ import 'package:super_module/super_module.dart';
 part 'social_event.dart';
 part 'social_state.dart';
 
+enum SocialType { Facebook, Google, Apple }
+
 @injectable
 class SocialBloc extends Bloc<SocialEvent, SocialState> {
-  static const String facebookType = 'facebook';
-  static const String googleType = 'google';
-  static const String appleType = 'apple';
-  SocialModel? socialModel;
-  final ISocialAuthRepository? socialAuthRepository;
-  final ISessionManager? iSessionManager;
+  late SocialModel socialModel;
+  final ISocialAuthRepository socialAuthRepository;
+  final ISessionManager iSessionManager;
+
   SocialBloc(this.socialAuthRepository, this.iSessionManager)
       : super(SocialInitial());
 
@@ -28,26 +28,27 @@ class SocialBloc extends Bloc<SocialEvent, SocialState> {
   ) async* {
     if (event is SocialLoginTapEvent) {
       yield SocialStateLoading();
-      switch (event.type) {
-        case facebookType:
-          socialModel = await socialAuthRepository?.facebookLogin();
+      switch (event.socialType) {
+        case SocialType.Facebook:
+          socialModel = await socialAuthRepository.facebookLogin();
           break;
-        case googleType:
-          socialModel = await socialAuthRepository?.googleLoginIn();
+        case SocialType.Google:
+          socialModel = await socialAuthRepository.googleLoginIn();
           break;
-        case appleType:
-          socialModel = await socialAuthRepository?.appleLogin();
+        case SocialType.Apple:
+          socialModel = await socialAuthRepository.appleLogin();
           break;
       }
-      if (socialModel != null && socialModel!.ok) {
-        await iSessionManager?.saveToken(
-            accessToken: socialModel!.accessToken!);
-        await iSessionManager?.saveCurrentUser(user: socialModel?.user);
-        yield SocialStateSuccess(socialModel: socialModel!);
+      if (socialModel.ok) {
+        await iSessionManager.saveToken(accessToken: socialModel.accessToken!);
+        if (socialModel.user != null) {
+          await iSessionManager.saveCurrentUser(user: socialModel.user!);
+        }
+        yield SocialStateSuccess(socialModel: socialModel);
         return;
       }
       yield SocialStateFailed(
-          message: socialModel?.message ?? 'An unknown error occured');
+          message: socialModel.message ?? 'An unknown error occured');
     }
   }
 }

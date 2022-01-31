@@ -29,7 +29,7 @@ class ChangeForgotPasswordBloc
           oldPassword: event.oldPassword,
           newPassword: event.newPassword,
           token: event.token);
-      if (data.ok!) {
+      if (data.ok) {
         await sessionManager.clearSession();
         yield ChangeForgotPasswordLoadSuccess(message: data.message);
       } else {

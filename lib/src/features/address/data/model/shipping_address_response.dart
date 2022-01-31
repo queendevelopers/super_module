@@ -13,5 +13,6 @@ class ShippingAddressResponse {
 
   factory ShippingAddressResponse.fromJson(Map<String, dynamic> json) =>
       _$ShippingAddressResponseFromJson(json);
+
   Map<String, dynamic> toJson() => _$ShippingAddressResponseToJson(this);
 }

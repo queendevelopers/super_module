@@ -63,7 +63,7 @@ class AuthLoginController implements IAuthLoginController {
     if (data.ok) {
       debugPrint('saved token to local storage');
       iSessionManager.saveToken(accessToken: data.accessToken!);
-      iSessionManager.saveCurrentUser(user: data.user);
+      iSessionManager.saveCurrentUser(user: data.user!);
     }
     return data;
   }

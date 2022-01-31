@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:jwt_decode/jwt_decode.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:super_module/src/core/super_keys.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
@@ -12,8 +14,9 @@ import 'package:super_module/src/features/user/data/session/i_session_manager.da
 @Injectable(as: ISessionManager)
 class SessionManager implements ISessionManager {
   final FlutterSecureStorage _secureStorage;
+  final SharedPreferences _sharedPreferences;
 
-  SessionManager(this._secureStorage);
+  SessionManager(this._secureStorage, this._sharedPreferences);
 
   @override
   Future<String?> getToken() {
@@ -123,6 +126,30 @@ class SessionManager implements ISessionManager {
   Future<void> clearBiometrics() async {
     try {
       await _secureStorage.delete(key: SuperKeys.userBiometricKey);
+    } on Exception {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<String?> getUserIpAddress() async {
+    try {
+      return await _sharedPreferences.getString('userIp');
+    } on Exception {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<void> initiateUserIpAddress() async {
+    try {
+      final Dio dio = Dio();
+      final response = await dio.get('https://api.ipify.org/?format=json');
+      if (response.statusCode == 200) {
+        final String userIp = response.data['ip'];
+        debugPrint('user ip address $userIp');
+        await _sharedPreferences.setString('userIp', userIp);
+      }
     } on Exception {
       rethrow;
     }

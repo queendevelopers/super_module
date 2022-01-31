@@ -2,6 +2,10 @@ import 'package:super_module/src/features/auth/data/models/biometric_register_mo
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 
 abstract class ISessionManager {
+  Future<void> initiateUserIpAddress();
+
+  Future<String?> getUserIpAddress();
+
   Future<void> saveToken({required String accessToken});
 
   Future<String?> getToken();
@@ -20,5 +24,10 @@ abstract class ISessionManager {
 
   Future<void> clearBiometrics();
 
-  Future<void> saveCurrentUser({UserModel? user});
+  Future<void> saveCurrentUser({required UserModel user});
+
+// Future<List<StoreRecentSearchEntity>> getHistorySearches();
+//
+// Future<void> deleteAllPreviousSearchHistory();
+
 }
