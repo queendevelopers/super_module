@@ -1,6 +1,6 @@
 name: super_module
-description: AuthModule
-publish_to: none
+description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
+publish_to: https://www.pub.dev
 version: 1.0.0+1
 
 environment:
@@ -26,10 +26,6 @@ dependencies:
   sign_in_with_apple: ^3.0.0
   flutter_facebook_auth: ^4.0.1
   basic_utils: ^4.0.1
-  rest_client:
-    git:
-      url: https://gitlab.com/swivt/rest-client.git
-      ref: develop
   firebase_messaging: ^11.2.6
   flutter_local_notifications: ^9.2.0
   flutter_image_compress: ^1.1.0
@@ -38,7 +34,9 @@ dependencies:
   url_launcher: ^6.0.18
   flutter_cache_manager: ^3.3.0
   photo_view: ^0.13.0
-
+  permission_handler: ^8.2.6
+  image_picker: ^0.8.4+4
+  flutter_rest_client: ^0.0.1
 
 dev_dependencies:
   flutter_test:

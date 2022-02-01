@@ -41,7 +41,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         yield RegisterSuccessState(response);
         return;
       }
-      yield RegisterFailureState(errorMessage: response.message);
+      yield RegisterFailureState(errorMessage: response.message??'An unknown error occurred.');
     } else if (event is CheckUserNameAvailability) {
       yield UsernameCheckingState();
       final response = await controller.checkUsername(username: event.username);
