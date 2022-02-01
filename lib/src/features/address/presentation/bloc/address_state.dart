@@ -14,9 +14,9 @@ class GetDefaultAddressSuccess extends AddressState {
 class GetDefaultAddressFetching extends AddressState {}
 
 class GetDefaultAddressFetchFailure extends AddressState {
-  final String? message;
+  final String message;
 
-  GetDefaultAddressFetchFailure({this.message});
+  GetDefaultAddressFetchFailure({required this.message});
 }
 
 class SetDefaultAddressSuccess extends AddressState {
@@ -29,17 +29,17 @@ class SetDefaultAddressSuccess extends AddressState {
 class SetDefaultAddressFetching extends AddressState {}
 
 class SetDefaultAddressFetchFailure extends AddressState {
-  final String? message;
+  final String message;
 
-  SetDefaultAddressFetchFailure({this.message});
+  SetDefaultAddressFetchFailure({required this.message});
 }
 
 class AddAddressPostState extends AddressState {}
 
 class AddAddressPostFailureState extends AddressState {
-  final String? message;
+  final String message;
 
-  AddAddressPostFailureState({this.message});
+  AddAddressPostFailureState({required this.message});
 }
 
 class AddAddressPostSuccessState extends AddressState {

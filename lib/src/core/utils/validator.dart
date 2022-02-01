@@ -8,7 +8,7 @@ String? validateField(String value, String field) {
   }
 }
 
-String? validateEmail(String? value) {
+String? validateEmail(String value) {
   String pattern =
       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
   RegExp regExp = new RegExp(pattern);
@@ -23,7 +23,7 @@ String? validateEmail(String? value) {
   }
 }
 
-String? validatePassword(String? value, String password) {
+String? validatePassword(String value, String password) {
   // String pattern = r'^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9_@.#&+-\d]{8,}$';
   if (value == null) {
     return 'Please enter password';
@@ -50,7 +50,7 @@ String? validateEqual(
   return null;
 }
 
-String? validateNotEmpty(String? value, String type) {
+String? validateNotEmpty(String value, String type) {
   if (value != null && value.isEmpty) {
     return '${type.inCaps} must not be empty';
   } else {

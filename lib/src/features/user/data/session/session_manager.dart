@@ -110,7 +110,7 @@ class SessionManager implements ISessionManager {
         debugPrint('User ${user.name} reading from local storage.');
         return Future.value(user);
       }
-      return UserModel();
+      return null;
     } on Exception {
       await _secureStorage.delete(key: SuperKeys.userKey);
       rethrow;
@@ -183,8 +183,31 @@ class SessionManager implements ISessionManager {
   }
 
   @override
-  Future<void> deleteAllPreviousSearchHistory() {
-    // TODO: implement deleteAllPreviousSearchHistory
-    throw UnimplementedError();
+  Future<void> deleteAllPreviousSearchHistory() async {
+    await _sharedPreferences.remove(SuperKeys.searchHistoryDate);
+    await _sharedPreferences.remove(SuperKeys.searchHistoryName);
+  }
+
+  @override
+  Future<void> saveCurrentSearchItem(String searchItem) async {
+    try {
+      if (searchItem != null && searchItem.trim().isNotEmpty) {
+        debugPrint('storing current search item $searchItem');
+        List<String> nameHistoryList = await _sharedPreferences
+                .getStringList(SuperKeys.searchHistoryName) ??
+            [];
+        List<String> dateHistoryList = await _sharedPreferences
+                .getStringList(SuperKeys.searchHistoryDate) ??
+            [];
+        nameHistoryList.add(searchItem);
+        dateHistoryList.add(DateTime.now().toString());
+        await _sharedPreferences.setStringList(
+            SuperKeys.searchHistoryName, nameHistoryList);
+        await _sharedPreferences.setStringList(
+            SuperKeys.searchHistoryDate, dateHistoryList);
+      }
+    } on Exception {
+      rethrow;
+    }
   }
 }

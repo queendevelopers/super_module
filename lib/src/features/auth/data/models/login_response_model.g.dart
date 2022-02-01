@@ -9,7 +9,7 @@ part of 'login_response_model.dart';
 LoginResponseModel _$LoginResponseModelFromJson(Map<String, dynamic> json) =>
     LoginResponseModel(
       ok: json['ok'] as bool?,
-      message: json['message'] as String?,
+      message: json['message'] as String,
       accessToken: json['accessToken'] as String,
       user: UserModel.fromJson(json['user'] as Map<String, dynamic>),
     );

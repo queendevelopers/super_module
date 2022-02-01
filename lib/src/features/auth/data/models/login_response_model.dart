@@ -6,12 +6,15 @@ part 'login_response_model.g.dart';
 @JsonSerializable()
 class LoginResponseModel {
   final bool? ok;
-  final String? message;
+  final String message;
   final String accessToken;
   final UserModel user;
 
   LoginResponseModel(
-      {this.ok, this.message, required this.accessToken, required this.user});
+      {this.ok,
+      required this.message,
+      required this.accessToken,
+      required this.user});
 
   factory LoginResponseModel.fromJson(Map<String, dynamic> data) =>
       _$LoginResponseModelFromJson(data);

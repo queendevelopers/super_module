@@ -26,13 +26,13 @@ class VerifyOtpSuccess extends VerifyOtpState {
 class GetOtpSending extends VerifyOtpState {}
 
 class GetOtpFailure extends VerifyOtpState {
-  final String? message;
+  final String message;
 
   GetOtpFailure(this.message);
 }
 
 class GetOtpSuccess extends VerifyOtpState {
-  final String? message;
+  final String message;
 
   GetOtpSuccess(this.message);
 }

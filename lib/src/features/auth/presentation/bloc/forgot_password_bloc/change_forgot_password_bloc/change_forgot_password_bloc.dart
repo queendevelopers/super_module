@@ -31,7 +31,8 @@ class ChangeForgotPasswordBloc
           token: event.token);
       if (data.ok) {
         await sessionManager.clearSession();
-        yield ChangeForgotPasswordLoadSuccess(message: data.message);
+        yield ChangeForgotPasswordLoadSuccess(
+            message: data.message ?? 'Password Changed Successfully.');
       } else {
         yield ChangeForgotPasswordLoadFailure(
             errorMessage: data.message ?? 'An unknown error occurred.');

@@ -9,9 +9,10 @@ class SocialModel {
   bool ok;
   String? accessToken;
   UserModel? user;
-  String? message;
+  String message;
 
-  SocialModel({required this.ok, this.accessToken, this.user, this.message});
+  SocialModel(
+      {required this.ok, this.accessToken, this.user, required this.message});
 
   factory SocialModel.fromJson(Map<String, dynamic> json) =>
       _$SocialModelFromJson(json);

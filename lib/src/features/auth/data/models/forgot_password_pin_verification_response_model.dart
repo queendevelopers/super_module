@@ -6,13 +6,17 @@ part 'forgot_password_pin_verification_response_model.g.dart';
 @JsonSerializable()
 class ForgotPasswordPinVerificationResponseModel {
   bool ok;
-  String? message;
+  String message;
   String? token;
   String? key;
   UserModel? user;
 
   ForgotPasswordPinVerificationResponseModel(
-      {required this.ok, this.message, this.key, this.token, this.user});
+      {required this.ok,
+      required this.message,
+      this.key,
+      this.token,
+      this.user});
 
   factory ForgotPasswordPinVerificationResponseModel.fromJson(
           Map<String, dynamic> data) =>

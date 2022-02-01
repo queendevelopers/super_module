@@ -6,7 +6,7 @@ part 'shipping_address_response.g.dart';
 @JsonSerializable(explicitToJson: true)
 class ShippingAddressResponse {
   final bool? ok;
-  final String? message;
+  final String message;
   final ShippingAddress? data;
 
   ShippingAddressResponse(this.ok, this.message, this.data);
