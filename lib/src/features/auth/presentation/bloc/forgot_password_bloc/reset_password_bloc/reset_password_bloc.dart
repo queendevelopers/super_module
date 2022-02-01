@@ -27,7 +27,7 @@ class ResetPasswordBloc extends Bloc<ResetPasswordEvent, ResetPasswordState> {
         yield ResetPasswordLoadSuccess(response);
         return;
       }
-      yield ResetPasswordLoadFailure(errorMessage: response.message);
+      yield ResetPasswordLoadFailure(errorMessage: response.message??'An unknown error occurred.');
     }
   }
 }

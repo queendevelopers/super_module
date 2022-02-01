@@ -33,7 +33,7 @@ class ChangeForgotPasswordBloc
         await sessionManager.clearSession();
         yield ChangeForgotPasswordLoadSuccess(message: data.message);
       } else {
-        yield ChangeForgotPasswordLoadFailure(errorMessage: data.message);
+        yield ChangeForgotPasswordLoadFailure(errorMessage: data.message??'An unknown error occurred.');
       }
     }
   }
