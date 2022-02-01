@@ -6,7 +6,6 @@ export 'package:super_module/src/core/extension/cap_extension.dart';
 export 'package:super_module/src/core/extension/map_extension.dart';
 export 'package:super_module/src/core/super_keys.dart';
 export 'package:super_module/src/core/utils/app_icon.dart';
-export 'package:super_module/src/core/utils/app_icon.dart';
 export 'package:super_module/src/core/utils/app_launchers.dart';
 export 'package:super_module/src/core/utils/app_utils.dart';
 export 'package:super_module/src/core/utils/concat_image_url.dart';
@@ -19,6 +18,8 @@ export 'package:super_module/src/core/utils/keyboard_utils.dart';
 export 'package:super_module/src/core/utils/shared_pref_util.dart';
 export 'package:super_module/src/core/utils/spacing_utils.dart';
 export 'package:super_module/src/core/utils/validator.dart';
+export 'package:super_module/src/features/auth/data/models/user_upload_image_model.dart';
+export 'package:super_module/src/features/auth/data/models/global_response_model.dart';
 export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';
 export 'package:super_module/src/features/auth/biometric/bloc/biometric_bloc.dart';
 export 'package:super_module/src/features/auth/data/models/user_model.dart';
@@ -29,9 +30,10 @@ export 'package:super_module/src/features/auth/presentation/bloc/forgot_password
 export 'package:super_module/src/features/auth/presentation/bloc/login_bloc/login_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/register_bloc/register_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/register_phone_by_otp_bloc/register_phone_by_otp_bloc.dart';
-export 'package:super_module/src/features/auth/social/data/repository/i_social_repository.dart';
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
 export 'package:super_module/src/features/user/data/model/address_model.dart';
 export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 export 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
+export 'package:super_module/src/features/auth/data/models/global_response_model.dart';
+
