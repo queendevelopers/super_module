@@ -10,6 +10,7 @@ import 'package:super_module/src/core/super_keys.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
+import 'package:super_module/src/features/user/domain/entity/store_recent_search_entity.dart';
 
 @Injectable(as: ISessionManager)
 class SessionManager implements ISessionManager {
@@ -153,5 +154,37 @@ class SessionManager implements ISessionManager {
     } on Exception {
       rethrow;
     }
+  }
+
+  @override
+  Future<List<StoreRecentSearchEntity>> getHistorySearches() async {
+    try {
+      // deleteAllPreviousSearchHistory();
+      debugPrint('Getting search from local');
+      List<StoreRecentSearchEntity> historyItem = [];
+      List<String> nameHistoryList =
+          await _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ??
+              [];
+      List<String> dateHistoryList =
+          await _sharedPreferences.getStringList(SuperKeys.searchHistoryDate) ??
+              [];
+      debugPrint(
+          'processing data ${nameHistoryList.length} ${nameHistoryList.last}');
+      for (int i = 0; i < nameHistoryList.length; i++) {
+        debugPrint('$i  ${nameHistoryList[i]}');
+        historyItem.add(StoreRecentSearchEntity(
+            name: nameHistoryList[i], searchDate: dateHistoryList[i]));
+      }
+      debugPrint('Getting last index from search list ${historyItem.last}');
+      return historyItem;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<void> deleteAllPreviousSearchHistory() {
+    // TODO: implement deleteAllPreviousSearchHistory
+    throw UnimplementedError();
   }
 }

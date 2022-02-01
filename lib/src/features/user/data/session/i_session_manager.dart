@@ -1,5 +1,6 @@
 import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
+import 'package:super_module/src/features/user/domain/entity/store_recent_search_entity.dart';
 
 abstract class ISessionManager {
   Future<void> initiateUserIpAddress();
@@ -26,8 +27,7 @@ abstract class ISessionManager {
 
   Future<void> saveCurrentUser({required UserModel user});
 
-// Future<List<StoreRecentSearchEntity>> getHistorySearches();
-//
-// Future<void> deleteAllPreviousSearchHistory();
+  Future<List<StoreRecentSearchEntity>> getHistorySearches();
 
+  Future<void> deleteAllPreviousSearchHistory();
 }

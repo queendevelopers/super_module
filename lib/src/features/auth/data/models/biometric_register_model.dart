@@ -1,5 +1,5 @@
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:rest_client/rest_client.dart';
 
 part 'biometric_register_model.g.dart';
 

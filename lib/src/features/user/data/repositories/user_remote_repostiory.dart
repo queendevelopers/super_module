@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rest_client/rest_client.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/user/data/model/user_response_model.dart';
 import 'package:super_module/src/features/user/data/requests/user_endpoint_request/user_information_update_endpoint.dart';

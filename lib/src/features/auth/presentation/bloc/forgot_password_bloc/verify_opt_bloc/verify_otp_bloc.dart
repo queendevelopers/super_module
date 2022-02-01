@@ -61,7 +61,8 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
               'otp success with token ${forgotPasswordRequestModel!.token}');
         } else {
           yield VerifyOtpLoadFailure(
-              errorMessage: forgotPasswordRequestModel?.message??'An unknown error occurred.');
+              errorMessage: forgotPasswordRequestModel?.message ??
+                  'An unknown error occurred.');
         }
       }
     } else if (event is GetOtpEvent) {
