@@ -18,6 +18,8 @@ export 'package:super_module/src/core/utils/keyboard_utils.dart';
 export 'package:super_module/src/core/utils/shared_pref_util.dart';
 export 'package:super_module/src/core/utils/spacing_utils.dart';
 export 'package:super_module/src/core/utils/validator.dart';
+// export 'package:super_module/src/features/auth/biometric/encryption/rsa_util';
+export 'package:super_module/src/features/auth/data/requests/model/biometric_register_request_model.dart';
 export 'package:super_module/src/features/auth/data/models/user_upload_image_model.dart';
 export 'package:super_module/src/features/auth/data/models/global_response_model.dart';
 export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';
