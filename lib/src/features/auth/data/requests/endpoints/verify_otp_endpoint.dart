@@ -1,4 +1,4 @@
-import 'package:rest_client/rest_client.dart';
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 
 class VerifyOtpEndpoint implements IRequestEndPoint {
   final int otpCode;

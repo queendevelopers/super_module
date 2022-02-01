@@ -1,5 +1,5 @@
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rest_client/rest_client.dart';
 import 'package:super_module/src/features/address/data/endpoint/add_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/delete_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/get_default_address_endpoint.dart';

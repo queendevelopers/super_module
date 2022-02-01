@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:injectable/injectable.dart';
-import 'package:rest_client/rest_client.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_response_model.dart';
 import 'package:super_module/src/features/auth/data/models/encrypted_access_token_response_model.dart';
