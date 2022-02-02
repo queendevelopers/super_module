@@ -5,17 +5,20 @@ abstract class RegisterEvent {}
 
 class RegisterButtonTapEvent extends RegisterEvent {
   final String? username;
-  final String fullName;
+  final String? fullName;
   final String email;
   final String password;
   final String phone;
+  final String? address;
 
-  RegisterButtonTapEvent(
-      {this.username,
-      required this.fullName,
-      required this.email,
-      required this.password,
-      required this.phone});
+  RegisterButtonTapEvent({
+    this.username,
+    this.fullName,
+    required this.email,
+    required this.password,
+    this.address,
+    required this.phone,
+  });
 }
 
 class CheckUserNameAvailability extends RegisterEvent {
