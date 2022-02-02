@@ -1,0 +1,1 @@
+[{"type":{"import":"package:super_module/src/features/test/test_bloc.dart","name":"TestBloc","isNullable":false},"typeImpl":{"import":"package:super_module/src/features/test/test_bloc.dart","name":"TestBloc","isNullable":false},"isAsync":false,"preResolve":false,"injectableType":0,"dependsOn":[],"environments":[],"dependencies":[],"constructorName":""}]

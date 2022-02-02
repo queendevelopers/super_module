@@ -38,3 +38,5 @@ export 'package:super_module/src/features/user/data/model/address_model.dart';
 export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 export 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
+export 'package:super_module/src/core/widget/full_screen_image_widget.dart';
+export 'package:super_module/src/core/widget/app_image_provider.dart';
