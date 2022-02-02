@@ -36,7 +36,7 @@ abstract class IAuthLoginController {
   Future<ForgotPasswordPinVerificationResponseModel> changeForgotPassword(
       {required String oldPassword,
       required String newPassword,
-      required String token});
+      String? token});
 
   Future<SocialModel> loginWithFacebook();
 

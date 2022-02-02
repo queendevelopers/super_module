@@ -15,9 +15,8 @@ import 'package:super_module/src/features/user/domain/entity/store_recent_search
 @Injectable(as: ISessionManager)
 class SessionManager implements ISessionManager {
   final FlutterSecureStorage _secureStorage;
-  final SharedPreferences _sharedPreferences;
 
-  SessionManager(this._secureStorage, this._sharedPreferences);
+  SessionManager(this._secureStorage);
 
   @override
   Future<String?> getToken() {
@@ -110,7 +109,7 @@ class SessionManager implements ISessionManager {
         debugPrint('User ${user.name} reading from local storage.');
         return Future.value(user);
       }
-      return UserModel();
+      return null;
     } on Exception {
       await _secureStorage.delete(key: SuperKeys.userKey);
       rethrow;
@@ -135,6 +134,8 @@ class SessionManager implements ISessionManager {
   @override
   Future<String?> getUserIpAddress() async {
     try {
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
       return await _sharedPreferences.getString('userIp');
     } on Exception {
       rethrow;
@@ -145,6 +146,8 @@ class SessionManager implements ISessionManager {
   Future<void> initiateUserIpAddress() async {
     try {
       final Dio dio = Dio();
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
       final response = await dio.get('https://api.ipify.org/?format=json');
       if (response.statusCode == 200) {
         final String userIp = response.data['ip'];
@@ -160,6 +163,8 @@ class SessionManager implements ISessionManager {
   Future<List<StoreRecentSearchEntity>> getHistorySearches() async {
     try {
       // deleteAllPreviousSearchHistory();
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
       debugPrint('Getting search from local');
       List<StoreRecentSearchEntity> historyItem = [];
       List<String> nameHistoryList =
@@ -183,8 +188,35 @@ class SessionManager implements ISessionManager {
   }
 
   @override
-  Future<void> deleteAllPreviousSearchHistory() {
-    // TODO: implement deleteAllPreviousSearchHistory
-    throw UnimplementedError();
+  Future<void> deleteAllPreviousSearchHistory() async {
+    final SharedPreferences _sharedPreferences =
+        await SharedPreferences.getInstance();
+    await _sharedPreferences.remove(SuperKeys.searchHistoryDate);
+    await _sharedPreferences.remove(SuperKeys.searchHistoryName);
+  }
+
+  @override
+  Future<void> saveCurrentSearchItem(String searchItem) async {
+    try {
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
+      if (searchItem != null && searchItem.trim().isNotEmpty) {
+        debugPrint('storing current search item $searchItem');
+        List<String> nameHistoryList = await _sharedPreferences
+                .getStringList(SuperKeys.searchHistoryName) ??
+            [];
+        List<String> dateHistoryList = await _sharedPreferences
+                .getStringList(SuperKeys.searchHistoryDate) ??
+            [];
+        nameHistoryList.add(searchItem);
+        dateHistoryList.add(DateTime.now().toString());
+        await _sharedPreferences.setStringList(
+            SuperKeys.searchHistoryName, nameHistoryList);
+        await _sharedPreferences.setStringList(
+            SuperKeys.searchHistoryDate, dateHistoryList);
+      }
+    } on Exception {
+      rethrow;
+    }
   }
 }

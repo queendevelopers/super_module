@@ -6,10 +6,8 @@ abstract class ChangeForgotPasswordEvent {}
 class ChangeForgotPasswordButtonTapEvent extends ChangeForgotPasswordEvent {
   final String oldPassword;
   final String newPassword;
-  final String token;
+  final String? token;
 
   ChangeForgotPasswordButtonTapEvent(
-      {required this.oldPassword,
-      required this.newPassword,
-      required this.token});
+      {required this.oldPassword, required this.newPassword, this.token});
 }

@@ -23,7 +23,7 @@ class AppManager implements IAppManager {
   }
 
   @override
-  Future<void> saveBool(String key, bool value) async {
+  Future<void> saveBool({required String key, required bool value}) async {
     try {
       await sharedPreferences.setBool(SuperKeys.isAppFistTime, value);
     } catch (e) {

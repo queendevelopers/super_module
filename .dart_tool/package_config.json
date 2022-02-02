@@ -15,7 +15,7 @@
     },
     {
       "name": "archive",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.9",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.11",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -45,7 +45,7 @@
     },
     {
       "name": "bloc",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-8.0.2",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-7.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -255,7 +255,7 @@
     },
     {
       "name": "flutter_bloc",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.1",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -969,7 +969,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.10",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
@@ -998,7 +998,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-02-01T06:32:21.560543Z",
+  "generated": "2022-02-02T07:45:10.733557Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

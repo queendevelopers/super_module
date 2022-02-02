@@ -10,7 +10,7 @@ ShippingAddressResponse _$ShippingAddressResponseFromJson(
         Map<String, dynamic> json) =>
     ShippingAddressResponse(
       json['ok'] as bool?,
-      json['message'] as String?,
+      json['message'] as String,
       json['data'] == null
           ? null
           : ShippingAddress.fromJson(json['data'] as Map<String, dynamic>),

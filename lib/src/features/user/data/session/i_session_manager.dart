@@ -27,6 +27,8 @@ abstract class ISessionManager {
 
   Future<void> saveCurrentUser({required UserModel user});
 
+  Future<void> saveCurrentSearchItem(String searchItem);
+
   Future<List<StoreRecentSearchEntity>> getHistorySearches();
 
   Future<void> deleteAllPreviousSearchHistory();

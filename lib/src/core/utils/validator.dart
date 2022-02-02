@@ -1,7 +1,7 @@
 import '../extension/cap_extension.dart';
 
-String? validateField(String value, String field) {
-  if (value.isEmpty) {
+String? validateField(String? value, String field) {
+  if (value != null && value.isEmpty) {
     return 'Please enter $field';
   } else {
     return null;
@@ -39,9 +39,9 @@ String? validatePassword(String? value, String password) {
 }
 
 String? validateEqual(
-    Map<String, String> firstString, Map<String, String> secondString) {
-  if (firstString.values.first.isNotEmpty &&
-      secondString.values.first.isNotEmpty) {
+    Map<String, String?> firstString, Map<String, String?> secondString) {
+  if ((firstString.values.first?.isNotEmpty ?? false) &&
+      (secondString.values.first?.isNotEmpty ?? false)) {
     if (firstString.values.first == secondString.values.first) {
       return null;
     }

@@ -14,7 +14,7 @@ class ChangeForgotPasswordLoadFailure extends ChangeForgotPasswordState {
 }
 
 class ChangeForgotPasswordLoadSuccess extends ChangeForgotPasswordState {
-  final String? message;
+  final String message;
 
-  ChangeForgotPasswordLoadSuccess({this.message});
+  ChangeForgotPasswordLoadSuccess({required this.message});
 }

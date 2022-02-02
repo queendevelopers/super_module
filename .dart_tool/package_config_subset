@@ -8,8 +8,8 @@ file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/analyzer-3.2.0/
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/analyzer-3.2.0/lib/
 archive
 2.12
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.9/
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.9/lib/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.11/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/archive-3.1.11/lib/
 args
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/args-2.3.0/
@@ -28,8 +28,8 @@ file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/basic_utils-4.0.1/
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/basic_utils-4.0.1/lib/
 bloc
 2.12
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-8.0.2/
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-8.0.2/lib/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-7.2.1/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/bloc-7.2.1/lib/
 boolean_selector
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/
@@ -164,8 +164,8 @@ file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0/
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0/lib/
 flutter_bloc
 2.12
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.1/
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.1/lib/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3/lib/
 flutter_cache_manager
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-3.3.0/
@@ -628,8 +628,8 @@ file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-2.1.0/
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-2.1.0/lib/
 win32
 2.15
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8/
-file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8/lib/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.10/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/win32-2.3.10/lib/
 xdg_directories
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0/

@@ -1,0 +1,1 @@
+Package developed for basic features that almost every app will have.

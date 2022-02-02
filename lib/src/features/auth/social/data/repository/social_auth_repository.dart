@@ -53,10 +53,12 @@ class SocialAuthRepository implements ISocialAuthRepository {
         debugPrint(accessToken.expires.toString());
         return model;
       case LoginStatus.failed:
-        return SocialModel(ok: false, message: result.message);
+        return SocialModel(
+            ok: false, message: result.message ?? 'An unknown error occurred.');
 
       default:
-        return SocialModel(ok: false, message: result.message);
+        return SocialModel(
+            ok: false, message: result.message ?? 'An unknown error occurred.');
     }
   }
 

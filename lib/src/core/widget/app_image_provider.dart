@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:super_module/src/core/utils/dialog_utils.dart';
-import 'package:super_module/super_module.dart';
 
 class AppImageProvider {
   File? file;

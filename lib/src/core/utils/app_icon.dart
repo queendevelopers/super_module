@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum ImageType { SVG, PNG }
 
-Widget AppIcon(
+Widget appIcon(
     {required String assetName,
     double iconSize = 28.0,
     VoidCallback? onPressed,

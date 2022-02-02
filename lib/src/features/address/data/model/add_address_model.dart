@@ -5,7 +5,7 @@ part 'add_address_model.g.dart';
 @JsonSerializable()
 class AddAddressModel {
   final bool? ok;
-  final String? message;
+  final String message;
 
   AddAddressModel(this.ok, this.message);
 

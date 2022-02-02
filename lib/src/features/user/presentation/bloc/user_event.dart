@@ -7,7 +7,7 @@ class UserRankFetchEvent extends UserEvent {}
 
 class UserInformationUpdateEvent extends UserEvent {
   final UserModel userModel;
-  final String token;
+  final String? token;
 
   UserInformationUpdateEvent(this.userModel, this.token);
 }
