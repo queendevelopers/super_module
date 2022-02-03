@@ -46,3 +46,16 @@ class BiometricsStatusCheckedSuccessState extends BiometricState {
 
   BiometricsStatusCheckedSuccessState(this.isEnabled);
 }
+
+class RegisteringBiometricsState  extends BiometricState{
+}
+class RegisterBiometricsFailureState extends BiometricState{
+  final String message;
+
+  RegisterBiometricsFailureState(this.message);
+}
+class RegisterBiometricsSuccessState extends BiometricState{
+  final String message;
+
+  RegisterBiometricsSuccessState(this.message);
+}

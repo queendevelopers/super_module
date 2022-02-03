@@ -31,13 +31,13 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
       yield VerifyOtpLoading();
       if (event.navigateToHome) {
         response = await controller.verifyOtp(otpCode: event.otpCode);
-        if (response.ok!) {
+        if (response.ok) {
           final UserModel? user = await sessionManager.getCurrentUser();
           if (user != null) {
             debugPrint(response.user.toString());
             await sessionManager.saveCurrentUser(user: response.user);
           }
-          yield VerifyOtpSuccess(message: response.message!);
+          yield VerifyOtpSuccess(message: response.message);
           debugPrint('otp success without token');
         } else {
           yield VerifyOtpLoadFailure(errorMessage: response.message!);

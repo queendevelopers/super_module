@@ -17,20 +17,20 @@ import '../features/address/domain/controller/i_address_controller.dart'
     as _i17;
 import '../features/address/domain/repository/i_address_repository.dart' as _i4;
 import '../features/address/presentation/bloc/address_bloc.dart' as _i26;
-import '../features/auth/biometric/bloc/biometric_bloc.dart' as _i27;
+import '../features/auth/biometric/bloc/biometric_bloc.dart' as _i32;
 import '../features/auth/data/repositories/auth_remote_repository.dart' as _i19;
-import '../features/auth/domain/controller/auth_login_controller.dart' as _i28;
+import '../features/auth/domain/controller/auth_login_controller.dart' as _i27;
 import '../features/auth/domain/repositories/i_auth_remote_repository.dart'
     as _i18;
 import '../features/auth/presentation/bloc/forgot_password_bloc/change_forgot_password_bloc/change_forgot_password_bloc.dart'
     as _i33;
 import '../features/auth/presentation/bloc/forgot_password_bloc/reset_password_bloc/reset_password_bloc.dart'
-    as _i31;
-import '../features/auth/presentation/bloc/forgot_password_bloc/verify_opt_bloc/verify_otp_bloc.dart'
-    as _i32;
-import '../features/auth/presentation/bloc/login_bloc/login_bloc.dart' as _i29;
-import '../features/auth/presentation/bloc/register_bloc/register_bloc.dart'
     as _i30;
+import '../features/auth/presentation/bloc/forgot_password_bloc/verify_opt_bloc/verify_otp_bloc.dart'
+    as _i31;
+import '../features/auth/presentation/bloc/login_bloc/login_bloc.dart' as _i28;
+import '../features/auth/presentation/bloc/register_bloc/register_bloc.dart'
+    as _i29;
 import '../features/auth/presentation/bloc/register_phone_by_otp_bloc/register_phone_by_otp_bloc.dart'
     as _i15;
 import '../features/auth/social/data/repository/i_social_repository.dart'
@@ -79,19 +79,24 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
   gh.factory<_i25.UserBloc>(() => _i25.UserBloc(get<_i22.IUserController>()));
   gh.factory<_i26.AddressBloc>(
       () => _i26.AddressBloc(get<_i17.IAddressController>()));
-  gh.factory<_i27.BiometricBloc>(() => _i27.BiometricBloc(
-      get<_i18.IAuthRemoteRepository>(), get<_i10.ISessionManager>()));
-  gh.factory<_i28.IAuthLoginController>(() => _i28.AuthLoginController(
-      get<_i18.IAuthRemoteRepository>(), get<_i10.ISessionManager>()));
-  gh.factory<_i29.LoginBloc>(() => _i29.LoginBloc(
-      get<_i28.IAuthLoginController>(), get<_i10.ISessionManager>()));
-  gh.factory<_i30.RegisterBloc>(() => _i30.RegisterBloc(
-      get<_i28.IAuthLoginController>(), get<_i10.ISessionManager>()));
-  gh.factory<_i31.ResetPasswordBloc>(
-      () => _i31.ResetPasswordBloc(get<_i28.IAuthLoginController>()));
-  gh.factory<_i32.VerifyOtpBloc>(() => _i32.VerifyOtpBloc(
-      get<_i28.IAuthLoginController>(), get<_i10.ISessionManager>()));
+  gh.factory<_i27.IAuthLoginController>(() => _i27.AuthLoginController(
+      get<_i18.IAuthRemoteRepository>(),
+      get<_i10.ISessionManager>(),
+      get<_i7.IAppManager>()));
+  gh.factory<_i28.LoginBloc>(() => _i28.LoginBloc(
+      get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
+  gh.factory<_i29.RegisterBloc>(() => _i29.RegisterBloc(
+      get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
+  gh.factory<_i30.ResetPasswordBloc>(
+      () => _i30.ResetPasswordBloc(get<_i27.IAuthLoginController>()));
+  gh.factory<_i31.VerifyOtpBloc>(() => _i31.VerifyOtpBloc(
+      get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
+  gh.factory<_i32.BiometricBloc>(() => _i32.BiometricBloc(
+      get<_i18.IAuthRemoteRepository>(),
+      get<_i10.ISessionManager>(),
+      get<_i27.IAuthLoginController>(),
+      get<_i7.IAppManager>()));
   gh.factory<_i33.ChangeForgotPasswordBloc>(() => _i33.ChangeForgotPasswordBloc(
-      get<_i28.IAuthLoginController>(), get<_i10.ISessionManager>()));
+      get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
   return get;
 }

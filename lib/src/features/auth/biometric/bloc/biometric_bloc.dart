@@ -1,23 +1,36 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:injectable/injectable.dart';
 import 'package:local_auth/local_auth.dart';
+import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
+import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
+import 'package:super_module/src/features/auth/domain/controller/auth_login_controller.dart';
 import 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
+import 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
 part 'biometric_event.dart';
 part 'biometric_state.dart';
 
+mixin BiometricActionBloc implements BiometricBloc {}
+
 @injectable
 class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
-  BiometricBloc(this.repository, this.sessionManager)
-      : super(BiometricInitial());
   final LocalAuthentication? auth = LocalAuthentication();
   final IAuthRemoteRepository repository;
+  final IAuthLoginController controller;
+  final IAppManager appManager;
   final ISessionManager sessionManager;
+
+  BiometricBloc(
+      this.repository, this.sessionManager, this.controller, this.appManager)
+      : super(BiometricInitial());
 
   @override
   Stream<BiometricState> mapEventToState(
@@ -86,6 +99,50 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
         yield BiometricsStatusCheckingState();
         final biometricsInfo = await sessionManager.readBiometricInfo();
         yield BiometricsStatusCheckedSuccessState(biometricsInfo != null);
+      }
+    } else if (event is RegisterBiometricsEvent) {
+      var list = RSAUtils.generateKeys(2048);
+      var rsa = RSAUtils.getInstance(list[0], list[1]);
+      // String str = "Come on Wuhan, China.";
+      // Uint8List sstr = utf8.encode(str);
+      // var enstr = rsa.encryptByPublicKey(sstr);
+
+      //  final key =
+      //     RsaKeyHelper().generateKeyPair();
+      // final publicKey = RsaKeyHelper()
+      //     .encodePublicKeyToPem(key.publicKey);
+      // final privateKey = RsaKeyHelper()
+      //     .encodePrivateKeyToPem(key.privateKey);
+      final response = await controller.registerBiometric(
+          publicKey: list[0], deviceId: await appManager.getDeviceId());
+      if (response.ok) {
+        final responseKey = response.data.key;
+        final id = response.data.id;
+        final deviceId = response.data.deviceId;
+        debugPrint('$responseKey');
+        // final pasedPrivatedKey = RsaKeyHelper()
+        //     .parsePrivateKeyFromPem(privateKey);
+        // final decryptKey = RsaKeyHelper().decrypt(
+        //     response.data.key, pasedPrivatedKey);
+
+        // String str = "Come on Wuhan, China.";
+        // Uint8List sstr = utf8.encode(responseKey);
+        // var enstr = rsa.encryptByPublicKey(sstr);
+
+        Uint8List ssstre = rsa.decryptByPrivateKey(base64Decode(responseKey!));
+        String utf8String = utf8.decode(ssstre);
+        debugPrint('decrypted key $utf8String');
+
+        sessionManager.storeBiometricInfo(BiometricRegisterModel(
+            key: responseKey,
+            // utf8String: utf8String,
+            deviceId: deviceId,
+            id: id,
+            // publicKey: list[0],
+            privateKey: list[1],
+            userId: (await sessionManager.getCurrentUser())?.id ?? ''));
+
+        yield RegisterBiometricsSuccessState(response.message);
       }
     }
   }

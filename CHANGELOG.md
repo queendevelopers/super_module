@@ -15,3 +15,9 @@
 
 ## [0.0.6] - 2 FEB 2022
 - Downgraded bloc to version 7.x.x due to major changes in version 8.x.x
+
+## [0.0.7] - 2 FEB 2022
+- Added additional export
+
+## [0.0.8] - 3 FEB 2022
+- Refactor of code & additional export

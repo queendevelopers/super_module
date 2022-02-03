@@ -12,6 +12,11 @@ class UserRankFetchFailure extends UserState {
 
   UserRankFetchFailure({required this.errorMessage});
 }
+class UserRankFetchSuccess extends UserState {
+  final List<UserRankModel> userRankList;
+
+  UserRankFetchSuccess({required this.userRankList});
+}
 
 class UserInformationUpdating extends UserState {}
 

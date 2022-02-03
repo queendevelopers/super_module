@@ -24,7 +24,8 @@ export 'package:super_module/src/features/auth/data/models/global_response_model
 export 'package:super_module/src/features/auth/data/models/global_response_model.dart';
 export 'package:super_module/src/features/auth/data/models/user_model.dart';
 export 'package:super_module/src/features/auth/data/models/user_upload_image_model.dart';
-// export 'package:super_module/src/features/auth/biometric/encryption/rsa_util';
+// export 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
+export 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 export 'package:super_module/src/features/auth/data/requests/model/biometric_register_request_model.dart';
 export 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/forgot_password_bloc/change_forgot_password_bloc/change_forgot_password_bloc.dart';
@@ -40,3 +41,5 @@ export 'package:super_module/src/features/user/data/session/i_session_manager.da
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
 export 'package:super_module/src/core/widget/full_screen_image_widget.dart';
 export 'package:super_module/src/core/widget/app_image_provider.dart';
+export 'package:super_module/src/core/utils/app_launchers.dart';
+export 'package:super_module/src/core/utils/app_launchers.dart';

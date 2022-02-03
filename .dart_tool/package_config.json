@@ -182,6 +182,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "device_info",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info_platform_interface",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/device_info_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "dio",
       "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/dio-4.0.4",
       "packageUri": "lib/",
@@ -998,7 +1010,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-02-02T07:45:10.733557Z",
+  "generated": "2022-02-03T05:46:52.105645Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }
