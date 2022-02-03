@@ -21,3 +21,9 @@
 
 ## [0.0.8] - 3 FEB 2022
 - Refactor of code & additional export
+
+## [0.0.9] - 3 FEB 2022
+- Refactor of models
+
+## [0.1.0] - 3 FEB 2022
+- Added changed log & export new models
