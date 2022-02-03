@@ -35,7 +35,7 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
           final UserModel? user = await sessionManager.getCurrentUser();
           if (user != null) {
             debugPrint(response.user.toString());
-            await sessionManager.saveCurrentUser(user: response.user);
+            await sessionManager.saveCurrentUser(user: response.user!);
           }
           yield VerifyOtpSuccess(message: response.message);
           debugPrint('otp success without token');

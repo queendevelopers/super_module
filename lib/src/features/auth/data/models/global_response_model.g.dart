@@ -8,10 +8,12 @@ part of 'global_response_model.dart';
 
 GlobalResponseModel _$GlobalResponseModelFromJson(Map<String, dynamic> json) =>
     GlobalResponseModel(
-      UserModel.fromJson(json['user'] as Map<String, dynamic>),
-      json['code'] as String,
-      json['field'] as String,
-      json['encryptedAccessToken'] as String,
+      json['user'] == null
+          ? null
+          : UserModel.fromJson(json['user'] as Map<String, dynamic>),
+      json['code'] as String?,
+      json['field'] as String?,
+      json['encryptedAccessToken'] as String?,
       ok: json['ok'] as bool,
       message: json['message'] as String,
       key: json['key'] as String?,

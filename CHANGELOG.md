@@ -27,3 +27,9 @@
 
 ## [0.1.0] - 3 FEB 2022
 - Added changed log & export new models
+
+## [0.1.1] - 3 FEB 2022
+- Removed rsa public and private keys.
+
+## [0.1.2] - 3 FEB 2022
+- Removed rsa public and private keys.

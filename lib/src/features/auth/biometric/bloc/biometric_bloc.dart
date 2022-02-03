@@ -101,7 +101,7 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
         yield BiometricsStatusCheckedSuccessState(biometricsInfo != null);
       }
     } else if (event is RegisterBiometricsEvent) {
-      var list = RSAUtils.generateKeys(2048);
+      /*  var list = RSAUtils.generateKeys(2048);
       var rsa = RSAUtils.getInstance(list[0], list[1]);
       // String str = "Come on Wuhan, China.";
       // Uint8List sstr = utf8.encode(str);
@@ -144,6 +144,7 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
 
         yield RegisterBiometricsSuccessState(response.message);
       }
+         */
     }
   }
 }
