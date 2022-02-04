@@ -12,7 +12,7 @@ class AuthenticateWithBiometricEvent extends BiometricEvent {}
 class RegisterBiometricsEvent extends BiometricEvent{}
 
 class BiometricsStatusCheckEvent extends BiometricEvent {
-  final bool status;
+  final bool? status;
 
-  BiometricsStatusCheckEvent({required this.status});
+  BiometricsStatusCheckEvent({this.status});
 }

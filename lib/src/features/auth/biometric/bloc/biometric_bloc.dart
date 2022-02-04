@@ -87,14 +87,14 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
       }*/
     } else if (event is BiometricsStatusCheckEvent) {
       if (event.status != null) {
-        if (!event.status) {
+        if (!event.status!) {
           yield BiometricsStatusCheckingState();
           await sessionManager.clearBiometrics();
-          yield BiometricsStatusCheckedSuccessState(event.status);
+          yield BiometricsStatusCheckedSuccessState(event.status!);
           return;
         }
         yield BiometricsStatusCheckingState();
-        yield BiometricsStatusCheckedSuccessState(event.status);
+        yield BiometricsStatusCheckedSuccessState(event.status??true);
       } else {
         yield BiometricsStatusCheckingState();
         final biometricsInfo = await sessionManager.readBiometricInfo();

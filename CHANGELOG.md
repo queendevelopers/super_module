@@ -33,3 +33,7 @@
 
 ## [0.1.2] - 3 FEB 2022
 - Removed rsa public and private keys.
+
+## [0.1.3] - 4 FEB 2022
+- Updates in user model profile for point and subscribed countries.
+
