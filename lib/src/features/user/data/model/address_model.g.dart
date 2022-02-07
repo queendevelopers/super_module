@@ -27,6 +27,6 @@ Map<String, dynamic> _$AddressModelToJson(AddressModel instance) =>
       'country': instance.country,
       'postcode': instance.postcode,
       'pedestrian': instance.pedestrian,
-      'country_code': instance.country_code,
-      'city_district': instance.city_district,
+      'country_code': instance.countryCode,
+      'city_district': instance.cityDistrict,
     };

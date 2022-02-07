@@ -55,7 +55,8 @@ import '../features/user/presentation/bloc/user_bloc.dart'
 _i1.GetIt $initModuleGetIt(_i1.GetIt get,
     {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
-  gh.factory<_i3.FirebaseNotificationService>(() => _i3.FirebaseNotificationService());
+  gh.factory<_i3.FirebaseNotificationService>(
+      () => _i3.FirebaseNotificationService());
   gh.factory<_i4.IAddressRepository>(
       () => _i5.AddressRepository(get<_i6.IHttpHelper>()));
   gh.factory<_i7.IAppManager>(

@@ -39,8 +39,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       } catch (e) {
         yield LoginFailureState(errorMessage: e.toString());
       }
-    } else if (event is LoginWithFaceBookTapEvent) {
-      final response = controller.loginWithFacebook();
     }
   }
 }

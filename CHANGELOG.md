@@ -5,7 +5,8 @@
 - Code optimizedN
 
 ## [0.0.3] - 1 FEB 2022
-- Added GlobalResponseModel & code refactor
+- Added GlobalResponseModel
+- code refactor
 
 ## [0.0.4] - 2 FEB 2022
 - Removed android and ios folder dependency & optimized
@@ -38,13 +39,16 @@
 - Updates in user model profile for point and subscribed countries.
 
 ## [0.1.4] - 7 FEB 2022
-- Forgot password model changes & some auth stability improvements.
+ - Forgot password model changes
+ - some auth stability improvements.
 
-## [0.1.4] - 7 FEB 2022
-- Fix null safety
-- Fix compile time warnings
+## [0.1.5] - 7 FEB 2022
+- Fixed null safety
+- Fixed compile time warnings
 - Removed map_extension (not required because package is already using sound null safety)
 - Firebase push notification code cleanup & better implementation.
+- Fixed suggestion warnings.
+- Code refactor with dartfmt
 
 
 
