@@ -1,15 +1,10 @@
 import 'dart:async';
-import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:injectable/injectable.dart';
 import 'package:local_auth/local_auth.dart';
-import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
-import 'package:super_module/src/features/auth/data/models/biometric_register_model.dart';
 import 'package:super_module/src/features/auth/domain/controller/auth_login_controller.dart';
 import 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
 import 'package:super_module/src/features/user/data/session/i_app_manager.dart';
@@ -94,7 +89,7 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
           return;
         }
         yield BiometricsStatusCheckingState();
-        yield BiometricsStatusCheckedSuccessState(event.status??true);
+        yield BiometricsStatusCheckedSuccessState(event.status ?? true);
       } else {
         yield BiometricsStatusCheckingState();
         final biometricsInfo = await sessionManager.readBiometricInfo();

@@ -1,5 +1,6 @@
-import 'package:super_module/super_module.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:super_module/super_module.dart';
+
 part 'user_rank_model.g.dart';
 
 @JsonSerializable()

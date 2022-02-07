@@ -37,3 +37,14 @@
 ## [0.1.3] - 4 FEB 2022
 - Updates in user model profile for point and subscribed countries.
 
+## [0.1.4] - 7 FEB 2022
+- Forgot password model changes & some auth stability improvements.
+
+## [0.1.4] - 7 FEB 2022
+- Fix null safety
+- Fix compile time warnings
+- Removed map_extension (not required because package is already using sound null safety)
+- Firebase push notification code cleanup & better implementation.
+
+
+

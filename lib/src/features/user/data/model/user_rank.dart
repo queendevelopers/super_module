@@ -11,7 +11,6 @@ class UserRank {
   final int totalShots;
   final String imageUrl;
 
-
   UserRank(this.id, this.rank, this.name, this.subTitle, this.totalShots,
       this.imageUrl);
 

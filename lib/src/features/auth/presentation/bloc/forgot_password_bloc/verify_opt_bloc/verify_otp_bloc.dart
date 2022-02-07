@@ -55,8 +55,8 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
             await sessionManager.saveCurrentUser(user: user);
           }
           yield VerifyOtpSuccess(
-              message: forgotPasswordRequestModel!.message!,
-              token: forgotPasswordRequestModel!.token!);
+              message: forgotPasswordRequestModel?.message,
+              token: forgotPasswordRequestModel?.token);
           debugPrint(
               'otp success with token ${forgotPasswordRequestModel!.token}');
         } else {

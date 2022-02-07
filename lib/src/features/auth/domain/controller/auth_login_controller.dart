@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:injectable/injectable.dart';
-import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
 import 'package:super_module/src/features/auth/data/models/biometric_register_response_model.dart';
 import 'package:super_module/src/features/auth/data/models/forgot_password_pin_verification_response_model.dart';
 import 'package:super_module/src/features/auth/data/models/global_response_model.dart';
@@ -33,9 +32,7 @@ abstract class IAuthLoginController {
   });
 
   Future<ForgotPasswordPinVerificationResponseModel> verifyForgotPasswordOtp(
-      {required int otpCode,
-      required bool navigateToHome,
-       String? key});
+      {required int otpCode, required bool navigateToHome, String? key});
 
   Future<ForgotPasswordPinVerificationResponseModel> changeForgotPassword(
       {required String oldPassword,
@@ -49,7 +46,9 @@ abstract class IAuthLoginController {
   Future<GlobalResponseModel> verifyOtp({required int otpCode});
 
   Future<GlobalResponseModel> checkUsername({String username});
-  Future<BiometricRegisterResponseModel> registerBiometric({required String publicKey,required String deviceId});
+
+  Future<BiometricRegisterResponseModel> registerBiometric(
+      {required String publicKey, required String deviceId});
 }
 
 @Injectable(as: IAuthLoginController)
@@ -58,7 +57,8 @@ class AuthLoginController implements IAuthLoginController {
   final ISessionManager iSessionManager;
   final IAppManager appManager;
 
-  AuthLoginController(this.iAuthRemoteRepository, this.iSessionManager, this.appManager);
+  AuthLoginController(
+      this.iAuthRemoteRepository, this.iSessionManager, this.appManager);
 
   @override
   Future<LoginModel> authLogin(
@@ -169,11 +169,12 @@ class AuthLoginController implements IAuthLoginController {
   }
 
   @override
-  Future<BiometricRegisterResponseModel> registerBiometric({required String publicKey,required String deviceId}) async {
-    final data = await iAuthRemoteRepository.registerBiometric(
-      BiometricRegisterRequestModel(
-          publicKey: publicKey,
-          deviceId: deviceId,
+  Future<BiometricRegisterResponseModel> registerBiometric(
+      {required String publicKey, required String deviceId}) async {
+    final data = await iAuthRemoteRepository
+        .registerBiometric(BiometricRegisterRequestModel(
+      publicKey: publicKey,
+      deviceId: deviceId,
     ));
     return data;
   }

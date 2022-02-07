@@ -9,7 +9,7 @@ class GetAllAvailableBiometricsEvent extends BiometricEvent {}
 
 class AuthenticateWithBiometricEvent extends BiometricEvent {}
 
-class RegisterBiometricsEvent extends BiometricEvent{}
+class RegisterBiometricsEvent extends BiometricEvent {}
 
 class BiometricsStatusCheckEvent extends BiometricEvent {
   final bool? status;

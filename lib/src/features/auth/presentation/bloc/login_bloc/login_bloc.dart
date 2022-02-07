@@ -35,8 +35,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
           yield LoginSuccessState(response);
           return;
         }
-        yield LoginFailureState(
-            errorMessage: response.message ?? 'An unknown error occurred.');
+        yield LoginFailureState(errorMessage: response.message);
       } catch (e) {
         yield LoginFailureState(errorMessage: e.toString());
       }

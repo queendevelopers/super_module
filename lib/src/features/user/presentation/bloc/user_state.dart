@@ -12,6 +12,7 @@ class UserRankFetchFailure extends UserState {
 
   UserRankFetchFailure({required this.errorMessage});
 }
+
 class UserRankFetchSuccess extends UserState {
   final List<UserRankModel> userRankList;
 

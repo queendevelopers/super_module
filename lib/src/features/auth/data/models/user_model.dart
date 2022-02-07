@@ -27,7 +27,9 @@ class UserModel extends BaseRequestModel {
   final double? score;
 
   UserModel(
-      {this.points, this.subscribedCountries, this.username,
+      {this.points,
+      this.subscribedCountries,
+      this.username,
       this.emailVerified,
       this.nickname,
       this.phoneVerified,

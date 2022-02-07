@@ -46,11 +46,7 @@ class SocialBloc extends Bloc<SocialEvent, SocialState> {
         yield SocialStateSuccess(socialModel: socialModel);
         return;
       }
-      yield SocialStateFailed(
-          message: socialModel.message ?? 'An unknown error occured');
+      yield SocialStateFailed(message: socialModel.message);
     }
   }
 }
-// mixin FaceBookType on Bloc<SocialEvent,SocialState>{}
-// mixin GoogleType on Bloc<SocialEvent,SocialState>{}
-// mixin AppleType on Bloc<SocialEvent,SocialState>{}

@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:super_module/src/features/user/data/model/page_limit_model.dart';
 import 'package:super_module/src/features/user/data/model/user_rank_model.dart';
+
 part 'pagination_model.g.dart';
 
 @JsonSerializable(explicitToJson: true)

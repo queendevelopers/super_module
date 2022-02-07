@@ -1,54 +1,59 @@
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-class FirebaseService {
+class FirebaseNotificationService {
   final FirebaseMessaging fcm = FirebaseMessaging.instance;
   late String fcmToken;
 
   late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
-  Future initialise() async {
+  Future initialise(
+      {alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: false,
+      sound: true,
+      String androidNotificationIcon = '@mipmap/ic_launcher'}) async {
+
     flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
-    var android = new AndroidInitializationSettings('@mipmap/ic_launcher');
+    var android = new AndroidInitializationSettings(androidNotificationIcon);
     var iOS = new IOSInitializationSettings();
-    var initSetttings = new InitializationSettings(android: android, iOS: iOS);
-    // flutterLocalNotificationsPlugin.initialize(initSetttings,
-    //     onSelectNotification: onSelectNotification);
+    var initSettings = new InitializationSettings(android: android, iOS: iOS);
+    flutterLocalNotificationsPlugin.initialize(initSettings,
+        onSelectNotification: (value) {});
     // if (Platform.isIOS) {
-    //   // fcm.requestNotificationPermissions(IosNotificationSettings());
+    fcm.requestPermission(
+        alert: alert,
+        announcement: announcement,
+        badge: badge,
+        carPlay: carPlay,
+        criticalAlert: criticalAlert,
+        provisional: provisional,
+        sound: sound);
     // }
 
-    // If you want to test the push notification locally,
-    // you need to get the token and input to the Firebase console
-    // https://console.firebase.google.com/project/YOUR_PROJECT_ID/notification/compose
     String? token = await fcm.getToken();
     print("FirebaseMessaging token: $token");
     fcmToken = token!;
+  }
 
-    // fcm.configure(onMessage: (Map<String, dynamic> message) async {
-    //   print("onMessage: $message");
-    //
-    //   showNotification(message);
-    //
-    //   // Get.snackbar(message['notification']['title'], message['notification']['body']);
-    //
-    //   // if (Platform.isAndroid) {
-    //   //   notificationMessage = PushNotificationMessage(
-    //   //     title: message['notification']['title'],
-    //   //     body: message['notification']['body'],
-    //   //   );
-    //   //
-    //   //   var notify = json.decode(message['data']['payload'] ?? message);
-    //   //   setvalue(notify);
-    //   //   Get.snackbar(notificationMessage.title, notificationMessage.data.bookingTitle);
-    //   // }
-    // }, onLaunch: (Map<String, dynamic> message) async {
-    //   print("onLaunch: $message");
-    //   // navigatorkey.currentState.pushNamed("/login");
-    // }, onResume: (Map<String, dynamic> message) async {
-    //   print("onResume: $message");
-    // });
-    // onBackgroundMessage: myBackgroundMessageHandler);
+  /*
+  You can use this function in UI in your own project way.
+  App can only customize the foreground push notification. Background are auto handled by Firebase.
+  Default styled can be used like below.
+   */
+  listenToNotification() {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print('Got a message whilst in the foreground!');
+      print('Message data: ${message.data}');
+      showNotification(message.data);
+      if (message.notification != null) {
+        print('Message also contained a notification: ${message.notification}');
+      }
+    });
   }
 
   showNotification(Map<String, dynamic> message) async {
