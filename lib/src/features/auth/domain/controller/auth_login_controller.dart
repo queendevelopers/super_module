@@ -44,7 +44,7 @@ abstract class IAuthLoginController {
 
   Future<SocialModel> loginWithFacebook();
 
-  Future<GlobalResponseModel> getOtp({String token});
+  Future<GlobalResponseModel> getOtp({String? token});
 
   Future<GlobalResponseModel> verifyOtp({required int otpCode});
 

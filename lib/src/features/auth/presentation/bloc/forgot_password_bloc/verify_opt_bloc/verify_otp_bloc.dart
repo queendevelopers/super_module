@@ -40,7 +40,7 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
           yield VerifyOtpSuccess(message: response.message);
           debugPrint('otp success without token');
         } else {
-          yield VerifyOtpLoadFailure(errorMessage: response.message!);
+          yield VerifyOtpLoadFailure(errorMessage: response.message);
         }
       } else {
         forgotPasswordRequestModel = await controller.verifyForgotPasswordOtp(
@@ -67,8 +67,8 @@ class VerifyOtpBloc extends Bloc<VerifyOtpEvent, VerifyOtpState> {
       }
     } else if (event is GetOtpEvent) {
       yield GetOtpSending();
-      final response = await controller.getOtp(token: event.token!);
-      if (response.ok!) {
+      final response = await controller.getOtp(token: event.token);
+      if (response.ok) {
         yield GetOtpSuccess(response.message);
       } else {
         yield GetOtpFailure(response.message);

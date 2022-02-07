@@ -31,9 +31,7 @@ String? validatePassword(String? value, String password) {
     return 'Please enter password';
   } else if (value.length < 8) {
     return 'Password must be 8 characters long';
-  } else if (value.isNotEmpty && password.isNotEmpty && value != password) {
-    return 'Password does not match';
-  } else {
+  }  else {
     return null;
   }
 }
