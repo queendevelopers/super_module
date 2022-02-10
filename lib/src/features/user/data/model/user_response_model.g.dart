@@ -9,8 +9,10 @@ part of 'user_response_model.dart';
 UserResponseModel _$UserResponseModelFromJson(Map<String, dynamic> json) =>
     UserResponseModel(
       json['ok'] as bool,
-      UserModel.fromJson(json['data'] as Map<String, dynamic>),
-      json['message'] as String,
+      json['data'] == null
+          ? null
+          : UserModel.fromJson(json['data'] as Map<String, dynamic>),
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$UserResponseModelToJson(UserResponseModel instance) =>

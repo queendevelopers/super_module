@@ -32,10 +32,10 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       final result = await controller.userInformationUpdate(
           model: event.userModel, token: event.token);
       if (result.ok) {
-        yield UserInformationUpdateSuccess(phone: result.data.phone);
+        yield UserInformationUpdateSuccess(phone: result.data?.phone!);
         return;
       }
-      yield UserInformationUpdateFailure(message: result.message);
+      yield UserInformationUpdateFailure(message: result.message??'An unknown error occurred.');
     }
   }
 }

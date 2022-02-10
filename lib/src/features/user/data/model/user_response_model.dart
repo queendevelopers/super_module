@@ -6,8 +6,8 @@ part 'user_response_model.g.dart';
 @JsonSerializable()
 class UserResponseModel {
   final bool ok;
-  final UserModel data;
-  final String message;
+  final UserModel? data;
+  final String? message;
 
   UserResponseModel(this.ok, this.data, this.message);
 
