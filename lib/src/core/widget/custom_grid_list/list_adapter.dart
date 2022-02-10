@@ -12,7 +12,7 @@ mixin BaseListAdapter<T> {
 class ListAdapter implements BaseListAdapter {
   final Future<ListItems> Function(int offset, int limit) fetchItems;
 
-  ListAdapter({required this.fetchItems}) : assert(fetchItems != null);
+  ListAdapter({required this.fetchItems});
 
   @override
   Future<ListItems> getItems(int offset, int limit) {

@@ -11,11 +11,13 @@ class AddressModel {
   final String country;
   final String postcode;
   final String pedestrian;
-  final String country_code;
-  final String city_district;
+  @JsonKey(name: 'country_code')
+  final String countryCode;
+  @JsonKey(name: 'country_district')
+  final String cityDistrict;
 
   AddressModel(this.city, this.state, this.country, this.suburb, this.postcode,
-      this.pedestrian, this.country_code, this.city_district, this.county);
+      this.pedestrian, this.countryCode, this.cityDistrict, this.county);
 
   factory AddressModel.fromJson(Map<String, dynamic> json) =>
       _$AddressModelFromJson(json);

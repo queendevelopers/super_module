@@ -3,6 +3,10 @@
 // **************************************************************************
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
+      points: json['points'] as int?,
+      subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       username: json['username'] as String?,
       emailVerified: json['emailVerified'] as bool?,
       nickname: json['nickname'] as String?,
@@ -41,6 +45,8 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('name', instance.name);
   writeNotNull('email', instance.email);
   writeNotNull('nickname', instance.nickname);
+  writeNotNull('points', instance.points);
+  writeNotNull('subscribedCountries', instance.subscribedCountries);
   writeNotNull('phone', instance.phone);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('address', instance.address);

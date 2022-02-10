@@ -170,14 +170,20 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "data_connection_checker",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/data_connection_checker-0.3.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.2"
-    },
-    {
       "name": "dbus",
       "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/dbus-0.6.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info_platform_interface",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/device_info_platform_interface-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -998,7 +1004,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-02-02T07:45:10.733557Z",
+  "generated": "2022-02-10T10:27:23.192856Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

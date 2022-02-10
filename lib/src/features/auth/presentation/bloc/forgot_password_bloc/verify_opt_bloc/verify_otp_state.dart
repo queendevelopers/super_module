@@ -14,11 +14,11 @@ class VerifyOtpLoadFailure extends VerifyOtpState {
 }
 
 class VerifyOtpSuccess extends VerifyOtpState {
-  final String message;
+  final String? message;
   final String? token;
 
   VerifyOtpSuccess({
-    required this.message,
+    this.message,
     this.token,
   });
 }

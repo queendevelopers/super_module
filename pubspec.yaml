@@ -2,7 +2,7 @@ name: super_module
 description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
 repository: https://gitlab.com/swivt/super-module
 homepage: https://gitlab.com/swivt/super-module
-version: 0.0.6
+version: 0.2.0
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -17,7 +17,6 @@ dependencies:
   flutter_secure_storage: ^5.0.2
   google_sign_in: ^5.2.3
   json_serializable: ^6.1.4
-  data_connection_checker: ^0.3.4
   injectable: ^1.5.0
   get_it: ^7.2.0
   flutter_bloc: ^7.3.3
@@ -43,6 +42,7 @@ dependencies:
   meta: ^1.7.0
   json_annotation: ^4.4.0
   dio: ^4.0.4
+  device_info: ^2.0.2
 
 
 dev_dependencies:
