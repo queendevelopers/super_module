@@ -58,6 +58,8 @@ class SocialAuthRepository implements ISocialAuthRepository {
           await googleSignInAccount!.authentication;
       final model =
           await repository.loginWithGoogle(token: authentication.accessToken!);
+      debugPrint(authentication.accessToken);
+      debugPrint(authentication.idToken);
       return model;
     } catch (e) {
       return SocialModel(ok: false, message: '${e.toString()}');

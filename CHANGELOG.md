@@ -49,6 +49,3 @@
 - Firebase push notification code cleanup & better implementation.
 - Fixed suggestion warnings.
 - Code refactor with dartfmt
-
-
-
