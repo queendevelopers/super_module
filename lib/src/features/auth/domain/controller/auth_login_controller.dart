@@ -19,13 +19,14 @@ abstract class IAuthLoginController {
   Future<LoginModel> authLogin(
       {required String email, required String password});
 
-  Future<LoginModel> registerUser(
-      {String? username,
-      required String name,
-      required String email,
-      required String phone,
-      String address,
-      required String password});
+  Future<LoginModel> registerUser({
+    String? username,
+    required String name,
+    required String email,
+    required String phone,
+    String? address,
+    required String password,
+  });
 
   Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByPhone({
     required String phone,

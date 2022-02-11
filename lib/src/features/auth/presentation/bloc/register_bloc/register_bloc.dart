@@ -27,10 +27,11 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       yield RegisterLoadingState();
       final response = await controller.registerUser(
           username: event.username,
-          name: event.fullName,
+          name: event.fullName!,
           email: event.email,
           password: event.password,
-          phone: event.phone);
+          phone: event.phone,
+          address: event.address);
       if (response.ok) {
         if (response.user != null) {
           await sessionManager.saveCurrentUser(user: response.user!);

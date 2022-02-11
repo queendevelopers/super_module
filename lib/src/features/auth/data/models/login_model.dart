@@ -7,7 +7,7 @@ part 'login_model.g.dart';
 class LoginModel {
   final bool ok;
   final String? accessToken;
-  final String message;
+  final String? message;
   final String? key;
   final UserModel? user;
 
