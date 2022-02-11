@@ -151,7 +151,7 @@ class AuthLoginController implements IAuthLoginController {
 
   @override
   Future<GlobalResponseModel> getOtp({String? token}) async {
-    final data = await iAuthRemoteRepository.getOtp(token: token!);
+    final data = await iAuthRemoteRepository.getOtp(token: token);
     return data;
   }
 
