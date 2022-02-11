@@ -30,7 +30,11 @@ class SocialAuthRepository implements ISocialAuthRepository {
   }
 
   Future<SocialModel> facebookLogin() async {
-    await FacebookAuth.instance.logOut();
+    try{
+      await FacebookAuth.instance.logOut();
+    }catch(e){
+      debugPrint('Facebook logout ${e.toString()}');
+    }
     final LoginResult? result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
     switch (result!.status) {
