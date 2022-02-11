@@ -30,6 +30,7 @@ class SocialAuthRepository implements ISocialAuthRepository {
   }
 
   Future<SocialModel> facebookLogin() async {
+    await FacebookAuth.instance.logOut();
     final LoginResult? result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
     switch (result!.status) {
@@ -51,6 +52,9 @@ class SocialAuthRepository implements ISocialAuthRepository {
 
   Future<SocialModel> googleLoginIn() async {
     GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email']);
+    if(await googleSignIn.isSignedIn()){
+      await googleSignIn.signOut();
+    }
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await googleSignIn.signIn();
