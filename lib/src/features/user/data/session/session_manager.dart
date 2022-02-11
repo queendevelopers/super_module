@@ -136,7 +136,7 @@ class SessionManager implements ISessionManager {
     try {
       final SharedPreferences _sharedPreferences =
           await SharedPreferences.getInstance();
-      return await _sharedPreferences.getString('userIp');
+      return _sharedPreferences.getString('userIp');
     } on Exception {
       rethrow;
     }
@@ -168,11 +168,9 @@ class SessionManager implements ISessionManager {
       debugPrint('Getting search from local');
       List<StoreRecentSearchEntity> historyItem = [];
       List<String> nameHistoryList =
-          await _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ??
-              [];
+          _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ?? [];
       List<String> dateHistoryList =
-          await _sharedPreferences.getStringList(SuperKeys.searchHistoryDate) ??
-              [];
+          _sharedPreferences.getStringList(SuperKeys.searchHistoryDate) ?? [];
       debugPrint(
           'processing data ${nameHistoryList.length} ${nameHistoryList.last}');
       for (int i = 0; i < nameHistoryList.length; i++) {
@@ -200,14 +198,12 @@ class SessionManager implements ISessionManager {
     try {
       final SharedPreferences _sharedPreferences =
           await SharedPreferences.getInstance();
-      if (searchItem != null && searchItem.trim().isNotEmpty) {
+      if (searchItem.trim().isNotEmpty) {
         debugPrint('storing current search item $searchItem');
-        List<String> nameHistoryList = await _sharedPreferences
-                .getStringList(SuperKeys.searchHistoryName) ??
-            [];
-        List<String> dateHistoryList = await _sharedPreferences
-                .getStringList(SuperKeys.searchHistoryDate) ??
-            [];
+        List<String> nameHistoryList =
+            _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ?? [];
+        List<String> dateHistoryList =
+            _sharedPreferences.getStringList(SuperKeys.searchHistoryDate) ?? [];
         nameHistoryList.add(searchItem);
         dateHistoryList.add(DateTime.now().toString());
         await _sharedPreferences.setStringList(

@@ -34,7 +34,7 @@ abstract class IAuthRemoteRepository {
 
   Future<SocialModel> loginWithApple({required String token});
 
-  Future<GlobalResponseModel> getOtp({String token});
+  Future<GlobalResponseModel> getOtp({String? token});
 
   Future<GlobalResponseModel> verifyOtp(int otpCode);
 

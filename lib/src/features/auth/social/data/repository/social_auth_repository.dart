@@ -30,24 +30,16 @@ class SocialAuthRepository implements ISocialAuthRepository {
   }
 
   Future<SocialModel> facebookLogin() async {
-    // FacebookLogin facebookSignIn = FacebookLogin();
+    try{
+      await FacebookAuth.instance.logOut();
+    }catch(e){
+      debugPrint('Facebook logout ${e.toString()}');
+    }
     final LoginResult? result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
-
-    // if (result.status == LoginStatus.success) {
-    //   // facebookSignIn.logOut();
-    //   debugPrint('loggout from facebook');
-    // }
-    // final FacebookLoginResult result = await facebookSignIn.logIn([
-    //   'email',
-    // ]);
-
-    // facebookSignIn.loginBehavior = FacebookLoginBehavior.nativeWithFallback;
     switch (result!.status) {
       case LoginStatus.success:
         final AccessToken? accessToken = result.accessToken;
-
-        // final FacebookAccessToken accessToken = result.accessToken;
         SocialModel model =
             await repository.loginWithFacebook(token: accessToken!.token);
         debugPrint(accessToken.expires.toString());
@@ -64,21 +56,21 @@ class SocialAuthRepository implements ISocialAuthRepository {
 
   Future<SocialModel> googleLoginIn() async {
     GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email']);
+    if(await googleSignIn.isSignedIn()){
+      await googleSignIn.signOut();
+    }
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await googleSignIn.signIn();
       GoogleSignInAuthentication authentication =
           await googleSignInAccount!.authentication;
-      debugPrint('AuthCode ${authentication.accessToken}');
       final model =
           await repository.loginWithGoogle(token: authentication.accessToken!);
+      debugPrint(authentication.accessToken);
+      debugPrint(authentication.idToken);
       return model;
     } catch (e) {
-      // rethrow;
-      print("error===>${e}");
-      // return null;
-      return SocialModel(
-          ok: false, message: 'User has cancel login with google');
+      return SocialModel(ok: false, message: '${e.toString()}');
     }
   }
 }

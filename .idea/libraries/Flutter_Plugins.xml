@@ -23,6 +23,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-5.0.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.8" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+5" />
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-9.2.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.18" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.0.4" />
@@ -31,6 +32,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth-4.0.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.0.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/local_auth-1.1.10" />
+=======
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.3" />
+>>>>>>> develop
     </CLASSES>
     <JAVADOC />
     <SOURCES />
