@@ -6,10 +6,10 @@ abstract class VerifyOtpEvent {}
 class VerifyOtpButtonTapEvent extends VerifyOtpEvent {
   final int otpCode;
   final bool navigateToHome;
-  final String key;
+  final String? key;
 
   VerifyOtpButtonTapEvent(
-      {required this.otpCode, required this.navigateToHome, required this.key});
+      {required this.otpCode, required this.navigateToHome, this.key});
 }
 
 class GetOtpEvent extends VerifyOtpEvent {

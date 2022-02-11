@@ -6,7 +6,7 @@ part 'forgot_password_pin_verification_response_model.g.dart';
 @JsonSerializable()
 class ForgotPasswordPinVerificationResponseModel {
   bool ok;
-  String message;
+  String? message;
   String? token;
   String? key;
   UserModel? user;

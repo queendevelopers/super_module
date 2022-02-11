@@ -9,7 +9,3 @@ class LoginButtonTapEvent extends LoginEvent {
 
   LoginButtonTapEvent({required this.email, required this.password});
 }
-
-class LoginWithFaceBookTapEvent extends LoginEvent {}
-
-class LoginWithGoogleTapEvent extends LoginEvent {}

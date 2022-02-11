@@ -14,7 +14,7 @@ AddressModel _$AddressModelFromJson(Map<String, dynamic> json) => AddressModel(
       json['postcode'] as String,
       json['pedestrian'] as String,
       json['country_code'] as String,
-      json['city_district'] as String,
+      json['country_district'] as String,
       json['county'] as String,
     );
 
@@ -27,6 +27,6 @@ Map<String, dynamic> _$AddressModelToJson(AddressModel instance) =>
       'country': instance.country,
       'postcode': instance.postcode,
       'pedestrian': instance.pedestrian,
-      'country_code': instance.country_code,
-      'city_district': instance.city_district,
+      'country_code': instance.countryCode,
+      'country_district': instance.cityDistrict,
     };

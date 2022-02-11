@@ -112,7 +112,6 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
       ForgotPasswordPinVerificationRequestModel
           forgotPasswordPinVerificationRequestModel) async {
     try {
-      final token = await sessionManager.getToken();
       final response = await httpHelper.request(
           forgotPasswordPinVerificationRequestModel.password!.isNotEmpty
               ? ChangePasswordRequestEndPoint()
