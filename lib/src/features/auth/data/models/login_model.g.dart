@@ -9,7 +9,7 @@ part of 'login_model.dart';
 LoginModel _$LoginModelFromJson(Map<String, dynamic> json) => LoginModel(
       json['ok'] as bool,
       json['accessToken'] as String?,
-      json['message'] as String,
+      json['message'] as String?,
       json['user'] == null
           ? null
           : UserModel.fromJson(json['user'] as Map<String, dynamic>),

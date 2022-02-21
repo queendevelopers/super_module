@@ -10,6 +10,7 @@ class RegisterButtonTapEvent extends RegisterEvent {
   final String password;
   final String phone;
   final String? address;
+  final String? role;
 
   RegisterButtonTapEvent({
     this.username,
@@ -18,6 +19,7 @@ class RegisterButtonTapEvent extends RegisterEvent {
     required this.password,
     this.address,
     required this.phone,
+    required this.role,
   });
 }
 
