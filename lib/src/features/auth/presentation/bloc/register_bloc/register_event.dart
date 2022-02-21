@@ -19,7 +19,7 @@ class RegisterButtonTapEvent extends RegisterEvent {
     required this.password,
     this.address,
     required this.phone,
-    required this.role,
+    this.role,
   });
 }
 
