@@ -26,12 +26,14 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     if (event is RegisterButtonTapEvent) {
       yield RegisterLoadingState();
       final response = await controller.registerUser(
-          username: event.username,
-          name: event.fullName!,
-          email: event.email,
-          password: event.password,
-          phone: event.phone,
-          address: event.address);
+        username: event.username,
+        name: event.fullName!,
+        email: event.email,
+        password: event.password,
+        phone: event.phone,
+        address: event.address,
+        role: event.role,
+      );
       if (response.ok) {
         if (response.user != null) {
           await sessionManager.saveCurrentUser(user: response.user!);
