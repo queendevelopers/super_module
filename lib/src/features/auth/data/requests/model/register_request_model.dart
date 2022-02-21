@@ -11,14 +11,17 @@ class RegisterRequestModel extends BaseRequestModel {
   final String? phone;
   final String? address;
   final String password;
+  final String? role;
 
-  RegisterRequestModel(
-      {this.name,
-      required this.email,
-      this.phone,
-      this.address,
-      required this.password,
-      this.username});
+  RegisterRequestModel({
+    this.name,
+    required this.email,
+    this.phone,
+    this.address,
+    required this.password,
+    this.username,
+    this.role,
+  });
 
   factory RegisterRequestModel.fromJson(Map<String, dynamic> json) =>
       _$RegisterRequestModelFromJson(json);
