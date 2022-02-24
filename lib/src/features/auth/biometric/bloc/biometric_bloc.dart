@@ -70,13 +70,17 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
       // PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
       var privateKey = parse(local!.privateKey!);
+      var publicKey = parse(local!.publickey!);
       print(privateKey.toString());
       Uint8List sstr = utf8.encode(local.encKey!) as Uint8List;
 
-      final enstr =
-          encryptByPrivateKey(utf8.decode(sstr), privateKey as RSAPrivateKey);
+      final enstr = encryptByPrivateKey(
+        sstr,
+        publicKey as RSAPublicKey,
+        privateKey as RSAPrivateKey,
+      );
       if (enstr != null) {
-        final encKey = base64Encode(utf8.encode(enstr));
+        final encKey = base64Encode(enstr);
         print(local.publickey);
         print(local.privateKey);
 
@@ -86,10 +90,11 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
 
         if (response.ok) {
           final utf8List = decryptByPrivateKey(
-              utf8.decode(base64.decode(response.data!.encryptedAccessToken)),
+              (base64.decode(response.data.encryptedAccessToken)),
+              local.publickey as RSAPublicKey,
               local.privateKey! as RSAPrivateKey);
           if (utf8List != null) {
-            String token = utf8.decode(utf8.encode(utf8List));
+            String token = utf8.decode((utf8List));
             yield AuthenticateWithBiometricFetchSuccess(token);
           }
           return;
