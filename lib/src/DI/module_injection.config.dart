@@ -93,10 +93,10 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
   gh.factory<_i31.VerifyOtpBloc>(() => _i31.VerifyOtpBloc(
       get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
   gh.factory<_i32.BiometricBloc>(() => _i32.BiometricBloc(
-      get<_i18.IAuthRemoteRepository>(),
-      get<_i10.ISessionManager>(),
+      get<_i24.IAuthRemoteRepository>(),
+      get<_i24.ISessionManager>(),
       get<_i27.IAuthLoginController>(),
-      get<_i7.IAppManager>()));
+      get<_i24.IAppManager>()));
   gh.factory<_i33.ChangeForgotPasswordBloc>(() => _i33.ChangeForgotPasswordBloc(
       get<_i27.IAuthLoginController>(), get<_i10.ISessionManager>()));
   return get;

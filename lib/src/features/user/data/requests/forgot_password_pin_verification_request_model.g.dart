@@ -15,6 +15,7 @@ ForgotPasswordPinVerificationRequestModel
           phone: json['phone'] as String?,
           newPassword: json['newPassword'] as String?,
           token: json['token'] as String?,
+          email: json['email'] as String?,
           password: json['password'] as String? ?? '',
         );
 
@@ -32,6 +33,7 @@ Map<String, dynamic> _$ForgotPasswordPinVerificationRequestModelToJson(
   writeNotNull('code', instance.code);
   writeNotNull('password', instance.password);
   writeNotNull('phone', instance.phone);
+  writeNotNull('email', instance.email);
   writeNotNull('newPassword', instance.newPassword);
   writeNotNull('token', instance.token);
   return val;

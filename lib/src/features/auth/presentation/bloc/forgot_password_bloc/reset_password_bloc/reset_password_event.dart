@@ -8,3 +8,9 @@ class ResetPasswordButtonTapEvent extends ResetPasswordEvent {
 
   ResetPasswordButtonTapEvent({required this.phone});
 }
+
+class ResetPasswordEmailButtonTapEvent extends ResetPasswordEvent {
+  final ForgotPasswordPinVerificationRequestModel model;
+
+  ResetPasswordEmailButtonTapEvent({required this.model});
+}
