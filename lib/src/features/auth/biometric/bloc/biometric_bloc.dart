@@ -70,7 +70,7 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
       // PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
       var privateKey = parse(local!.privateKey!);
-      var publicKey = parse(local!.publickey!);
+      var publicKey = parse(local.publickey!);
       print(privateKey.toString());
       Uint8List sstr = utf8.encode(local.encKey!) as Uint8List;
 
@@ -100,7 +100,7 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
           return;
         }
         yield AuthenticateWithBiometricFetchFailure(
-            response.message ?? 'An unknown error occurred.');
+            response.message);
       }
     } else if (event is BiometricsStatusCheckEvent) {
       if (event.status != null) {
