@@ -49,6 +49,10 @@ abstract class IAuthLoginController {
 
   Future<GlobalResponseModel> checkUsername({String username});
 
+  Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByEmail({
+    required ForgotPasswordPinVerificationRequestModel model,
+  });
+
   Future<BiometricRegisterResponseModel> registerBiometric(
       {required String publicKey, required String deviceId});
 }
@@ -183,5 +187,11 @@ class AuthLoginController implements IAuthLoginController {
       deviceId: deviceId,
     ));
     return data;
+  }
+
+  @override
+  Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByEmail(
+      {required ForgotPasswordPinVerificationRequestModel model}) {
+    return iAuthRemoteRepository.resetPasswordByEmail(model);
   }
 }

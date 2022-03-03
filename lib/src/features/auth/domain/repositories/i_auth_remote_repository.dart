@@ -28,6 +28,10 @@ abstract class IAuthRemoteRepository {
       ForgotPasswordPinVerificationRequestModel
           forgotPasswordPinVerificationRequestModel);
 
+  Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByEmail(
+      ForgotPasswordPinVerificationRequestModel
+          forgotPasswordPinVerificationRequestModel);
+
   Future<SocialModel> loginWithFacebook({required String token});
 
   Future<SocialModel> loginWithGoogle({required String token});
