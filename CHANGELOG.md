@@ -49,3 +49,10 @@
 - Firebase push notification code cleanup & better implementation.
 - Fixed suggestion warnings.
 - Code refactor with dartfmt
+
+
+## [0.3.5] - 27 FEB 2022
+- Fixed Biometrics issue
+
+## [0.3.6] - 3 MAR 2022
+- Added verification with email
