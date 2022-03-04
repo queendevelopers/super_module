@@ -10,10 +10,6 @@ import 'package:local_auth/local_auth.dart';
 import 'package:pointycastle/asymmetric/api.dart';
 import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
 import 'package:super_module/src/features/auth/domain/controller/auth_login_controller.dart';
-import 'package:super_module/src/features/auth/domain/repositories/i_auth_remote_repository.dart';
-import 'package:super_module/src/features/user/data/session/i_app_manager.dart';
-import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
-
 import '../../../../../super_module.dart';
 
 part 'biometric_event.dart';
@@ -79,29 +75,25 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
         publicKey as RSAPublicKey,
         privateKey as RSAPrivateKey,
       );
-      if (enstr != null) {
-        final encKey = base64Encode(enstr);
-        print(local.publickey);
-        print(local.privateKey);
+      final encKey = base64Encode(enstr);
+      print(local.publickey);
+      print(local.privateKey);
 
-        final response = await repository.authenticateWithBiometrics(
-            BiometricRegisterModel(
-                id: local.id, encKey: encKey, deviceId: local.deviceId));
+      final response = await repository.authenticateWithBiometrics(
+          BiometricRegisterModel(
+              id: local.id, encKey: encKey, deviceId: local.deviceId));
 
-        if (response.ok) {
-          final utf8List = decryptByPrivateKey(
-              (base64.decode(response.data.encryptedAccessToken)),
-              local.publickey as RSAPublicKey,
-              local.privateKey! as RSAPrivateKey);
-          if (utf8List != null) {
-            String token = utf8.decode((utf8List));
-            yield AuthenticateWithBiometricFetchSuccess(token);
-          }
-          return;
-        }
-        yield AuthenticateWithBiometricFetchFailure(
-            response.message);
+      if (response.ok) {
+        final utf8List = decryptByPrivateKey(
+            (base64.decode(response.data.encryptedAccessToken)),
+            local.publickey as RSAPublicKey,
+            local.privateKey! as RSAPrivateKey);
+        String token = utf8.decode((utf8List));
+        yield AuthenticateWithBiometricFetchSuccess(token);
+        return;
       }
+      yield AuthenticateWithBiometricFetchFailure(
+          response.message);
     } else if (event is BiometricsStatusCheckEvent) {
       if (event.status != null) {
         if (!event.status!) {

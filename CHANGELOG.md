@@ -56,3 +56,9 @@
 
 ## [0.3.6] - 3 MAR 2022
 - Added verification with email
+
+## [0.3.8] - 3 MAR 2022
+- Removed testbloc
+- Code refactor
+- Build runner DI
+- Dart analysis optimized
