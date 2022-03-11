@@ -8,10 +8,10 @@ deploy_pubspec:
     - dart pub publish -f
   after_script:
     - git add pubspec.yaml
-    - git config --global user.name "Gitlab CI"
+    - git config user.name "Gitlab CI"
     - git config user.email "noreply@swivt.com.np"
     - git commit -m "version upgraded."
-    - git remote add ssh-origin git@gitlab.com:swivt/super-module.git
+    - git config remote.ssh-origin.url >&- || git remote add ssh-origin git@gitlab.com:swivt/super-module.git
     - git push ssh-origin HEAD:develop
   tags:
     - dart
