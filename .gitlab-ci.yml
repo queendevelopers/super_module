@@ -9,6 +9,7 @@ deploy_pubspec:
   after_script:
     - git add pubspec.yaml
     - git commit -m "version upgraded."
-    - git push
+    - git remote add ssh-origin git@gitlab.com:swivt/super-module.git
+    - git push ssh-origin HEAD:${CI_BUILD_REF_NAME}
   tags:
     - dart

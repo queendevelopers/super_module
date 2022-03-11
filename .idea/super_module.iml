@@ -225,6 +225,9 @@
       <excludeFolder url="file://$MODULE_DIR$/builds/6QcTe-Y3/0/swivt/world-story-app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/builds/6QcTe-Y3/0/swivt/world-story-app/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/builds/6QcTe-Y3/0/swivt/world-story-app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
