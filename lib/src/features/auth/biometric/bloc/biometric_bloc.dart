@@ -10,6 +10,7 @@ import 'package:local_auth/local_auth.dart';
 import 'package:pointycastle/asymmetric/api.dart';
 import 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
 import 'package:super_module/src/features/auth/domain/controller/auth_login_controller.dart';
+
 import '../../../../../super_module.dart';
 
 part 'biometric_event.dart';
@@ -86,14 +87,13 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
       if (response.ok) {
         final utf8List = decryptByPrivateKey(
             (base64.decode(response.data.encryptedAccessToken)),
-            local.publickey as RSAPublicKey,
-            local.privateKey! as RSAPrivateKey);
+            parse(local.publickey!) as RSAPublicKey,
+            parse(local.privateKey!) as RSAPrivateKey);
         String token = utf8.decode((utf8List));
         yield AuthenticateWithBiometricFetchSuccess(token);
         return;
       }
-      yield AuthenticateWithBiometricFetchFailure(
-          response.message);
+      yield AuthenticateWithBiometricFetchFailure(response.message);
     } else if (event is BiometricsStatusCheckEvent) {
       if (event.status != null) {
         if (!event.status!) {
