@@ -12,6 +12,6 @@ deploy_pubspec:
     - git config user.email "noreply@swivt.com.np"
     - git commit -m "version upgraded."
     - git config remote.ssh-origin.url >&- || git remote add ssh-origin git@gitlab.com:swivt/super-module.git
-    - git push ssh-origin HEAD:develop
+    - git push ssh-origin develop
   tags:
     - dart
