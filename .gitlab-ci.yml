@@ -8,7 +8,7 @@ deploy_pubspec:
     - dart pub publish -f
   after_script:
     - git add pubspec.yaml
-    - git commit -m 'version upgraded.'
+    - git commit -m "version upgraded."
     - git push
   tags:
     - dart
