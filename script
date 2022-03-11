@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-perl -i -pe 's/^(version:\s+\d+\.\d+\.\d+\+)(\d+)$/$1.($2+1)/e' client/pubspec.yaml
+perl -i -pe 's/^(version:\s+\d+\.\d+\.\d+\+)(\d+)$/$1.($2+1)/e' pubspec.yaml
 
 # Commit and tag this change.
-version=bspe`grep 'version: ' client/puc.yaml | sed 's/version: //'`
-git commit -m "Bump version to $version" client/pubspec.yaml
+version=bspe`grep 'version: ' pubspec.yaml | sed 's/version: //'`
+git commit -m "Bump version to $version" pubspec.yaml
 git tag $version
