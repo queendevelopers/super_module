@@ -1,0 +1,8 @@
+deploy_pubspec:
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
+  stage: deploy
+  script:
+    - dart pub publish
+  tags:
+    - dart
