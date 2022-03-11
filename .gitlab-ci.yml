@@ -5,8 +5,8 @@ deploy_pubspec:
   before_script:
 #    - git config --bool core.bare true
 #    - git config receive.denyCurrentBranch ignore
-    - git config user.name "Gitlab CI"
-    - git config user.email "noreply@swivt.com.np"
+    - git config user.name "gitlab-ci"
+    - git config user.email "app@swivt.com.np"
     - git clone git@gitlab.com:swivt/super-module.git
     - cd super-module
 #    - git checkout $CI_COMMIT_REF_NAME
