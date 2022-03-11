@@ -1,0 +1,6 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[http "https://gitlab.com"]
+	sslCAInfo = /Users/dev/StudioProjects/Flutter/GoSwivt/module/super_module/builds/sUzgkDVF/0/swivt/super-module.tmp/CI_SERVER_TLS_CA_FILE
