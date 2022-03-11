@@ -9,6 +9,9 @@ deploy_pubspec:
 #    - dart pub publish -f
 #    - pwd
   after_script:
+    - pwd
+    - ls
+    - git status
     - git clone git@gitlab.com:swivt/super-module.git
     - cd super-module
     - git config user.name "Gitlab CI"
@@ -16,7 +19,7 @@ deploy_pubspec:
     - git config remote.ssh-origin.url >&- || git remote add ssh-origin git@gitlab.com:swivt/super-module.git
     - git status
     - git branch -a
-    - git checkout origin $CI_COMMIT_REF_NAME
+    - git checkout origin/$CI_COMMIT_REF_NAME
     - git add ../pubspec.yaml
     - git commit -m "version upgraded."
     - git status
