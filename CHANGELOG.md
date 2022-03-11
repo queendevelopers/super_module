@@ -62,3 +62,6 @@
 - Code refactor
 - Build runner DI
 - Dart analysis optimized
+
+# [0.3.9] - 11 MAR 2022
+- fixed typecast error
