@@ -5,7 +5,7 @@ deploy_pubspec:
   before_script:
 #    - git config --bool core.bare true
 #    - git config receive.denyCurrentBranch ignore
-    - mkdir ~/.ssh/
+#    - mkdir ~/.ssh/
     - echo "${CI_KNOWN_HOSTS}" > ~/.ssh/known_hosts
     - echo "${SSH_PUSH_KEY}" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
