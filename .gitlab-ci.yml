@@ -5,10 +5,14 @@ deploy_pubspec:
   before_script:
 #    - git config --bool core.bare true
 #    - git config receive.denyCurrentBranch ignore
-    - git config user.name "app.goswivt"
-    - git config user.email "app@swivt.com.np"
+    - mkdir ~/.ssh/
+    - echo "${CI_KNOWN_HOSTS}" > ~/.ssh/known_hosts
+    - echo "${SSH_PUSH_KEY}" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
     - git clone git@gitlab.com:swivt/super-module.git
     - cd super-module
+    - git config user.name "app.goswivt"
+    - git config user.email "app@swivt.com.np"
 #    - git checkout $CI_COMMIT_REF_NAME
     - git fetch
     - git checkout $CI_COMMIT_REF_NAME
