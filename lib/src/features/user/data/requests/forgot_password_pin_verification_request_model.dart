@@ -9,6 +9,7 @@ class ForgotPasswordPinVerificationRequestModel extends BaseRequestModel {
   int? code;
   String? password;
   String? phone;
+  String? email;
   String? newPassword;
   String? token;
 
@@ -18,6 +19,7 @@ class ForgotPasswordPinVerificationRequestModel extends BaseRequestModel {
       this.phone,
       this.newPassword,
       this.token,
+      this.email,
       this.password = ''});
 
   factory ForgotPasswordPinVerificationRequestModel.fromJson(

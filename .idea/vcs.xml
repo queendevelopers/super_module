@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/builds/0/project-0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/builds/6QcTe-Y3/0/swivt/world-story-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/builds/sUzgkDVF/0/swivt/super-module" vcs="Git" />
   </component>
 </project>

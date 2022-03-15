@@ -31,6 +31,8 @@ import 'package:super_module/src/features/auth/domain/repositories/i_auth_remote
 import 'package:super_module/src/features/user/data/requests/forgot_password_pin_verification_request_model.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
+import '../requests/endpoints/reset_password_by_email_endpoint.dart';
+
 @Injectable(as: IAuthRemoteRepository)
 class AuthRemoteRepository implements IAuthRemoteRepository {
   final IHttpHelper httpHelper;
@@ -221,6 +223,25 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
           AuthAppleRequestEndpoint(token!), BaseRequestModel());
       return SocialModel.fromJson(response);
     } catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByEmail(
+      ForgotPasswordPinVerificationRequestModel
+          forgotPasswordPinVerificationRequestModel) async {
+    try {
+      final response = await httpHelper.request(
+          ResetPasswordByEmailRequestEndPoint(),
+          forgotPasswordPinVerificationRequestModel);
+      debugPrint(response.toString());
+      ForgotPasswordPinVerificationResponseModel model =
+          ForgotPasswordPinVerificationResponseModel.fromJson(response);
+      debugPrint(model.message);
+      return model;
+    } catch (e) {
+      debugPrint(e.toString());
       rethrow;
     }
   }
