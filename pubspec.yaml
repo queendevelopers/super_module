@@ -43,6 +43,10 @@ dependencies:
   json_annotation: ^4.4.0
   dio: ^4.0.4
   device_info: ^2.0.2
+  carrier_info: ^2.0.4
+  country_code_picker: ^2.0.2
+
+
 
 
 dev_dependencies:
