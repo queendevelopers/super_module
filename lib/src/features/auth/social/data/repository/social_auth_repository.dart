@@ -30,9 +30,9 @@ class SocialAuthRepository implements ISocialAuthRepository {
   }
 
   Future<SocialModel> facebookLogin() async {
-    try{
+    try {
       await FacebookAuth.instance.logOut();
-    }catch(e){
+    } catch (e) {
       debugPrint('Facebook logout ${e.toString()}');
     }
     final LoginResult? result = await FacebookAuth.instance
@@ -56,7 +56,7 @@ class SocialAuthRepository implements ISocialAuthRepository {
 
   Future<SocialModel> googleLoginIn() async {
     GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email']);
-    if(await googleSignIn.isSignedIn()){
+    if (await googleSignIn.isSignedIn()) {
       await googleSignIn.signOut();
     }
     try {
