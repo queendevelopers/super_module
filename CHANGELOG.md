@@ -65,3 +65,7 @@
 
 # [0.3.9] - 11 MAR 2022
 - fixed typecast error
+
+# [0.4.14] - 28 MAR 2022
+- Gallery permission set true for limited as well.
+- removed app_launcher which is causing issue on application. app_launcher now needs to be use from app.

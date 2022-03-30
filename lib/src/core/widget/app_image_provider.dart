@@ -49,7 +49,8 @@ class AppImageProvider {
       required BuildContext context}) async {
     final isPermissionGranted = source == ImageSource.camera
         ? await Permission.camera.isGranted
-        : await Permission.photos.isGranted;
+        : (await Permission.photos.isGranted ||
+            await Permission.photos.isLimited);
 
     debugPrint(isPermissionGranted.toString());
 

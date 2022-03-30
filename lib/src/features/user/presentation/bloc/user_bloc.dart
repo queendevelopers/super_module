@@ -35,7 +35,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         yield UserInformationUpdateSuccess(phone: result.data?.phone!);
         return;
       }
-      yield UserInformationUpdateFailure(message: result.message??'An unknown error occurred.');
+      yield UserInformationUpdateFailure(
+          message: result.message ?? 'An unknown error occurred.');
     }
   }
 }

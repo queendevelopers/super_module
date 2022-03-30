@@ -90,6 +90,12 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
             parse(local.publickey!) as RSAPublicKey,
             parse(local.privateKey!) as RSAPrivateKey);
         String token = utf8.decode((utf8List));
+        /*
+        storing token here coz passing token in optional parameter in rest client through headers is throwing
+        token expired due to also accepting old token through request interceptor. Please remove the following
+        code once this scenrio is fixed.
+         */
+        sessionManager.saveToken(accessToken: token);
         yield AuthenticateWithBiometricFetchSuccess(token);
         return;
       }
