@@ -5,9 +5,6 @@ export 'package:super_module/src/DI/module_injection.dart';
 export 'package:super_module/src/core/extension/cap_extension.dart';
 export 'package:super_module/src/core/super_keys.dart';
 export 'package:super_module/src/core/utils/app_icon.dart';
-export 'package:super_module/src/core/utils/app_launchers.dart';
-export 'package:super_module/src/core/utils/app_launchers.dart';
-export 'package:super_module/src/core/utils/app_launchers.dart';
 export 'package:super_module/src/core/utils/app_utils.dart';
 export 'package:super_module/src/core/utils/concat_image_url.dart';
 export 'package:super_module/src/core/utils/date_util.dart';
@@ -43,6 +40,7 @@ export 'package:super_module/src/features/user/data/model/page_limit_model.dart'
 export 'package:super_module/src/features/user/data/model/pagination_model.dart';
 export 'package:super_module/src/features/user/data/model/user_rank_model.dart';
 export 'package:super_module/src/features/user/data/model/user_rank_response_model.dart';
+export 'package:super_module/src/features/user/data/requests/forgot_password_pin_verification_request_model.dart';
 export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 export 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';

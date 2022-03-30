@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -214,5 +215,23 @@ class SessionManager implements ISessionManager {
     } on Exception {
       rethrow;
     }
+  }
+
+  @override
+  Future<void> saveCartCount(int count) async {
+    final box = await Hive.openBox<String>(SuperKeys.cartBox);
+    box.put(SuperKeys.cartCount, count.toString());
+  }
+
+  @override
+  Future<int> readCartCount() async {
+    final prefs = await Hive.openBox(SuperKeys.cartBox);
+    return prefs.get(SuperKeys.cartCount) ?? 0;
+  }
+
+  @override
+  Future<void> saveWishlistProduct(int key, bool value) async {
+    final box = await Hive.openBox<bool>(SuperKeys.wishlistBox);
+    box.put(key, value);
   }
 }

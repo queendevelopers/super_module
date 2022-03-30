@@ -104,8 +104,20 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "carrier_info",
-      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/carrier_info-2.0.4",
+      "name": "cached_network_image",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "cached_network_image_platform_interface",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image_platform_interface-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "cached_network_image_web",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image_web-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -154,12 +166,6 @@
     {
       "name": "convert",
       "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "country_code_picker",
-      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/country_code_picker-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -274,6 +280,12 @@
     {
       "name": "flutter_bloc",
       "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_blurhash",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.6.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -452,6 +464,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "hive",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/hive-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
       "packageUri": "lib/",
@@ -578,14 +596,14 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "modal_bottom_sheet",
-      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-2.0.1",
+      "name": "nested",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "nested",
-      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
+      "name": "octo_image",
+      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/octo_image-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -926,12 +944,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "universal_platform",
-      "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/universal_platform-1.0.0+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "url_launcher",
       "rootUri": "file:///C:/Users/HP%2014DQ/Downloads/flutter_windows_2.10.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.0.18",
       "packageUri": "lib/",
@@ -1034,7 +1046,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-15T08:53:31.245058Z",
+  "generated": "2022-03-30T07:29:45.074885Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }
