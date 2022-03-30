@@ -32,4 +32,10 @@ abstract class ISessionManager {
   Future<List<StoreRecentSearchEntity>> getHistorySearches();
 
   Future<void> deleteAllPreviousSearchHistory();
+
+  Future<void> saveCartCount(int count);
+
+  Future<void> saveWishlistProduct(int key, bool value);
+
+  Future<int> readCartCount();
 }
