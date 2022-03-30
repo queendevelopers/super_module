@@ -45,6 +45,10 @@ dependencies:
   device_info: ^2.0.2
   cached_network_image: ^3.2.0
   hive: ^2.1.0
+  carrier_info: ^2.0.4
+  country_code_picker: ^2.0.2
+
+
 
 
 dev_dependencies:
