@@ -224,13 +224,13 @@ class SessionManager implements ISessionManager {
   }
 
   @override
-  Future<int> readCartCount() async {
-    final prefs = await Hive.openBox(SuperKeys.cartBox);
-    return prefs.get(SuperKeys.cartCount) ?? 0;
+  Future<String> readCartCount() async {
+    final prefs = await Hive.openBox<String>(SuperKeys.cartBox);
+    return prefs.get(SuperKeys.cartCount) ?? '0';
   }
 
   @override
-  Future<void> saveWishlistProduct(int key, bool value) async {
+  Future<void> saveWishlistProduct(String key, bool value) async {
     final box = await Hive.openBox<bool>(SuperKeys.wishlistBox);
     box.put(key, value);
   }

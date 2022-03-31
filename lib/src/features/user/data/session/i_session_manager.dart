@@ -35,7 +35,7 @@ abstract class ISessionManager {
 
   Future<void> saveCartCount(int count);
 
-  Future<void> saveWishlistProduct(int key, bool value);
+  Future<void> saveWishlistProduct(String key, bool value);
 
-  Future<int> readCartCount();
+  Future<String> readCartCount();
 }
