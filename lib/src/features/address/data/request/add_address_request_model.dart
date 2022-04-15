@@ -6,6 +6,9 @@ part 'add_address_request_model.g.dart';
 @JsonSerializable(includeIfNull: false)
 class AddAddressRequestModel implements IRequestModel {
   final String? fullName;
+  final String? name;
+  final String? address;
+  final String? region;
   final String? phone;
   final String? city;
   final String? road;
@@ -19,6 +22,7 @@ class AddAddressRequestModel implements IRequestModel {
 
   AddAddressRequestModel(
       {this.fullName,
+      this.name, this.address, this.region, 
       this.phone,
       this.city,
       this.road,
