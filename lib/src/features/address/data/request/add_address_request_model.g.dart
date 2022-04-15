@@ -10,6 +10,9 @@ AddAddressRequestModel _$AddAddressRequestModelFromJson(
         Map<String, dynamic> json) =>
     AddAddressRequestModel(
       fullName: json['fullName'] as String?,
+      name: json['name'] as String?,
+      address: json['address'] as String?,
+      region: json['region'] as String?,
       phone: json['phone'] as String?,
       city: json['city'] as String?,
       road: json['road'] as String?,
@@ -33,6 +36,9 @@ Map<String, dynamic> _$AddAddressRequestModelToJson(
   }
 
   writeNotNull('fullName', instance.fullName);
+  writeNotNull('name', instance.name);
+  writeNotNull('address', instance.address);
+  writeNotNull('region', instance.region);
   writeNotNull('phone', instance.phone);
   writeNotNull('city', instance.city);
   writeNotNull('road', instance.road);
