@@ -16,6 +16,9 @@ ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) =>
       json['addressInfo'] as String?,
       json['lat'] as String?,
       json['lng'] as String?,
+      json['name'] as String?,
+      json['address'] as String?,
+      json['region'] as String?,
     );
 
 Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
@@ -23,6 +26,9 @@ Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
       '_id': instance.id,
       'user': instance.user,
       'fullName': instance.fullName,
+      'name': instance.name,
+      'address': instance.address,
+      'region': instance.region,
       'phone': instance.phone,
       'googleAddress': instance.googleAddress,
       'addressInfo': instance.addressInfo,

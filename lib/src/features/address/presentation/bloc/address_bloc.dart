@@ -43,6 +43,9 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
         yield AddAddressPostState();
         final requestModel = AddAddressRequestModel(
           fullName: event.fullName,
+          name: event.name,
+          address: event.address,
+          region: event.region,
           phone: event.phone,
           city: event.city,
           road: event.road,
