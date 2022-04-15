@@ -8,6 +8,9 @@ class ShippingAddress {
   final String? id;
   final String? user;
   final String? fullName;
+  final String? name;
+  final String? address;
+  final String? region;
   final String? phone;
   final String? googleAddress;
   final String? addressInfo;
@@ -15,7 +18,7 @@ class ShippingAddress {
   final String? lng;
 
   ShippingAddress(this.id, this.user, this.fullName, this.phone,
-      this.googleAddress, this.addressInfo, this.lat, this.lng);
+      this.googleAddress, this.addressInfo, this.lat, this.lng, this.name, this.address, this.region);
 
   factory ShippingAddress.fromJson(Map<String, dynamic> json) =>
       _$ShippingAddressFromJson(json);
