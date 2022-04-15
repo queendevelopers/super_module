@@ -95,7 +95,10 @@ class BiometricBloc extends Bloc<BiometricEvent, BiometricState> {
         token expired due to also accepting old token through request interceptor. Please remove the following
         code once this scenrio is fixed.
          */
-        sessionManager.saveToken(accessToken: token);
+        // sessionManager.saveToken(accessToken: token);
+        if (!(await sessionManager.isAuthenticated)) {
+          sessionManager.clearSession();
+        }
         yield AuthenticateWithBiometricFetchSuccess(token);
         return;
       }

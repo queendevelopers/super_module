@@ -55,7 +55,7 @@ class SessionManager implements ISessionManager {
     try {
       await _secureStorage.delete(key: SuperKeys.userKey);
       await _secureStorage.delete(key: SuperKeys.tokenKey);
-      debugPrint('session cleared');
+      debugPrint('session cleared successfully!!');
     } on Exception {
       rethrow;
     }
@@ -79,7 +79,6 @@ class SessionManager implements ISessionManager {
       if (resultSting != null) {
         BiometricRegisterModel user =
             BiometricRegisterModel.fromJson(json.decode(resultSting));
-        debugPrint('Biometric Information $resultSting');
         return Future.value(user);
       }
       return null;
@@ -105,7 +104,6 @@ class SessionManager implements ISessionManager {
     try {
       final stringUser = await _secureStorage.read(key: SuperKeys.userKey);
       if (stringUser != null) {
-        debugPrint('user $stringUser');
         UserModel user = UserModel.fromJson(json.decode(stringUser));
         debugPrint('User ${user.name} reading from local storage.');
         return Future.value(user);
@@ -152,7 +150,6 @@ class SessionManager implements ISessionManager {
       final response = await dio.get('https://api.ipify.org/?format=json');
       if (response.statusCode == 200) {
         final String userIp = response.data['ip'];
-        debugPrint('user ip address $userIp');
         await _sharedPreferences.setString('userIp', userIp);
       }
     } on Exception {
@@ -166,20 +163,16 @@ class SessionManager implements ISessionManager {
       // deleteAllPreviousSearchHistory();
       final SharedPreferences _sharedPreferences =
           await SharedPreferences.getInstance();
-      debugPrint('Getting search from local');
       List<StoreRecentSearchEntity> historyItem = [];
       List<String> nameHistoryList =
           _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ?? [];
       List<String> dateHistoryList =
           _sharedPreferences.getStringList(SuperKeys.searchHistoryDate) ?? [];
-      debugPrint(
-          'processing data ${nameHistoryList.length} ${nameHistoryList.last}');
       for (int i = 0; i < nameHistoryList.length; i++) {
         debugPrint('$i  ${nameHistoryList[i]}');
         historyItem.add(StoreRecentSearchEntity(
             name: nameHistoryList[i], searchDate: dateHistoryList[i]));
       }
-      debugPrint('Getting last index from search list ${historyItem.last}');
       return historyItem;
     } catch (e) {
       rethrow;
@@ -200,7 +193,6 @@ class SessionManager implements ISessionManager {
       final SharedPreferences _sharedPreferences =
           await SharedPreferences.getInstance();
       if (searchItem.trim().isNotEmpty) {
-        debugPrint('storing current search item $searchItem');
         List<String> nameHistoryList =
             _sharedPreferences.getStringList(SuperKeys.searchHistoryName) ?? [];
         List<String> dateHistoryList =
