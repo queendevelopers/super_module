@@ -5,6 +5,7 @@ export 'package:super_module/src/DI/module_injection.dart';
 export 'package:super_module/src/core/extension/cap_extension.dart';
 export 'package:super_module/src/core/super_keys.dart';
 export 'package:super_module/src/core/utils/app_icon.dart';
+export 'package:super_module/src/core/utils/app_launchers.dart';
 export 'package:super_module/src/core/utils/app_utils.dart';
 export 'package:super_module/src/core/utils/concat_image_url.dart';
 export 'package:super_module/src/core/utils/date_util.dart';

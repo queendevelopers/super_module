@@ -30,7 +30,9 @@ class AddAddressEvent extends AddressEvent {
   AddAddressEvent(
       {this.fullName,
       this.phone,
-      this.name, this.region, this.address, 
+      this.name,
+      this.region,
+      this.address,
       this.city,
       this.road,
       this.building,

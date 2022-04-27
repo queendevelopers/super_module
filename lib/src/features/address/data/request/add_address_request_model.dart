@@ -22,7 +22,9 @@ class AddAddressRequestModel implements IRequestModel {
 
   AddAddressRequestModel(
       {this.fullName,
-      this.name, this.address, this.region, 
+      this.name,
+      this.address,
+      this.region,
       this.phone,
       this.city,
       this.road,
