@@ -47,7 +47,6 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
           await httpHelper.request(AuthLoginRequestEndPoint(), requestModel);
       debugPrint(response.toString());
       LoginModel model = LoginModel.fromJson(response);
-      debugPrint('passed');
       return model;
     } catch (e) {
       debugPrint(e.toString());
@@ -115,7 +114,7 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
           forgotPasswordPinVerificationRequestModel) async {
     try {
       final response = await httpHelper.request(
-          forgotPasswordPinVerificationRequestModel.password!.isNotEmpty
+          forgotPasswordPinVerificationRequestModel.password != null
               ? ChangePasswordRequestEndPoint()
               : ChangeForgotPasswordRequestEndPoint(),
           forgotPasswordPinVerificationRequestModel);

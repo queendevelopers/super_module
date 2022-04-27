@@ -4,10 +4,10 @@ part of 'change_forgot_password_bloc.dart';
 abstract class ChangeForgotPasswordEvent {}
 
 class ChangeForgotPasswordButtonTapEvent extends ChangeForgotPasswordEvent {
-  final String oldPassword;
-  final String newPassword;
+  final String? oldPassword;
+  final String? newPassword;
   final String? token;
 
   ChangeForgotPasswordButtonTapEvent(
-      {required this.oldPassword, required this.newPassword, this.token});
+      { this.oldPassword, this.newPassword, this.token});
 }

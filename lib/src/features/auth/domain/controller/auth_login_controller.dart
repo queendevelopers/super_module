@@ -37,9 +37,7 @@ abstract class IAuthLoginController {
       {required int otpCode, required bool navigateToHome, String? key});
 
   Future<ForgotPasswordPinVerificationResponseModel> changeForgotPassword(
-      {required String oldPassword,
-      required String newPassword,
-      String? token});
+      {String? oldPassword, String? newPassword, String? token});
 
   Future<SocialModel> loginWithFacebook();
 
