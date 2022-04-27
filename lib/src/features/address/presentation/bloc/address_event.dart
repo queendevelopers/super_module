@@ -13,6 +13,9 @@ class GetDefaultAddressEvent extends AddressEvent {}
 
 class AddAddressEvent extends AddressEvent {
   final String? fullName;
+  final String? name;
+  final String? region;
+  final String? address;
   final String? phone;
   final String? city;
   final String? road;
@@ -27,6 +30,9 @@ class AddAddressEvent extends AddressEvent {
   AddAddressEvent(
       {this.fullName,
       this.phone,
+      this.name,
+      this.region,
+      this.address,
       this.city,
       this.road,
       this.building,
