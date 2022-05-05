@@ -19,8 +19,6 @@ export 'package:super_module/src/core/utils/spacing_utils.dart';
 export 'package:super_module/src/core/utils/validator.dart';
 export 'package:super_module/src/core/widget/app_country_picker.dart';
 export 'package:super_module/src/core/widget/app_image_provider.dart';
-export 'package:super_module/src/core/widget/app_launchers.dart';
-export 'package:super_module/src/core/widget/app_launchers.dart';
 export 'package:super_module/src/core/widget/full_screen_image_widget.dart';
 export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';
 export 'package:super_module/src/features/auth/biometric/bloc/biometric_bloc.dart';
