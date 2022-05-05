@@ -2,7 +2,7 @@ name: super_module
 description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
 repository: https://gitlab.com/swivt/super-module
 homepage: https://gitlab.com/swivt/super-module
-version: 0.4.27+27
+version: 0.4.28+28
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -11,41 +11,41 @@ dependencies:
   flutter:
     sdk: flutter
 
-  local_auth: ^1.1.7
+  local_auth: ^2.0.0
   flutter_easyloading: ^3.0.3
   jwt_decode: ^0.3.1
   flutter_secure_storage: ^5.0.2
-  google_sign_in: ^5.2.3
-  json_serializable: ^6.1.4
-  injectable: ^1.5.0
+  google_sign_in: ^5.3.0
+  json_serializable: ^6.2.0
+  injectable: ^1.5.3
   get_it: ^7.2.0
-  flutter_bloc: ^7.3.3
-  shared_preferences: ^2.0.12
-  pointycastle: ^3.3.4
-  asn1lib: ^1.0.2
-  sign_in_with_apple: ^3.0.0
-  flutter_facebook_auth: ^4.0.1
-  basic_utils: ^4.0.1
-  firebase_messaging: ^11.2.6
-  flutter_local_notifications: ^9.2.0
+  flutter_bloc: ^7.2.0
+  shared_preferences: ^2.0.13
+  pointycastle: ^3.6.0
+  asn1lib: ^1.1.0
+  sign_in_with_apple: ^3.3.0
+  flutter_facebook_auth: ^4.3.0
+  basic_utils: ^4.2.1
+  firebase_messaging: ^11.3.0
+  flutter_local_notifications: ^9.5.0
   flutter_image_compress: ^1.1.0
-  path_provider: ^2.0.8
+  path_provider: ^2.0.9
   flutter_svg: ^1.0.3
-  url_launcher: ^6.0.18
+  url_launcher: ^6.1.0
   flutter_cache_manager: ^3.3.0
   photo_view: ^0.13.0
-  permission_handler: ^8.2.6
-  image_picker: ^0.8.4+4
-  flutter_rest_client: ^0.0.1
+  permission_handler: ^9.2.0
+  image_picker: ^0.8.5
+  flutter_rest_client: ^0.0.7
   bloc: ^7.2.1
   intl: ^0.17.0
   meta: ^1.7.0
-  json_annotation: ^4.4.0
-  dio: ^4.0.4
-  device_info: ^2.0.2
+  json_annotation: ^4.5.0
+  dio: ^4.0.6
+  device_info: ^2.0.3
   cached_network_image: ^3.2.0
   hive: ^2.1.0
-  carrier_info: ^2.0.4
+  carrier_info: ^2.0.5
   country_code_picker: ^2.0.2
 
 
@@ -55,6 +55,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  build_runner: ^2.1.2
-  injectable_generator: ^1.5.2
+  build_runner: ^2.1.10
+  injectable_generator: ^1.5.3
   flutter_launcher_icons: ^0.9.2
