@@ -10,6 +10,8 @@ class UserModel extends BaseRequestModel {
   final String? role;
   final String? status;
   final bool? social;
+  final int shotsDiscovered;
+  final int rank;
   final String? language;
   @JsonKey(name: '_id')
   final String? id;
@@ -26,7 +28,7 @@ class UserModel extends BaseRequestModel {
   final String? updatedAt;
   final double? score;
 
-  UserModel(
+  UserModel(this.shotsDiscovered, this.rank,
       {this.points,
       this.subscribedCountries,
       this.username,
