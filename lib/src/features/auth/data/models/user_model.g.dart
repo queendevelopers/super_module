@@ -7,6 +7,8 @@ part of 'user_model.dart';
 // **************************************************************************
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
+      json['shotsDiscovered'] as int,
+      json['rank'] as int,
       points: json['points'] as int?,
       subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -44,6 +46,8 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('role', instance.role);
   writeNotNull('status', instance.status);
   writeNotNull('social', instance.social);
+  val['shotsDiscovered'] = instance.shotsDiscovered;
+  val['rank'] = instance.rank;
   writeNotNull('language', instance.language);
   writeNotNull('_id', instance.id);
   writeNotNull('name', instance.name);
