@@ -9,5 +9,5 @@ class ChangeForgotPasswordButtonTapEvent extends ChangeForgotPasswordEvent {
   final String? token;
 
   ChangeForgotPasswordButtonTapEvent(
-      { this.oldPassword, this.newPassword, this.token});
+      {this.oldPassword, this.newPassword, this.token});
 }
