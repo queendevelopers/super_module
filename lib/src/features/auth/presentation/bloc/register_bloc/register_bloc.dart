@@ -9,6 +9,7 @@ import 'package:super_module/src/features/auth/domain/controller/auth_login_cont
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
 part 'register_event.dart';
+
 part 'register_state.dart';
 
 @injectable
@@ -26,14 +27,15 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     if (event is RegisterButtonTapEvent) {
       yield RegisterLoadingState();
       final response = await controller.registerUser(
-        username: event.username,
-        name: event.fullName!,
-        email: event.email,
-        password: event.password,
-        phone: event.phone,
-        address: event.address,
-        role: event.role,
-      );
+          username: event.username,
+          name: event.fullName!,
+          email: event.email,
+          password: event.password,
+          phone: event.phone,
+          address: event.address,
+          role: event.role,
+          subRole: event.subRole,
+          schoolId: event.schoolId);
       if (response.ok) {
         if (response.user != null) {
           await sessionManager.saveCurrentUser(user: response.user!);

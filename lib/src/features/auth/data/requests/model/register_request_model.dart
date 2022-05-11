@@ -12,6 +12,8 @@ class RegisterRequestModel extends BaseRequestModel {
   final String? address;
   final String password;
   final String? role;
+  final String? subrole;
+  final String? schoolId;
 
   RegisterRequestModel({
     this.name,
@@ -21,6 +23,8 @@ class RegisterRequestModel extends BaseRequestModel {
     required this.password,
     this.username,
     this.role,
+    this.subrole,
+    this.schoolId,
   });
 
   factory RegisterRequestModel.fromJson(Map<String, dynamic> json) =>
