@@ -27,6 +27,8 @@ abstract class IAuthLoginController {
     String? address,
     required String password,
     String? role,
+    String? subRole,
+    String? schoolId,
   });
 
   Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByPhone({
@@ -87,6 +89,8 @@ class AuthLoginController implements IAuthLoginController {
     String? address,
     required String password,
     String? role,
+    String? subRole,
+    String? schoolId,
   }) async {
     final model = RegisterRequestModel(
       name: name,
@@ -95,6 +99,8 @@ class AuthLoginController implements IAuthLoginController {
       password: password,
       username: username,
       role: role,
+      subrole: subRole,
+      schoolId: schoolId,
     );
     final data = await iAuthRemoteRepository.registerUser(model);
     return data;
