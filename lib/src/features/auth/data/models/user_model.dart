@@ -20,6 +20,7 @@ class UserModel extends BaseRequestModel {
   final String? nickname;
   final int? points;
   final List<String>? subscribedCountries;
+  final int? activeCountries;
   final String? phone;
   final String? avatar;
   final String? address;
@@ -33,6 +34,7 @@ class UserModel extends BaseRequestModel {
       this.shotsDiscovered,
       this.rank,
       this.subscribedCountries,
+      this.activeCountries,
       this.username,
       this.emailVerified,
       this.nickname,
