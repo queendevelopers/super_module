@@ -65,8 +65,7 @@ class SocialAuthRepository implements ISocialAuthRepository {
       GoogleSignInAuthentication authentication =
           await googleSignInAccount!.authentication;
       if (authentication.accessToken == null) {
-        return SocialModel(
-            ok: false, message: 'Sign in is unfortunately cancelled.');
+        return SocialModel(ok: false, message: 'Sign in cancelled.');
       } else {
         final model = await repository.loginWithGoogle(
             token: authentication.accessToken!);
