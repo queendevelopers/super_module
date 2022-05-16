@@ -25,7 +25,8 @@ class SocialAuthRepository implements ISocialAuthRepository {
           await repository.loginWithApple(token: credential.identityToken!);
       return model;
     } catch (e) {
-      return SocialModel(ok: false, message: 'An Unknown Error occurred.');
+      return SocialModel(
+          ok: false, message: 'Unable to sign in.Please try again.');
     }
   }
 
@@ -47,7 +48,6 @@ class SocialAuthRepository implements ISocialAuthRepository {
       case LoginStatus.failed:
         return SocialModel(
             ok: false, message: result.message ?? 'An unknown error occurred.');
-
       default:
         return SocialModel(
             ok: false, message: result.message ?? 'An unknown error occurred.');
@@ -64,13 +64,19 @@ class SocialAuthRepository implements ISocialAuthRepository {
           await googleSignIn.signIn();
       GoogleSignInAuthentication authentication =
           await googleSignInAccount!.authentication;
-      final model =
-          await repository.loginWithGoogle(token: authentication.accessToken!);
-      debugPrint(authentication.accessToken);
-      debugPrint(authentication.idToken);
-      return model;
+      if (authentication.accessToken == null) {
+        return SocialModel(
+            ok: false, message: 'Sign in is unfortunately cancelled.');
+      } else {
+        final model = await repository.loginWithGoogle(
+            token: authentication.accessToken!);
+        debugPrint(authentication.accessToken);
+        debugPrint(authentication.idToken);
+        return model;
+      }
     } catch (e) {
-      return SocialModel(ok: false, message: '${e.toString()}');
+      return SocialModel(
+          ok: false, message: 'Unable to sign in.Please try again.');
     }
   }
 }
