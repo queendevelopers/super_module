@@ -13,6 +13,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
+      activeCountries: json['activeCountries'] as int?,
       username: json['username'] as String?,
       emailVerified: json['emailVerified'] as bool?,
       nickname: json['nickname'] as String?,
@@ -55,6 +56,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('nickname', instance.nickname);
   writeNotNull('points', instance.points);
   writeNotNull('subscribedCountries', instance.subscribedCountries);
+  writeNotNull('activeCountries', instance.activeCountries);
   writeNotNull('phone', instance.phone);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('address', instance.address);
