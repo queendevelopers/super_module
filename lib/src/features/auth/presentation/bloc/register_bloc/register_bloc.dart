@@ -9,7 +9,6 @@ import 'package:super_module/src/features/auth/domain/controller/auth_login_cont
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
 part 'register_event.dart';
-
 part 'register_state.dart';
 
 @injectable
