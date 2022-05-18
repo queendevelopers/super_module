@@ -15,7 +15,7 @@ GlobalResponseModel _$GlobalResponseModelFromJson(Map<String, dynamic> json) =>
       json['field'] as String?,
       json['encryptedAccessToken'] as String?,
       ok: json['ok'] as bool,
-      message: json['message'] as String,
+      message: json['message'] as String? ?? 'Process Complete',
       key: json['key'] as String?,
       otp: json['otp'] as int?,
     );
