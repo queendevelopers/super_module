@@ -68,4 +68,11 @@
 
 # [0.4.14] - 28 MAR 2022
 - Gallery permission set true for limited as well.
-- removed app_launcher which is causing issue on application. app_launcher now needs to be use from app.
+- Removed app_launcher which is causing issue on application.
+- app_launcher now needs to be use from app.
+
+# [0.5.0] - 18 MAY 2022
+- Added wishlist
+- Added cart
+- Code refactor
+- Updated packages
