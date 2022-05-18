@@ -94,7 +94,8 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
       () => _i27.WishlistController(get<_i17.IWishlistRepository>()));
   gh.factory<_i28.SocialBloc>(() => _i28.SocialBloc(
       get<_i24.ISocialAuthRepository>(), get<_i29.ISessionManager>()));
-  gh.factory<_i30.UserBloc>(() => _i30.UserBloc(get<_i26.IUserController>()));
+  gh.factory<_i30.UserBloc>(() =>
+      _i30.UserBloc(get<_i26.IUserController>(), get<_i12.ISessionManager>()));
   gh.factory<_i31.WishlistBloc>(
       () => _i31.WishlistBloc(get<_i27.IWishlistController>()));
   gh.factory<_i32.AddressBloc>(

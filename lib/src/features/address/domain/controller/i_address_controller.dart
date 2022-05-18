@@ -8,6 +8,9 @@ import 'package:super_module/src/features/address/domain/repository/i_address_re
 abstract class IAddressController {
   Future<AddAddressModel> addAddress(AddAddressRequestModel requestModel);
 
+  Future<AddAddressModel> updateAddress(
+      {required AddAddressRequestModel requestModel, required String id});
+
   Future<ShippingAddressList> deleteAddress(String id);
 
   Future<ShippingAddressResponse> setDefaultAddress(String id);
@@ -42,5 +45,14 @@ class CheckoutController implements IAddressController {
   @override
   Future<ShippingAddressResponse> setDefaultAddress(String id) async {
     return await repository.setDefaultAddress(id);
+  }
+
+  @override
+  Future<AddAddressModel> updateAddress(
+      {required AddAddressRequestModel requestModel,
+      required String id}) async {
+    final response =
+        await repository.updateAddress(requestModel: requestModel, id: id);
+    return response;
   }
 }

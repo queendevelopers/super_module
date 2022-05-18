@@ -6,7 +6,7 @@ abstract class AddressState {}
 class AddressInitial extends AddressState {}
 
 class GetDefaultAddressSuccess extends AddressState {
-  final ShippingAddress? model;
+  final ShippingAddress model;
 
   GetDefaultAddressSuccess(this.model);
 }
@@ -47,3 +47,21 @@ class AddAddressPostSuccessState extends AddressState {
 
   AddAddressPostSuccessState({this.addAddressModel});
 }
+
+class AddressUpdatingState extends AddressState {}
+
+class AddressUpdateFailure extends AddressState {
+  final String message;
+
+  AddressUpdateFailure({required this.message});
+}
+
+class AddressRemovingState extends AddressState {}
+
+class AddressRemoveFailure extends AddressState {
+  final String message;
+
+  AddressRemoveFailure(this.message);
+}
+
+class AddressRemoveSuccess extends AddressState {}
