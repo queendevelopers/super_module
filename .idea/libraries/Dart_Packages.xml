@@ -58,7 +58,6 @@
         <entry key="bloc">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/bloc-8.0.3/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/bloc-7.2.1/lib" />
             </list>
           </value>
@@ -420,7 +419,6 @@
         <entry key="flutter_bloc">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.1/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3/lib" />
             </list>
           </value>
@@ -1593,7 +1591,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/basic_utils-4.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/basic_utils-4.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/bloc-7.2.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/bloc-8.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/browser_launcher-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/build-2.2.1/lib" />
@@ -1653,7 +1650,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-2.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-7.3.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-8.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.6.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-3.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-3.0.3/lib" />
