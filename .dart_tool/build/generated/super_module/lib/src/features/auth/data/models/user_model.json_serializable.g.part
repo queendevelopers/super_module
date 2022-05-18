@@ -27,6 +27,9 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       createdAt: json['createdAt'] as String?,
       updatedAt: json['updatedAt'] as String?,
       score: (json['score'] as num?)?.toDouble(),
+      classroom: json['classroom'] == null
+          ? null
+          : Classroom.fromJson(json['classroom'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) {
@@ -60,5 +63,6 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('createdAt', instance.createdAt);
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('score', instance.score);
+  writeNotNull('classroom', instance.classroom);
   return val;
 }
