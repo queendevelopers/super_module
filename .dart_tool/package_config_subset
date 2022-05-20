@@ -618,6 +618,14 @@ sign_in_with_apple_web
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple_web-1.0.1/
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple_web-1.0.1/lib/
+socket_io_client
+2.12
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_client-2.0.0-beta.4-nullsafety.0/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_client-2.0.0-beta.4-nullsafety.0/lib/
+socket_io_common
+2.12
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_common-2.0.0/
+file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_common-2.0.0/lib/
 source_gen
 2.12
 file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.1/

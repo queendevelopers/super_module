@@ -956,6 +956,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "socket_io_client",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_client-2.0.0-beta.4-nullsafety.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "socket_io_common",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/socket_io_common-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "source_gen",
       "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.1",
       "packageUri": "lib/",
@@ -1154,7 +1166,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-05-18T10:29:09.121429Z",
+  "generated": "2022-05-20T08:50:21.138769Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

@@ -14,9 +14,9 @@ class WishlistLoadFailure extends WishlistState {
 }
 
 class WishlistLoadSuccess extends WishlistState {
-  final List<WishList> WishlistItems;
+  final List<WishList> wishlistItems;
 
-  WishlistLoadSuccess({required this.WishlistItems});
+  WishlistLoadSuccess({required this.wishlistItems});
 }
 
 class WishlistUpdating extends WishlistState {}

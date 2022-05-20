@@ -17,7 +17,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
         emit(WishlistLoading());
         final response = await controller.getWishlistItems();
         if (response.ok) {
-          emit(WishlistLoadSuccess(WishlistItems: response.response));
+          emit(WishlistLoadSuccess(wishlistItems: response.response));
           return;
         }
         emit(WishlistLoadFailure(
@@ -26,7 +26,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
         emit(WishlistUpdating());
         final response = await controller.addToWishlist(id: event.id);
         if (response.ok) {
-          emit(WishlistLoadSuccess(WishlistItems: response.response));
+          emit(WishlistLoadSuccess(wishlistItems: response.response));
           return;
         }
         emit(WishlistUpdateFailure(
@@ -35,7 +35,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
         emit(WishlistUpdating());
         final response = await controller.addToWishlist(id: event.id);
         if (response.ok) {
-          emit(WishlistLoadSuccess(WishlistItems: response.response));
+          emit(WishlistLoadSuccess(wishlistItems: response.response));
           return;
         }
         emit(WishlistUpdateFailure(
