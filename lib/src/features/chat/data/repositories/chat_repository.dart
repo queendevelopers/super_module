@@ -14,10 +14,21 @@ class ChatRepository implements IChatRepository {
     final token = await sessionManager.getToken();
     Socket socket = io('https://stem.goswivt.com', <String, dynamic>{
       'transports': ['websocket'],
-      'Content-type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': 'Bearer $token'
+      'autoConnect': true,
+      'auth': {
+        'token': 'Bearer $token',
+      },
     });
-    socket.onconnect('bye');
+    socket.connect();
+    socket.emit("addUser");
+    socket.on("getUsersOnline", (user) => {print(user)});
+    socket.onConnectError((data) => print('@@@@@@$data'));
+    socket.onConnecting((data) => print(data));
+    socket.onConnect((data) {
+      print('connect');
+      socket.emit('msg', 'test');
+    });
+    socket.onDisconnect((_) => print('disconnect'));
+    socket.on('fromServer', (data) => print(data));
   }
 }

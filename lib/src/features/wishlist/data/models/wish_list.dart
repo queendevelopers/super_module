@@ -6,12 +6,12 @@ part 'wish_list.g.dart';
 class WishList {
   @JsonKey(name: '_id')
   final String id;
-  final String name;
-  final String description;
-  final int price;
   final List<dynamic> products;
 
-  WishList(this.id, this.products, this.name, this.description, this.price);
+  WishList(
+    this.id,
+    this.products,
+  );
 
   factory WishList.fromJson(Map<String, dynamic> json) =>
       _$WishListFromJson(json);

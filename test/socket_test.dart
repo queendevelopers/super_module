@@ -6,20 +6,20 @@ void main() {
 
   Socket socket = io('https://stem.goswivt.com', <String, dynamic>{
     'transports': ['websocket'],
-    // 'autoConnect': true,
+    'autoConnect': true,
     'auth': {
       'token': 'Bearer $token',
     },
   });
   socket.connect();
-  // socket.emit("addUser");
-  // socket.on("getUsersOnline", (user) => {print(user)});
-  // socket.onConnectError((data) => print('@@@@@@$data'));
-  // socket.onConnecting((data) => print(data));
+  socket.emit("addUser");
+  socket.on("getUsersOnline", (user) => {print(user)});
+  socket.onConnectError((data) => print('@@@@@@$data'));
+  socket.onConnecting((data) => print(data));
   socket.onConnect((data) {
     print('connect');
     socket.emit('msg', 'test');
   });
-  // socket.onDisconnect((_) => print('disconnect'));
-  // socket.on('fromServer', (data) => print(data));
+  socket.onDisconnect((_) => print('disconnect'));
+  socket.on('fromServer', (data) => print(data));
 }
