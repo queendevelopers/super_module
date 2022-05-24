@@ -10,6 +10,7 @@ part 'chat_state.dart';
 @injectable
 class ChatBloc extends Bloc<ChatEvent, ChatState> {
   final IChatController chatController;
+
   ChatBloc(this.chatController) : super(ChatInitial()) {
     on<ChatEvent>((event, emit) async* {
       if (event is CreateSocketConnectionEvent) {

@@ -76,3 +76,6 @@
 - Added cart
 - Code refactor
 - Updated packages
+
+# [0.5.3] - 24 MAY 2022
+- Added chat
