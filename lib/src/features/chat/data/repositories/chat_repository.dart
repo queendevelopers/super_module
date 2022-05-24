@@ -31,7 +31,7 @@ class ChatRepository extends IChatRepository {
     socket.onDisconnect((data) => print('Socket: $data'));
     socket.onAny((event, data) =>
         print('Socket ${event.toString()} ${data.toString()}'));
-    // socket.emit("addUser");
+    socket.emit("addUser");
     // socket.on("getUsersOnline", (user) => {print(user)});
     socket.on('fromServer', (data) => print(data));
     return socket;
