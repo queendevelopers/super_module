@@ -1,11 +1,13 @@
 import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:super_module/src/features/auth/data/models/classroom.dart';
+import 'package:super_module/src/features/auth/data/models/game_avatar.dart';
 
 part 'user_model.g.dart';
 
 @JsonSerializable(includeIfNull: false)
 class UserModel extends BaseRequestModel {
+  final GameAvatar? gameAvatar;
   final bool? emailVerified;
   bool? phoneVerified;
   final String? role;
@@ -33,6 +35,7 @@ class UserModel extends BaseRequestModel {
 
   UserModel({
     this.points,
+    this.gameAvatar,
     this.shotsDiscovered,
     this.rank,
     this.subscribedCountries,
