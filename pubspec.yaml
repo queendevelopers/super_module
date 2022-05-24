@@ -36,7 +36,7 @@ dependencies:
   photo_view: ^0.13.0
   permission_handler: ^9.2.0
   image_picker: ^0.8.5+3
-  flutter_rest_client: ^0.1.1
+  flutter_rest_client: ^0.1.2-beta
   bloc: ^7.2.1
   intl: ^0.17.0
   meta: ^1.7.0

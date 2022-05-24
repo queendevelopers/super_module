@@ -5,16 +5,10 @@ abstract class ChatState {}
 
 class ChatInitial extends ChatState {}
 
-class ChatSubscribeEvent extends ChatState {}
+class ChatSubscribeSuccessState extends ChatState {
+  final Socket socket;
 
-class ChatTypingEvent extends ChatState {}
-
-class ChatTypingCompleteEvent extends ChatState {}
-
-class ChatMessageEvent extends ChatState {
-  final dynamic message;
-
-  ChatMessageEvent(this.message);
+  ChatSubscribeSuccessState(this.socket);
 }
 
-class ChatUnsubscribeEvent extends ChatState {}
+class ChatSubscribeFailureState extends ChatState {}

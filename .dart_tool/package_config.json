@@ -375,7 +375,7 @@
     },
     {
       "name": "flutter_rest_client",
-      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_rest_client-0.1.1",
+      "rootUri": "file:///Users/dev/.pub-cache/hosted/pub.dartlang.org/flutter_rest_client-0.1.2-beta",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1166,7 +1166,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-05-20T08:50:21.138769Z",
+  "generated": "2022-05-24T07:06:48.967103Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

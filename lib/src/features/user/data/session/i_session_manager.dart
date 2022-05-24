@@ -11,6 +11,8 @@ abstract class ISessionManager {
 
   Future<bool> get isAuthenticated;
 
+  Future<void> saveCurrentUser({required UserModel user});
+
   Future<UserModel?> getCurrentUser();
 
   Future<void> storeBiometricInfo(BiometricRegisterModel? model);
@@ -20,8 +22,6 @@ abstract class ISessionManager {
   Future<BiometricRegisterModel?> readBiometricInfo();
 
   Future<void> clearBiometrics();
-
-  Future<void> saveCurrentUser({required UserModel user});
 
   Future<void> saveCurrentSearchItem(String searchItem);
 
