@@ -37,6 +37,8 @@ export 'package:super_module/src/features/auth/presentation/bloc/login_bloc/logi
 export 'package:super_module/src/features/auth/presentation/bloc/register_bloc/register_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/register_phone_by_otp_bloc/register_phone_by_otp_bloc.dart';
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
+export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart';
+export 'package:super_module/src/features/chat/presentation/bloc/chat_bloc.dart';
 export 'package:super_module/src/features/user/data/model/address_model.dart';
 export 'package:super_module/src/features/user/data/model/page_limit_model.dart';
 export 'package:super_module/src/features/user/data/model/pagination_model.dart';
@@ -48,3 +50,4 @@ export 'package:super_module/src/features/user/data/session/i_app_manager.dart';
 export 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 export 'package:super_module/src/features/user/domain/entity/store_recent_search_entity.dart';
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
+export 'package:super_module/src/features/wishlist/presentation/bloc/wishlist_bloc.dart';

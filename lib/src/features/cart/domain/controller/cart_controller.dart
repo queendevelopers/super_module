@@ -5,7 +5,9 @@ import 'package:super_module/src/features/cart/domain/repositories/i_cart_reposi
 
 abstract class ICartController {
   Future<ResponseEntityList<Cart>> getCartItems();
+
   Future<ResponseEntityList<Cart>> removeFromCart({required String id});
+
   Future<ResponseEntityList<Cart>> addToCart({required String id});
 }
 

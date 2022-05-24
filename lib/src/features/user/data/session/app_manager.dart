@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:device_info/device_info.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -52,6 +53,33 @@ class AppManager implements IAppManager {
     } on PlatformException {
       print('Failed to get platform version');
       return 'Failed to get platform version';
+    }
+  }
+
+  @override
+  Future<String?> getDeviceIpAddress() async {
+    try {
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
+      return _sharedPreferences.getString('currentIP');
+    } on Exception {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<void> initiateDeviceIpAddress() async {
+    try {
+      final Dio dio = Dio();
+      final SharedPreferences _sharedPreferences =
+          await SharedPreferences.getInstance();
+      final response = await dio.get('https://api.ipify.org/?format=json');
+      if (response.statusCode == 200) {
+        final String currentIP = response.data['ip'];
+        await _sharedPreferences.setString('currentIP', currentIP);
+      }
+    } on Exception {
+      rethrow;
     }
   }
 }

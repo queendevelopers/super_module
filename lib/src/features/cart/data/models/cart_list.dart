@@ -6,7 +6,9 @@ part 'cart_list.g.dart';
 class Cart {
   final String id;
   final int quantity;
-  final dynamic product;
+
+  ///ToDo:Need to change to List<dynamic>
+  final List<dynamic> product;
 
   Cart(this.id, this.product, this.quantity);
 

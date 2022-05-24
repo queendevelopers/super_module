@@ -5,7 +5,9 @@ import 'package:super_module/src/features/wishlist/domain/repositories/i_wishlis
 
 abstract class IWishlistController {
   Future<ResponseEntityList<WishList>> getWishlistItems();
+
   Future<ResponseEntityList<WishList>> removeFromWishlist({required String id});
+
   Future<ResponseEntityList<WishList>> addToWishlist({required String id});
 }
 

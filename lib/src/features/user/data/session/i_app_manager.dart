@@ -4,4 +4,8 @@ abstract class IAppManager {
   Future<void> saveBool({required String key, required bool value});
 
   Future<String> getDeviceId();
+
+  Future<void> initiateDeviceIpAddress();
+
+  Future<String?> getDeviceIpAddress();
 }

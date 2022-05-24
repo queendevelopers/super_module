@@ -5,9 +5,9 @@
 ShippingAddressList _$ShippingAddressListFromJson(Map<String, dynamic> json) =>
     ShippingAddressList(
       json['ok'] as bool,
-      json['message'] as String,
-      (json['data'] as List<dynamic>)
-          .map((e) => ShippingAddress.fromJson(e as Map<String, dynamic>))
+      json['message'] as String?,
+      (json['data'] as List<dynamic>?)
+          ?.map((e) => ShippingAddress.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

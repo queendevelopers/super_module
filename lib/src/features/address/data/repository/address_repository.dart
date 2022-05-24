@@ -4,6 +4,7 @@ import 'package:super_module/src/features/address/data/endpoint/add_address_endp
 import 'package:super_module/src/features/address/data/endpoint/delete_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/get_default_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/set_default_address_endpoint.dart';
+import 'package:super_module/src/features/address/data/endpoint/update_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/model/add_address_model.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_list.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_response.dart';
@@ -46,5 +47,14 @@ class AddressRepository implements IAddressRepository {
     final response = await iHttpHelper.request(
         SetDefaultAddressEndpoint(id), BaseRequestModel());
     return ShippingAddressResponse.fromJson(response);
+  }
+
+  @override
+  Future<AddAddressModel> updateAddress(
+      {required AddAddressRequestModel requestModel,
+      required String id}) async {
+    final response = await iHttpHelper.request(
+        UpdateAddressRequestEndpoint(id: id), requestModel);
+    return AddAddressModel.fromJson(response);
   }
 }

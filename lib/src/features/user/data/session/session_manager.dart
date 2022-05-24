@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive/hive.dart';
@@ -131,33 +130,6 @@ class SessionManager implements ISessionManager {
   }
 
   @override
-  Future<String?> getUserIpAddress() async {
-    try {
-      final SharedPreferences _sharedPreferences =
-          await SharedPreferences.getInstance();
-      return _sharedPreferences.getString('userIp');
-    } on Exception {
-      rethrow;
-    }
-  }
-
-  @override
-  Future<void> initiateUserIpAddress() async {
-    try {
-      final Dio dio = Dio();
-      final SharedPreferences _sharedPreferences =
-          await SharedPreferences.getInstance();
-      final response = await dio.get('https://api.ipify.org/?format=json');
-      if (response.statusCode == 200) {
-        final String userIp = response.data['ip'];
-        await _sharedPreferences.setString('userIp', userIp);
-      }
-    } on Exception {
-      rethrow;
-    }
-  }
-
-  @override
   Future<List<StoreRecentSearchEntity>> getHistorySearches() async {
     try {
       // deleteAllPreviousSearchHistory();
@@ -211,19 +183,20 @@ class SessionManager implements ISessionManager {
 
   @override
   Future<void> saveCartCount(int count) async {
-    final box = await Hive.openBox<String>(SuperKeys.cartBox);
-    box.put(SuperKeys.cartCount, count.toString());
+    final box = await Hive.openBox<int>(SuperKeys.cartBox);
+    box.put(SuperKeys.cartCount, count.toInt());
   }
 
   @override
-  Future<String> readCartCount() async {
-    final prefs = await Hive.openBox<String>(SuperKeys.cartBox);
-    return prefs.get(SuperKeys.cartCount) ?? '0';
+  Future<int> readCartCount() async {
+    final prefs = await Hive.openBox<int>(SuperKeys.cartBox);
+    return prefs.get(SuperKeys.cartCount) ?? 0;
   }
 
   @override
-  Future<void> saveWishlistProduct(String key, bool value) async {
+  Future<void> saveWishlistProduct(
+      {required String productId, required bool isWishlist}) async {
     final box = await Hive.openBox<bool>(SuperKeys.wishlistBox);
-    box.put(key, value);
+    box.put(productId, isWishlist);
   }
 }

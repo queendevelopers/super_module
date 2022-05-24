@@ -2,7 +2,7 @@ name: super_module
 description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
 repository: https://gitlab.com/swivt/super-module
 homepage: https://gitab.com/swivt/super-module
-version: 0.4.33+33
+version: 0.5.3
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -11,32 +11,32 @@ dependencies:
   flutter:
     sdk: flutter
 
-  local_auth: ^2.0.0
+  local_auth: ^2.0.2
   flutter_easyloading: ^3.0.3
   jwt_decode: ^0.3.1
   flutter_secure_storage: ^5.0.2
-  google_sign_in: ^5.3.0
+  google_sign_in: ^5.3.1
   json_serializable: ^6.2.0
   injectable: ^1.5.3
   get_it: ^7.2.0
   flutter_bloc: ^7.2.0
-  shared_preferences: ^2.0.13
+  shared_preferences: ^2.0.15
   pointycastle: ^3.6.0
   asn1lib: ^1.1.0
   sign_in_with_apple: ^3.3.0
-  flutter_facebook_auth: ^4.3.0
-  basic_utils: ^4.2.1
-  firebase_messaging: ^11.3.0
-  flutter_local_notifications: ^9.5.0
+  flutter_facebook_auth: ^4.3.4
+  basic_utils: ^4.2.2
+  firebase_messaging: ^11.4.0
+  flutter_local_notifications: ^9.5.3+1
   flutter_image_compress: ^1.1.0
-  path_provider: ^2.0.9
+  path_provider: ^2.0.10
   flutter_svg: ^1.0.3
-  url_launcher: ^6.1.0
+  url_launcher: ^6.1.2
   flutter_cache_manager: ^3.3.0
   photo_view: ^0.13.0
   permission_handler: ^9.2.0
-  image_picker: ^0.8.5
-  flutter_rest_client: ^0.0.7
+  image_picker: ^0.8.5+3
+  flutter_rest_client: ^0.1.2-beta
   bloc: ^7.2.1
   intl: ^0.17.0
   meta: ^1.7.0
@@ -44,16 +44,18 @@ dependencies:
   dio: ^4.0.6
   device_info: ^2.0.3
   cached_network_image: ^3.2.0
-  hive: ^2.1.0
+  hive: ^2.2.0
   carrier_info: ^2.0.5
   country_code_picker: ^2.0.2
-  socket_io_client: ^2.0.0-beta.4-nullsafety.0
+  hive_flutter: ^1.1.0
+  socket_io_client: 2.0.0-beta.4-nullsafety.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  build_runner: ^2.1.10
+  build_runner: ^2.1.11
   injectable_generator: ^1.5.3
   flutter_launcher_icons: ^0.9.2
+  hive_generator: ^1.1.2

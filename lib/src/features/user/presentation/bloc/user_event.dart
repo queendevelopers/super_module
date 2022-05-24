@@ -3,11 +3,11 @@ part of 'user_bloc.dart';
 @immutable
 abstract class UserEvent {}
 
-class UserRankFetchEvent extends UserEvent {}
+class UserProfileFetchEvent extends UserEvent {}
 
-class UserInformationUpdateEvent extends UserEvent {
+class UserProfileUpdateEvent extends UserEvent {
   final UserModel userModel;
   final String? token;
 
-  UserInformationUpdateEvent(this.userModel, this.token);
+  UserProfileUpdateEvent(this.userModel, this.token);
 }

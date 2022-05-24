@@ -6,8 +6,8 @@ part 'shipping_address_list.g.dart';
 @JsonSerializable()
 class ShippingAddressList {
   final bool ok;
-  final String message;
-  final List<ShippingAddress> data;
+  final String? message;
+  final List<ShippingAddress>? data;
 
   ShippingAddressList(this.ok, this.message, this.data);
 
