@@ -4,6 +4,9 @@
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       points: json['points'] as int?,
+      gameAvatar: json['gameAvatar'] == null
+          ? null
+          : GameAvatar.fromJson(json['gameAvatar'] as Map<String, dynamic>),
       shotsDiscovered: json['shotsDiscovered'] as int?,
       rank: json['rank'] as int?,
       subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
@@ -41,6 +44,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
     }
   }
 
+  writeNotNull('gameAvatar', instance.gameAvatar);
   writeNotNull('emailVerified', instance.emailVerified);
   writeNotNull('phoneVerified', instance.phoneVerified);
   writeNotNull('role', instance.role);
