@@ -1,10 +1,12 @@
 import 'package:flutter_rest_client/flutter_rest_client.dart';
+import 'package:injectable/injectable.dart';
 import 'package:socket_io_client/socket_io_client.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/chat/data/models/chat_message_response.dart';
 import 'package:super_module/src/features/chat/data/models/send_message_request_model.dart';
 import 'package:super_module/src/features/chat/domain/repositories/i_chat_repository.dart';
 
+@Injectable(as: IChatRepository)
 class ChatRepository extends IChatRepository {
   late Socket socket;
   final IHttpConfig httpConfig;

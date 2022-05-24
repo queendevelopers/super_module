@@ -1,4 +1,5 @@
 import 'package:flutter_rest_client/flutter_rest_client.dart';
+import 'package:injectable/injectable.dart';
 import 'package:socket_io_client/socket_io_client.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/chat/data/models/chat_message_response.dart';
@@ -23,6 +24,7 @@ abstract class IChatController {
   Stream<ResponseEntity<ChatMessageResponse>> getMessageResponse();
 }
 
+@Injectable(as: IChatController)
 class ChatController implements IChatController {
   final IChatRepository repository;
   final ISessionManager sessionManager;
