@@ -9,6 +9,11 @@ abstract class ICartController {
   Future<ResponseEntityList<Cart>> removeFromCart({required String id});
 
   Future<ResponseEntityList<Cart>> addToCart({required String id});
+
+  Future<ResponseEntityList<Cart>> updateCartQuantity({
+    required String id,
+    required bool isMinus,
+  });
 }
 
 @Injectable(as: ICartController)
@@ -30,5 +35,11 @@ class CartController implements ICartController {
   @override
   Future<ResponseEntityList<Cart>> removeFromCart({required String id}) async {
     return await repository.removeFromCart(id: id);
+  }
+
+  @override
+  Future<ResponseEntityList<Cart>> updateCartQuantity(
+      {required String id, required bool isMinus}) async {
+    return await repository.updateCartQuantity(id: id, isMinus: isMinus);
   }
 }

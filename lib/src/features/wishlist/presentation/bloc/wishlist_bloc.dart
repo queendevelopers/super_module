@@ -33,7 +33,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
             response.message ?? 'An Unknown Error Occurred.'));
       } else if (event is WishlistItemRemoveEvent) {
         emit(WishlistUpdating());
-        final response = await controller.addToWishlist(id: event.id);
+        final response = await controller.removeFromWishlist(id: event.id);
         if (response.ok) {
           emit(WishlistLoadSuccess(wishlistItems: response.response));
           return;

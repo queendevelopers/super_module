@@ -7,4 +7,9 @@ abstract class ICartRepository {
   Future<ResponseEntityList<Cart>> removeFromCart({required String id});
 
   Future<ResponseEntityList<Cart>> addToCart({required String id});
+
+  Future<ResponseEntityList<Cart>> updateCartQuantity({
+    required String id,
+    required bool isMinus,
+  });
 }

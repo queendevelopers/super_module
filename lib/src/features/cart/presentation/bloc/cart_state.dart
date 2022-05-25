@@ -26,3 +26,18 @@ class CartUpdateFailure extends CartState {
 
   CartUpdateFailure(this.message);
 }
+
+//Quantity Update States
+class CartQuantityUpdateSuccess extends CartState {
+  final Cart cartItem;
+
+  CartQuantityUpdateSuccess({required this.cartItem});
+}
+
+class CartQuantityUpdateFailure extends CartState {
+  final String message;
+
+  CartQuantityUpdateFailure(this.message);
+}
+
+class CartQuantityUpdateLoading extends CartState {}

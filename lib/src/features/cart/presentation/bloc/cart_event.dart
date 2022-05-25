@@ -16,3 +16,10 @@ class CartItemAddEvent implements CartEvent {
 
   CartItemAddEvent({required this.id});
 }
+
+class CartQuantityUpdateEvent implements CartEvent {
+  final String id;
+  final bool isMinus;
+
+  CartQuantityUpdateEvent(this.isMinus, this.id);
+}
