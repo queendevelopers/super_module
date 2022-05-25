@@ -12,34 +12,47 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   final ICartController controller;
 
   CartBloc(this.controller) : super(CartInitial()) {
-    on<CartEvent>((event, emit) async {
-      if (event is CartFetchEvent) {
-        emit(CartLoading());
-        final response = await controller.getCartItems();
-        if (response.ok) {
-          emit(CartLoadSuccess(cartItems: response.response));
-          return;
+    on<CartEvent>(
+      (event, emit) async {
+        if (event is CartFetchEvent) {
+          emit(CartLoading());
+          final response = await controller.getCartItems();
+          if (response.ok) {
+            emit(CartLoadSuccess(cartItems: response.response));
+            return;
+          }
+          emit(CartLoadFailure(
+              response.message ?? 'An Unknown Error Occurred.'));
+        } else if (event is CartItemAddEvent) {
+          emit(CartUpdating());
+          final response = await controller.addToCart(id: event.id);
+          if (response.ok) {
+            emit(CartLoadSuccess(cartItems: response.response));
+            return;
+          }
+          emit(CartUpdateFailure(
+              response.message ?? 'An Unknown Error Occurred.'));
+        } else if (event is CartItemRemoveEvent) {
+          emit(CartUpdating());
+          final response = await controller.removeFromCart(id: event.id);
+          if (response.ok) {
+            emit(CartLoadSuccess(cartItems: response.response));
+            return;
+          }
+          emit(CartUpdateFailure(
+              response.message ?? 'An Unknown Error Occurred.'));
+        } else if (event is CartQuantityUpdateEvent) {
+          emit(CartUpdating());
+          final response = await controller.updateCartQuantity(
+              id: event.id, isMinus: event.isMinus);
+          if (response.ok) {
+            emit(CartLoadSuccess(cartItems: response.response));
+            return;
+          }
+          emit(CartUpdateFailure(
+              response.message ?? 'An Unknown Error Occurred.'));
         }
-        emit(CartLoadFailure(response.message ?? 'An Unknown Error Occurred.'));
-      } else if (event is CartItemAddEvent) {
-        emit(CartUpdating());
-        final response = await controller.addToCart(id: event.id);
-        if (response.ok) {
-          emit(CartLoadSuccess(cartItems: response.response));
-          return;
-        }
-        emit(CartUpdateFailure(
-            response.message ?? 'An Unknown Error Occurred.'));
-      } else if (event is CartItemRemoveEvent) {
-        emit(CartUpdating());
-        final response = await controller.addToCart(id: event.id);
-        if (response.ok) {
-          emit(CartLoadSuccess(cartItems: response.response));
-          return;
-        }
-        emit(CartUpdateFailure(
-            response.message ?? 'An Unknown Error Occurred.'));
-      }
-    });
+      },
+    );
   }
 }
