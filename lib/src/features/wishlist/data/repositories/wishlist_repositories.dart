@@ -1,8 +1,8 @@
 import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:flutter_rest_client/src/dio/response/response_entity_list.dart';
 import 'package:injectable/injectable.dart';
-import 'package:super_module/src/features/wishlist/data/endpoints/add_to_wishlist_endpoint.dart';
 import 'package:super_module/src/features/wishlist/data/endpoints/get_all_wishlist_endpoint.dart';
+import 'package:super_module/src/features/wishlist/data/endpoints/update_wishlist_endpoint.dart';
 import 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 import 'package:super_module/src/features/wishlist/data/request/action_request_model.dart';
 import 'package:super_module/src/features/wishlist/domain/repositories/i_wishlist_repositories.dart';
@@ -18,7 +18,7 @@ class WishlistRepositories implements IWishlistRepository {
       {required String id}) async {
     try {
       final response = await httpHelper.request(
-          AddToWishlistEndpoint(), ActionRequestModel('add', id));
+          UpdateWishlistEndpoint(), ActionRequestModel('add', id));
       return ResponseEntityList<WishList>.fromJson(
           fromJson: (json) => WishList.fromJson(json), json: response);
     } catch (e) {
@@ -45,7 +45,7 @@ class WishlistRepositories implements IWishlistRepository {
       {required String id}) async {
     try {
       final response = await httpHelper.request(
-          AddToWishlistEndpoint(), ActionRequestModel('remove', id));
+          UpdateWishlistEndpoint(), ActionRequestModel('remove', id));
       return ResponseEntityList<WishList>.fromJson(
           fromJson: (json) => WishList.fromJson(json), json: response);
     } catch (e) {
