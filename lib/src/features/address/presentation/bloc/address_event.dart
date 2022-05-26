@@ -84,3 +84,5 @@ class UpdateAddressEvent extends AddressEvent {
       this.lat,
       this.lng});
 }
+
+class GetAddressEvent extends AddressEvent {}

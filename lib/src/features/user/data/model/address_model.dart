@@ -4,17 +4,17 @@ part 'address_model.g.dart';
 
 @JsonSerializable()
 class AddressModel {
-  final String city;
-  final String state;
-  final String county;
-  final String suburb;
-  final String country;
-  final String postcode;
-  final String pedestrian;
+  final String? city;
+  final String? state;
+  final String? county;
+  final String? suburb;
+  final String? country;
+  final String? postcode;
+  final String? pedestrian;
   @JsonKey(name: 'country_code')
-  final String countryCode;
+  final String? countryCode;
   @JsonKey(name: 'country_district')
-  final String cityDistrict;
+  final String? cityDistrict;
 
   AddressModel(this.city, this.state, this.country, this.suburb, this.postcode,
       this.pedestrian, this.countryCode, this.cityDistrict, this.county);

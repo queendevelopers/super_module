@@ -5,6 +5,20 @@ abstract class AddressState {}
 
 class AddressInitial extends AddressState {}
 
+class GetAddressListFetching extends AddressState {}
+
+class GetAddressListFailure extends AddressState {
+  final String message;
+
+  GetAddressListFailure({required this.message});
+}
+
+class GetAddressListFetchSuccess extends AddressState {
+  final List<ShippingAddress> addressList;
+
+  GetAddressListFetchSuccess(this.addressList);
+}
+
 class GetDefaultAddressSuccess extends AddressState {
   final ShippingAddress model;
 

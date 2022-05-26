@@ -5,7 +5,9 @@ import 'package:super_module/src/features/address/data/endpoint/delete_address_e
 import 'package:super_module/src/features/address/data/endpoint/get_default_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/set_default_address_endpoint.dart';
 import 'package:super_module/src/features/address/data/endpoint/update_address_endpoint.dart';
+import 'package:super_module/src/features/address/data/endpoint/user_address_get_endpoint.dart';
 import 'package:super_module/src/features/address/data/model/add_address_model.dart';
+import 'package:super_module/src/features/address/data/model/shipping_address.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_list.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_response.dart';
 import 'package:super_module/src/features/address/data/request/add_address_request_model.dart';
@@ -56,5 +58,18 @@ class AddressRepository implements IAddressRepository {
     final response = await iHttpHelper.request(
         UpdateAddressRequestEndpoint(id: id), requestModel);
     return AddAddressModel.fromJson(response);
+  }
+
+  @override
+  Future<ResponseEntityList<ShippingAddress>> getAddressList() async {
+    try {
+      final response = await iHttpHelper.request(
+          UserAddressGetEndpoint(), BaseRequestModel());
+      return ResponseEntityList<ShippingAddress>.fromJson(
+          json: response, fromJson: (json) => ShippingAddress.fromJson(json));
+    } catch (e) {
+      return ResponseEntityList<ShippingAddress>.withError(
+          ErrorParser.parseDioException(e));
+    }
   }
 }

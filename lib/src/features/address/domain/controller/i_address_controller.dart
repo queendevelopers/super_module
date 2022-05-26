@@ -1,5 +1,7 @@
+import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:injectable/injectable.dart';
 import 'package:super_module/src/features/address/data/model/add_address_model.dart';
+import 'package:super_module/src/features/address/data/model/shipping_address.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_list.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address_response.dart';
 import 'package:super_module/src/features/address/data/request/add_address_request_model.dart';
@@ -16,6 +18,8 @@ abstract class IAddressController {
   Future<ShippingAddressResponse> setDefaultAddress(String id);
 
   Future<ShippingAddressResponse> getDefaultAddress();
+
+  Future<ResponseEntityList<ShippingAddress>> getAddressList();
 }
 
 @Injectable(as: IAddressController)
@@ -54,5 +58,10 @@ class CheckoutController implements IAddressController {
     final response =
         await repository.updateAddress(requestModel: requestModel, id: id);
     return response;
+  }
+
+  @override
+  Future<ResponseEntityList<ShippingAddress>> getAddressList() async {
+    return await repository.getAddressList();
   }
 }

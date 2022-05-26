@@ -101,6 +101,14 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
         }
         yield AddressUpdateFailure(message: response.message);
       }
+    } else if (event is GetAddressEvent) {
+      final response = await controller.getAddressList();
+      if (response.ok) {
+        yield (GetAddressListFetchSuccess(response.response));
+        return;
+      }
+      yield GetAddressListFailure(
+          message: response.message ?? 'An Unknown Error Occurred.');
     }
   }
 }
