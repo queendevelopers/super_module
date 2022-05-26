@@ -9,5 +9,5 @@ class SetDefaultAddressEndpoint implements IRequestEndPoint {
   RequestMethod method = RequestMethod.PATCH;
 
   @override
-  String get url => '/user/addresses/$id/default';
+  String get url => '/user/address/$id/default';
 }
