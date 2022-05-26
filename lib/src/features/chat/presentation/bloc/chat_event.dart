@@ -3,7 +3,11 @@ part of 'chat_bloc.dart';
 @immutable
 abstract class ChatEvent {}
 
-class CreateSocketConnectionEvent extends ChatEvent {}
+class CreateSocketConnectionEvent extends ChatEvent {
+  final String socketUrl;
+
+  CreateSocketConnectionEvent({required this.socketUrl});
+}
 
 class EmitAnyEvent extends ChatEvent {
   final String key;

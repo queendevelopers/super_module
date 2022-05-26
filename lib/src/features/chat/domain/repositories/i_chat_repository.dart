@@ -5,7 +5,7 @@ import 'package:super_module/src/features/chat/data/models/chat_message_response
 import 'package:super_module/src/features/chat/data/models/send_message_request_model.dart';
 
 abstract class IChatRepository {
-  Future<Socket> createSocketConnection();
+  Future<Socket> createSocketConnection({required String socketUrl});
 
   Future<void> emitAny({required String key});
 

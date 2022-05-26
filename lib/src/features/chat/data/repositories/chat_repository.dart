@@ -5,23 +5,24 @@ import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/chat/data/models/chat_message_response.dart';
 import 'package:super_module/src/features/chat/data/models/send_message_request_model.dart';
 import 'package:super_module/src/features/chat/domain/repositories/i_chat_repository.dart';
+import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
 @Injectable(as: IChatRepository)
-class ChatRepository extends IChatRepository {
+class ChatRepository implements IChatRepository {
   late Socket socket;
-  final IHttpConfig httpConfig;
+  final ISessionManager sessionManager;
 
-  ChatRepository(this.httpConfig);
+  ChatRepository(this.sessionManager);
 
   @override
-  Future<Socket> createSocketConnection() async {
+  Future<Socket> createSocketConnection({required String socketUrl}) async {
     // final String? token =
     //     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNzU1MmU0Y2I0OTJhMzg3OGZhOTcxYSIsImlhdCI6MTY1MzI5MjE3OCwiZXhwIjoxNjUzMzc4NTc4LCJpc3MiOiJpc3N1ZXJfbmFtZSJ9.J8pxztluo1C5UpcCgqnT9BnUEZr9Os3b0SnjdCcwexU';
-    socket = io('https://stem.goswivt.com', <String, dynamic>{
+    socket = io(socketUrl, <String, dynamic>{
       'transports': ['websocket'],
       'autoConnect': true,
       'auth': {
-        'token': 'Bearer ${await httpConfig.socketUrl}',
+        'token': 'Bearer ${await sessionManager.getToken()}',
       },
     });
     socket.connect();

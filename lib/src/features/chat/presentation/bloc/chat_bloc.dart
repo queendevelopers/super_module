@@ -14,7 +14,8 @@ class ChatBloc extends Bloc<ChatEvent, ChatState> {
   ChatBloc(this.chatController) : super(ChatInitial()) {
     on<ChatEvent>((event, emit) async* {
       if (event is CreateSocketConnectionEvent) {
-        final socket = await chatController.createSocketConnection();
+        final socket = await chatController.createSocketConnection(
+            socketUrl: event.socketUrl);
         emit(ChatSubscribeSuccessState(socket));
       } else if (event is EmitAnyEvent) {
         chatController.emitAny(key: event.key);

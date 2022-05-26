@@ -8,7 +8,7 @@ import 'package:super_module/src/features/chat/domain/repositories/i_chat_reposi
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 
 abstract class IChatController {
-  Future<Socket> createSocketConnection();
+  Future<Socket> createSocketConnection({required String socketUrl});
 
   Future<void> emitAny({required String key});
 
@@ -32,8 +32,8 @@ class ChatController implements IChatController {
   ChatController(this.repository, this.sessionManager);
 
   @override
-  Future<Socket> createSocketConnection() async {
-    return await repository.createSocketConnection();
+  Future<Socket> createSocketConnection({required String socketUrl}) async {
+    return await repository.createSocketConnection(socketUrl: socketUrl);
   }
 
   @override
