@@ -1,19 +1,15 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'current_logged_user.dart';
+
 part 'chat_message_response.g.dart';
 
 @JsonSerializable()
 class ChatMessageResponse {
-  @JsonKey(name: '_id')
-  final String id;
-  final String from;
-  final String to;
-  final String message;
-  final DateTime createdAt;
-  final DateTime updatedAt;
+  CurrentLoggedUser currentlyLoggedUser;
+  final String msg;
 
-  ChatMessageResponse(this.id, this.from, this.to, this.message, this.createdAt,
-      this.updatedAt);
+  ChatMessageResponse(this.currentlyLoggedUser, this.msg);
 
   factory ChatMessageResponse.fromJson(Map<String, dynamic> json) =>
       _$ChatMessageResponseFromJson(json);
