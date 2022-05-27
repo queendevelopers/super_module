@@ -12,7 +12,6 @@ import 'package:super_module/src/features/user/domain/repositories/i_user_remote
 class UserRemoteRepository implements IUserRemoteRepository {
   final IHttpHelper httpHelper;
   final ISessionManager sessionManager;
-
   UserRemoteRepository(this.httpHelper, this.sessionManager);
 
   @override
