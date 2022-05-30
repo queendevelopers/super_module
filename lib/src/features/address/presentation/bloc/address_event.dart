@@ -32,9 +32,8 @@ class AddAddressEvent extends AddressEvent {
   final String? lng;
   final String? googleAddress;
   final String? additionalInfo;
-  final RequestMethod requestMethod;
 
-  AddAddressEvent(this.requestMethod,
+  AddAddressEvent(
       {this.fullName,
       this.phone,
       this.name,
