@@ -4,7 +4,7 @@ part 'cart_list.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Cart {
-  final String id;
+  final String? id;
   final int quantity;
 
   ///ToDo:Need to change to List<dynamic>
