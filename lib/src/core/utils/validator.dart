@@ -55,8 +55,3 @@ String? validateNotEmpty(String? value, String type) {
     return null;
   }
 }
-
-String toBeginningOfSentenceCase(String input) {
-  if (input.isEmpty) return input;
-  return '${input.substring(1).toUpperCase()}${input.substring(input.indexOf(input.substring(2)), input.length)}';
-}
