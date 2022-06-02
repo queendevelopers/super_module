@@ -55,3 +55,4 @@ export 'package:super_module/src/features/user/domain/entity/store_recent_search
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
 export 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 export 'package:super_module/src/features/wishlist/presentation/bloc/wishlist_bloc.dart';
+export 'package:super_module/src/features/address/data/model/shipping_address.dart';

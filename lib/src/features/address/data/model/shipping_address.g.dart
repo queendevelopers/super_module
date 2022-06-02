@@ -18,7 +18,9 @@ ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) =>
       json['lng'] as String?,
       json['name'] as String?,
       json['address'] as String?,
+      json['isDefalt'] as bool?,
       json['region'] as String?,
+      
     );
 
 Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
