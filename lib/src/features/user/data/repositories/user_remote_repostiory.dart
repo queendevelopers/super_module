@@ -37,7 +37,7 @@ class UserRemoteRepository implements IUserRemoteRepository {
       final response = await httpHelper.request(
           GetUserProfileEndpoint(), BaseRequestModel());
       return ResponseEntity<UserModel>.fromJson(
-          json: response, jsonObj: (json) => UserModel.fromJson(json));
+          json: response, fromJson: (json) => UserModel.fromJson(json));
     } catch (e) {
       return ResponseEntity<UserModel>.withError(
           ErrorParser.parseDioException(e));

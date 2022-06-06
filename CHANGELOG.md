@@ -79,3 +79,6 @@
 
 # [0.5.3] - 24 MAY 2022
 - Added chat
+
+# [0.5.13] - 6 JUN 2022
+- Added firebase remote config
