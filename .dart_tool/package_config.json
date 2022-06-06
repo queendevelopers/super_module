@@ -267,19 +267,19 @@
     },
     {
       "name": "firebase_messaging",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.0",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
     {
       "name": "firebase_messaging_platform_interface",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-3.5.0",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-3.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
     {
       "name": "firebase_messaging_web",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-2.4.0",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-2.4.1",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
@@ -315,7 +315,7 @@
     },
     {
       "name": "flutter_easyloading",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-3.0.3",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-3.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -801,7 +801,7 @@
     },
     {
       "name": "photo_view",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/photo_view-0.13.0",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/photo_view-0.14.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -933,7 +933,7 @@
     },
     {
       "name": "sign_in_with_apple",
-      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple-3.3.0",
+      "rootUri": "file:///Users/deepak/development/flutter/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1166,7 +1166,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-05-27T10:37:24.176402Z",
+  "generated": "2022-06-02T07:13:48.313815Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

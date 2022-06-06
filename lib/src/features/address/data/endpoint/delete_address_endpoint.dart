@@ -9,5 +9,5 @@ class DeleteAddressRequestEndpoint implements IRequestEndPoint {
   RequestMethod method = RequestMethod.DELETE;
 
   @override
-  String get url => '/user/addresses/$id';
+  String get url => '/user/shipping/address/$id';
 }
