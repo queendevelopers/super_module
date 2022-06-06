@@ -12,6 +12,7 @@ import 'package:super_module/src/features/user/domain/repositories/i_user_remote
 class UserRemoteRepository implements IUserRemoteRepository {
   final IHttpHelper httpHelper;
   final ISessionManager sessionManager;
+
   UserRemoteRepository(this.httpHelper, this.sessionManager);
 
   @override
@@ -36,7 +37,7 @@ class UserRemoteRepository implements IUserRemoteRepository {
       final response = await httpHelper.request(
           GetUserProfileEndpoint(), BaseRequestModel());
       return ResponseEntity<UserModel>.fromJson(
-          json: response, fromJson: (json) => UserModel.fromJson(json));
+          json: response, jsonObj: (json) => UserModel.fromJson(json));
     } catch (e) {
       return ResponseEntity<UserModel>.withError(
           ErrorParser.parseDioException(e));

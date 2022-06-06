@@ -6,15 +6,16 @@ part of 'current_logged_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CurrentLoggedUser _$CurrentLoggedUserFromJson(Map<String, dynamic> json) =>
-    CurrentLoggedUser(
-      json['_id'] as String,
-      json['email'] as String,
-      json['schoolId'] as String,
-      json['status'] as String,
-      DateTime.parse(json['createdAt'] as String),
-      DateTime.parse(json['updatedAt'] as String),
-    );
+CurrentLoggedUser _$CurrentLoggedUserFromJson(Map<String, dynamic> json) {
+  return CurrentLoggedUser(
+    json['_id'] as String,
+    json['email'] as String,
+    json['schoolId'] as String,
+    json['status'] as String,
+    DateTime.parse(json['createdAt'] as String),
+    DateTime.parse(json['updatedAt'] as String),
+  );
+}
 
 Map<String, dynamic> _$CurrentLoggedUserToJson(CurrentLoggedUser instance) =>
     <String, dynamic>{

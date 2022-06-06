@@ -8,16 +8,17 @@ part of 'forgot_password_pin_verification_request_model.dart';
 
 ForgotPasswordPinVerificationRequestModel
     _$ForgotPasswordPinVerificationRequestModelFromJson(
-            Map<String, dynamic> json) =>
-        ForgotPasswordPinVerificationRequestModel(
-          key: json['key'] as String?,
-          code: json['code'] as int?,
-          phone: json['phone'] as String?,
-          newPassword: json['newPassword'] as String?,
-          token: json['token'] as String?,
-          email: json['email'] as String?,
-          password: json['password'] as String? ?? '',
-        );
+        Map<String, dynamic> json) {
+  return ForgotPasswordPinVerificationRequestModel(
+    key: json['key'] as String?,
+    code: json['code'] as int?,
+    phone: json['phone'] as String?,
+    newPassword: json['newPassword'] as String?,
+    token: json['token'] as String?,
+    email: json['email'] as String?,
+    password: json['password'] as String?,
+  );
+}
 
 Map<String, dynamic> _$ForgotPasswordPinVerificationRequestModelToJson(
     ForgotPasswordPinVerificationRequestModel instance) {

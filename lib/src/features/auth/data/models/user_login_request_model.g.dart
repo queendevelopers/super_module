@@ -7,11 +7,12 @@ part of 'user_login_request_model.dart';
 // **************************************************************************
 
 UserLoginRequestModel _$UserLoginRequestModelFromJson(
-        Map<String, dynamic> json) =>
-    UserLoginRequestModel(
-      email: json['email'] as String,
-      password: json['password'] as String,
-    );
+    Map<String, dynamic> json) {
+  return UserLoginRequestModel(
+    email: json['email'] as String,
+    password: json['password'] as String,
+  );
+}
 
 Map<String, dynamic> _$UserLoginRequestModelToJson(
         UserLoginRequestModel instance) =>

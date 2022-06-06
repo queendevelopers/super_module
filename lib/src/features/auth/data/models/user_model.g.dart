@@ -6,38 +6,40 @@ part of 'user_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
-      points: json['points'] as int?,
-      gameAvatar: json['gameAvatar'] == null
-          ? null
-          : GameAvatar.fromJson(json['gameAvatar'] as Map<String, dynamic>),
-      shotsDiscovered: json['shotsDiscovered'] as int?,
-      rank: json['rank'] as int?,
-      subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      activeCountries: json['activeCountries'] as int?,
-      username: json['username'] as String?,
-      emailVerified: json['emailVerified'] as bool?,
-      nickname: json['nickname'] as String?,
-      phoneVerified: json['phoneVerified'] as bool?,
-      role: json['role'] as String?,
-      status: json['status'] as String?,
-      social: json['social'] as bool?,
-      language: json['language'] as String?,
-      id: json['_id'] as String?,
-      name: json['name'] as String?,
-      email: json['email'] as String?,
-      phone: json['phone'] as String?,
-      avatar: json['avatar'] as String?,
-      address: json['address'] as String?,
-      createdAt: json['createdAt'] as String?,
-      updatedAt: json['updatedAt'] as String?,
-      score: (json['score'] as num?)?.toDouble(),
-      classroom: json['classroom'] == null
-          ? null
-          : Classroom.fromJson(json['classroom'] as Map<String, dynamic>),
-    );
+UserModel _$UserModelFromJson(Map<String, dynamic> json) {
+  return UserModel(
+    points: json['points'] as int?,
+    gameAvatar: json['gameAvatar'] == null
+        ? null
+        : GameAvatar.fromJson(json['gameAvatar'] as Map<String, dynamic>),
+    shotsDiscovered: json['shotsDiscovered'] as int?,
+    rank: json['rank'] as int?,
+    subscribedCountries: (json['subscribedCountries'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
+    activeCountries: json['activeCountries'] as int?,
+    username: json['username'] as String?,
+    emailVerified: json['emailVerified'] as bool?,
+    nickname: json['nickname'] as String?,
+    phoneVerified: json['phoneVerified'] as bool?,
+    role: json['role'] as String?,
+    status: json['status'] as String?,
+    social: json['social'] as bool?,
+    language: json['language'] as String?,
+    id: json['_id'] as String?,
+    name: json['name'] as String?,
+    email: json['email'] as String?,
+    phone: json['phone'] as String?,
+    avatar: json['avatar'] as String?,
+    address: json['address'] as String?,
+    createdAt: json['createdAt'] as String?,
+    updatedAt: json['updatedAt'] as String?,
+    score: (json['score'] as num?)?.toDouble(),
+    classroom: json['classroom'] == null
+        ? null
+        : Classroom.fromJson(json['classroom'] as Map<String, dynamic>),
+  );
+}
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   final val = <String, dynamic>{};

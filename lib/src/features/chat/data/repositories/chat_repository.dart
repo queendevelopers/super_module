@@ -71,7 +71,7 @@ class ChatRepository implements IChatRepository {
       try {
         yield ResponseEntity<ChatMessageResponse>.fromJson(
             json: response,
-            fromJson: (data) => ChatMessageResponse.fromJson(data));
+            jsonObj: (data) => ChatMessageResponse.fromJson(data));
       } catch (e) {
         rethrow;
       }
@@ -84,7 +84,7 @@ class ChatRepository implements IChatRepository {
       try {
         yield (ResponseEntity<ChatMessageResponse>.fromJson(
             json: response,
-            fromJson: (data) => ChatMessageResponse.fromJson(data)));
+            jsonObj: (data) => ChatMessageResponse.fromJson(data)));
       } catch (e) {
         rethrow;
       }

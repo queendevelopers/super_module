@@ -6,19 +6,20 @@ part of 'global_response_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GlobalResponseModel _$GlobalResponseModelFromJson(Map<String, dynamic> json) =>
-    GlobalResponseModel(
-      json['user'] == null
-          ? null
-          : UserModel.fromJson(json['user'] as Map<String, dynamic>),
-      json['code'] as String?,
-      json['field'] as String?,
-      json['encryptedAccessToken'] as String?,
-      ok: json['ok'] as bool,
-      message: json['message'] as String? ?? 'Process Complete',
-      key: json['key'] as String?,
-      otp: json['otp'] as int?,
-    );
+GlobalResponseModel _$GlobalResponseModelFromJson(Map<String, dynamic> json) {
+  return GlobalResponseModel(
+    json['user'] == null
+        ? null
+        : UserModel.fromJson(json['user'] as Map<String, dynamic>),
+    json['code'] as String?,
+    json['field'] as String?,
+    json['encryptedAccessToken'] as String?,
+    ok: json['ok'] as bool,
+    message: json['message'] as String? ?? 'Process Complete',
+    key: json['key'] as String?,
+    otp: json['otp'] as int?,
+  );
+}
 
 Map<String, dynamic> _$GlobalResponseModelToJson(
         GlobalResponseModel instance) =>

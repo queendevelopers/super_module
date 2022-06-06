@@ -7,11 +7,12 @@ part of 'user_rank_response_model.dart';
 // **************************************************************************
 
 UserRankResponseModel _$UserRankResponseModelFromJson(
-        Map<String, dynamic> json) =>
-    UserRankResponseModel(
-      json['ok'] as bool,
-      PaginationModel.fromJson(json['data'] as Map<String, dynamic>),
-    );
+    Map<String, dynamic> json) {
+  return UserRankResponseModel(
+    json['ok'] as bool,
+    PaginationModel.fromJson(json['data'] as Map<String, dynamic>),
+  );
+}
 
 Map<String, dynamic> _$UserRankResponseModelToJson(
         UserRankResponseModel instance) =>

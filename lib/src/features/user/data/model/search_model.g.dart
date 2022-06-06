@@ -6,12 +6,14 @@ part of 'search_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SearchModel _$SearchModelFromJson(Map<String, dynamic> json) => SearchModel(
-      json['ok'] as bool,
-      (json['data'] as List<dynamic>)
-          .map((e) => UserModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+SearchModel _$SearchModelFromJson(Map<String, dynamic> json) {
+  return SearchModel(
+    json['ok'] as bool,
+    (json['data'] as List<dynamic>)
+        .map((e) => UserModel.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
+}
 
 Map<String, dynamic> _$SearchModelToJson(SearchModel instance) =>
     <String, dynamic>{

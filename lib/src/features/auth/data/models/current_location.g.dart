@@ -6,11 +6,12 @@ part of 'current_location.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CurrentLocation _$CurrentLocationFromJson(Map<String, dynamic> json) =>
-    CurrentLocation(
-      json['lat'] as String,
-      json['lng'] as String,
-    );
+CurrentLocation _$CurrentLocationFromJson(Map<String, dynamic> json) {
+  return CurrentLocation(
+    json['lat'] as String,
+    json['lng'] as String,
+  );
+}
 
 Map<String, dynamic> _$CurrentLocationToJson(CurrentLocation instance) =>
     <String, dynamic>{

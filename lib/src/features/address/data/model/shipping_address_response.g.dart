@@ -7,14 +7,15 @@ part of 'shipping_address_response.dart';
 // **************************************************************************
 
 ShippingAddressResponse _$ShippingAddressResponseFromJson(
-        Map<String, dynamic> json) =>
-    ShippingAddressResponse(
-      json['ok'] as bool?,
-      json['message'] as String,
-      json['data'] == null
-          ? null
-          : ShippingAddress.fromJson(json['data'] as Map<String, dynamic>),
-    );
+    Map<String, dynamic> json) {
+  return ShippingAddressResponse(
+    json['ok'] as bool?,
+    json['message'] as String,
+    json['data'] == null
+        ? null
+        : ShippingAddress.fromJson(json['data'] as Map<String, dynamic>),
+  );
+}
 
 Map<String, dynamic> _$ShippingAddressResponseToJson(
         ShippingAddressResponse instance) =>

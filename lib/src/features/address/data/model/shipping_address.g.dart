@@ -6,20 +6,21 @@ part of 'shipping_address.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) =>
-    ShippingAddress(
-      json['_id'] as String?,
-      json['user'] as String?,
-      json['fullName'] as String?,
-      json['phone'] as String?,
-      json['googleAddress'] as String?,
-      json['addressInfo'] as String?,
-      json['lat'] as String?,
-      json['lng'] as String?,
-      json['name'] as String?,
-      json['address'] as String?,
-      json['region'] as String?,
-    );
+ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) {
+  return ShippingAddress(
+    json['_id'] as String?,
+    json['user'] as String?,
+    json['fullName'] as String?,
+    json['phone'] as String?,
+    json['googleAddress'] as String?,
+    json['addressInfo'] as String?,
+    json['lat'] as String?,
+    json['lng'] as String?,
+    json['name'] as String?,
+    json['address'] as String?,
+    json['region'] as String?,
+  );
+}
 
 Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
     <String, dynamic>{

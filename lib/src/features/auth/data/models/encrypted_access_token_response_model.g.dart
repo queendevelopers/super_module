@@ -7,13 +7,14 @@ part of 'encrypted_access_token_response_model.dart';
 // **************************************************************************
 
 EncryptedAccessTokenResponseModel _$EncryptedAccessTokenResponseModelFromJson(
-        Map<String, dynamic> json) =>
-    EncryptedAccessTokenResponseModel(
-      json['ok'] as bool,
-      EncryptedAccessTokenModel.fromJson(
-          Map<String, String>.from(json['data'] as Map)),
-      json['message'] as String,
-    );
+    Map<String, dynamic> json) {
+  return EncryptedAccessTokenResponseModel(
+    json['ok'] as bool,
+    EncryptedAccessTokenModel.fromJson(
+        Map<String, String>.from(json['data'] as Map)),
+    json['message'] as String,
+  );
+}
 
 Map<String, dynamic> _$EncryptedAccessTokenResponseModelToJson(
         EncryptedAccessTokenResponseModel instance) =>

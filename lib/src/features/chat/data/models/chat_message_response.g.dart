@@ -6,12 +6,13 @@ part of 'chat_message_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ChatMessageResponse _$ChatMessageResponseFromJson(Map<String, dynamic> json) =>
-    ChatMessageResponse(
-      CurrentLoggedUser.fromJson(
-          json['currentlyLoggedUser'] as Map<String, dynamic>),
-      json['msg'] as String,
-    );
+ChatMessageResponse _$ChatMessageResponseFromJson(Map<String, dynamic> json) {
+  return ChatMessageResponse(
+    CurrentLoggedUser.fromJson(
+        json['currentlyLoggedUser'] as Map<String, dynamic>),
+    json['msg'] as String,
+  );
+}
 
 Map<String, dynamic> _$ChatMessageResponseToJson(
         ChatMessageResponse instance) =>
