@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'game_avatar.dart.g.dart';
+part 'avatar.dart.g.dart';
 
 @JsonSerializable()
 class Avatar {
