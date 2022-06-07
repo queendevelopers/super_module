@@ -4,7 +4,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.6.4" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/permission_handler-9.2.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.0.2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple-4.0.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.5" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-2.4.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth_web-3.1.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/google_sign_in_ios-5.2.6" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/local_auth-2.0.2" />
@@ -25,6 +27,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.3.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.5" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.5" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.3" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/google_sign_in_android-5.2.6" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple_web-1.0.1" />
@@ -35,9 +38,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.5+3" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_image_compress-1.1.0" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_facebook_auth-4.3.4" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple-4.0.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-2.4.1" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-11.4.1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
