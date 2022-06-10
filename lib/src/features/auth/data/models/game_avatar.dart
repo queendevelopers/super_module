@@ -1,6 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:super_module/src/features/auth/data/models/avatar.dart';
 
+import 'avatar.dart';
+
 part 'game_avatar.g.dart';
 
 @JsonSerializable()
