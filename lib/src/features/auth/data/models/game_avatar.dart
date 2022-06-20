@@ -1,10 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:super_module/src/features/auth/data/models/avatar.dart';
+
+import 'avatar.dart';
 
 part 'game_avatar.g.dart';
 
 @JsonSerializable()
 class GameAvatar {
-  final String? avatar;
+  final Avatar? avatar;
   final String? customName;
 
   GameAvatar(this.avatar, this.customName);

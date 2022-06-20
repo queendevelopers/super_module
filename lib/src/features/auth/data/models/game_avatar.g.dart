@@ -8,7 +8,9 @@ part of 'game_avatar.dart';
 
 GameAvatar _$GameAvatarFromJson(Map<String, dynamic> json) {
   return GameAvatar(
-    json['avatar'] as String?,
+    json['avatar'] == null
+        ? null
+        : Avatar.fromJson(json['avatar'] as Map<String, dynamic>),
     json['customName'] as String?,
   );
 }

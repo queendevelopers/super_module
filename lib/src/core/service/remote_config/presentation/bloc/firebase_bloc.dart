@@ -10,6 +10,7 @@ part 'firebase_state.dart';
 @injectable
 class FirebaseBloc extends Bloc<FirebaseEvent, FirebaseState> {
   final IFirebaseController controller;
+
   FirebaseBloc(this.controller) : super(FirebaseInitial()) {
     on<FirebaseEvent>((event, emit) async {
       if (event is FirebaseRemoteConfigFetchEvent) {
