@@ -6,12 +6,11 @@ part of 'add_address_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddAddressModel _$AddAddressModelFromJson(Map<String, dynamic> json) {
-  return AddAddressModel(
-    json['ok'] as bool?,
-    json['message'] as String,
-  );
-}
+AddAddressModel _$AddAddressModelFromJson(Map<String, dynamic> json) =>
+    AddAddressModel(
+      json['ok'] as bool?,
+      json['message'] as String,
+    );
 
 Map<String, dynamic> _$AddAddressModelToJson(AddAddressModel instance) =>
     <String, dynamic>{

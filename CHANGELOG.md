@@ -82,3 +82,7 @@
 
 # [0.5.13] - 6 JUN 2022
 - Added firebase remote config
+
+# [0.6.0] - 20 JUN 2022
+- Updated library to latest version
+- Added firebase remote config

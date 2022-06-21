@@ -7,11 +7,10 @@ part of 'forgot_password_request_model.dart';
 // **************************************************************************
 
 ForgotPasswordRequestModel _$ForgotPasswordRequestModelFromJson(
-    Map<String, dynamic> json) {
-  return ForgotPasswordRequestModel(
-    phone: json['phone'] as String,
-  );
-}
+        Map<String, dynamic> json) =>
+    ForgotPasswordRequestModel(
+      phone: json['phone'] as String,
+    );
 
 Map<String, dynamic> _$ForgotPasswordRequestModelToJson(
         ForgotPasswordRequestModel instance) =>

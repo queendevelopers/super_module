@@ -7,24 +7,27 @@ part of 'firebase_remote_config_model.dart';
 // **************************************************************************
 
 FirebaseRemoteConfigModel _$FirebaseRemoteConfigModelFromJson(
-    Map<String, dynamic> json) {
-  return FirebaseRemoteConfigModel(
-    json['latestVersion'] as String,
-    json['minimumVersion'] as String,
-    json['titleText'] as String,
-    json['descriptionText'] as String,
-    json['releaseNotes'] as String,
-    json['isEnabled'] as bool,
-  );
-}
+        Map<String, dynamic> json) =>
+    FirebaseRemoteConfigModel(
+      json['latestVersion'] as String,
+      json['minimumVersion'] as String,
+      json['releaseNotes'] as String,
+      json['isEnabled'] as bool,
+      TitleModel.fromJson(json['title'] as Map<String, dynamic>),
+      DescriptionModel.fromJson(json['description'] as Map<String, dynamic>),
+      ButtonModel.fromJson(json['button'] as Map<String, dynamic>),
+      RedirectModel.fromJson(json['redirect'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$FirebaseRemoteConfigModelToJson(
         FirebaseRemoteConfigModel instance) =>
     <String, dynamic>{
       'latestVersion': instance.latestVersion,
       'minimumVersion': instance.minimumVersion,
-      'titleText': instance.titleText,
-      'descriptionText': instance.descriptionText,
+      'title': instance.title.toJson(),
+      'description': instance.description.toJson(),
+      'button': instance.button.toJson(),
       'releaseNotes': instance.releaseNotes,
       'isEnabled': instance.isEnabled,
+      'redirect': instance.redirect.toJson(),
     };

@@ -3,6 +3,7 @@ library super_module;
 // export 'package:super_module/src/features/auth/data/repositories/auth_remote_repository.dart';
 export 'package:super_module/src/DI/module_injection.dart';
 export 'package:super_module/src/core/extension/cap_extension.dart';
+export 'package:super_module/src/core/service/init_crash_anlytics.dart';
 export 'package:super_module/src/core/service/remote_config/presentation/bloc/firebase_bloc.dart';
 export 'package:super_module/src/core/super_keys.dart';
 export 'package:super_module/src/core/utils/app_icon.dart';

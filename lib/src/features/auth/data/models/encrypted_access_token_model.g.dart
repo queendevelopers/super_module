@@ -7,11 +7,10 @@ part of 'encrypted_access_token_model.dart';
 // **************************************************************************
 
 EncryptedAccessTokenModel _$EncryptedAccessTokenModelFromJson(
-    Map<String, dynamic> json) {
-  return EncryptedAccessTokenModel(
-    json['encryptedAccessToken'] as String,
-  );
-}
+        Map<String, dynamic> json) =>
+    EncryptedAccessTokenModel(
+      json['encryptedAccessToken'] as String,
+    );
 
 Map<String, dynamic> _$EncryptedAccessTokenModelToJson(
         EncryptedAccessTokenModel instance) =>

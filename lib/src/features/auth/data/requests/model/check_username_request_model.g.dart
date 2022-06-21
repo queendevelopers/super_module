@@ -7,11 +7,10 @@ part of 'check_username_request_model.dart';
 // **************************************************************************
 
 CheckUsernameRequestModel _$CheckUsernameRequestModelFromJson(
-    Map<String, dynamic> json) {
-  return CheckUsernameRequestModel(
-    json['username'] as String,
-  );
-}
+        Map<String, dynamic> json) =>
+    CheckUsernameRequestModel(
+      json['username'] as String,
+    );
 
 Map<String, dynamic> _$CheckUsernameRequestModelToJson(
         CheckUsernameRequestModel instance) =>

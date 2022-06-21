@@ -7,13 +7,12 @@ part of 'biometric_register_response_model.dart';
 // **************************************************************************
 
 BiometricRegisterResponseModel _$BiometricRegisterResponseModelFromJson(
-    Map<String, dynamic> json) {
-  return BiometricRegisterResponseModel(
-    json['ok'] as bool,
-    BiometricRegisterModel.fromJson(json['data'] as Map<String, dynamic>),
-    json['message'] as String,
-  );
-}
+        Map<String, dynamic> json) =>
+    BiometricRegisterResponseModel(
+      json['ok'] as bool,
+      BiometricRegisterModel.fromJson(json['data'] as Map<String, dynamic>),
+      json['message'] as String,
+    );
 
 Map<String, dynamic> _$BiometricRegisterResponseModelToJson(
         BiometricRegisterResponseModel instance) =>

@@ -1,18 +1,31 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:super_module/src/core/service/remote_config/data/models/submodel/button_model.dart';
+import 'package:super_module/src/core/service/remote_config/data/models/submodel/description_model.dart';
+import 'package:super_module/src/core/service/remote_config/data/models/submodel/redirect_model.dart';
+import 'package:super_module/src/core/service/remote_config/data/models/submodel/title_model.dart';
 
 part 'firebase_remote_config_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class FirebaseRemoteConfigModel {
   final String latestVersion;
   final String minimumVersion;
-  final String titleText;
-  final String descriptionText;
+  final TitleModel title;
+  final DescriptionModel description;
+  final ButtonModel button;
   final String releaseNotes;
   final bool isEnabled;
+  final RedirectModel redirect;
 
-  FirebaseRemoteConfigModel(this.latestVersion, this.minimumVersion,
-      this.titleText, this.descriptionText, this.releaseNotes, this.isEnabled);
+  FirebaseRemoteConfigModel(
+      this.latestVersion,
+      this.minimumVersion,
+      this.releaseNotes,
+      this.isEnabled,
+      this.title,
+      this.description,
+      this.button,
+      this.redirect);
 
   factory FirebaseRemoteConfigModel.fromJson(Map<String, dynamic> json) =>
       _$FirebaseRemoteConfigModelFromJson(json);

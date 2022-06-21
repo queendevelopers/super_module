@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/core/service/remote_config/data/models/firebase_remote_config_model.dart';
 import 'package:super_module/src/core/service/remote_config/domain/controller/firebase_controller.dart';
 

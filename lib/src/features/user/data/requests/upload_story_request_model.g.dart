@@ -7,13 +7,12 @@ part of 'upload_story_request_model.dart';
 // **************************************************************************
 
 UploadStoryRequestModel _$UploadStoryRequestModelFromJson(
-    Map<String, dynamic> json) {
-  return UploadStoryRequestModel(
-    fileName: json['fileName'] as String,
-    fileType: json['fileType'] as String,
-    location: json['location'] as String?,
-  );
-}
+        Map<String, dynamic> json) =>
+    UploadStoryRequestModel(
+      fileName: json['fileName'] as String,
+      fileType: json['fileType'] as String,
+      location: json['location'] as String?,
+    );
 
 Map<String, dynamic> _$UploadStoryRequestModelToJson(
         UploadStoryRequestModel instance) =>

@@ -7,17 +7,16 @@ part of 'biometric_register_model.dart';
 // **************************************************************************
 
 BiometricRegisterModel _$BiometricRegisterModelFromJson(
-    Map<String, dynamic> json) {
-  return BiometricRegisterModel(
-    key: json['key'] as String?,
-    id: json['id'] as String?,
-    userId: json['userId'] as String?,
-    encKey: json['encKey'] as String?,
-    deviceId: json['deviceId'] as String?,
-    privateKey: json['privateKey'] as String?,
-    publickey: json['publickey'] as String?,
-  );
-}
+        Map<String, dynamic> json) =>
+    BiometricRegisterModel(
+      key: json['key'] as String?,
+      id: json['id'] as String?,
+      userId: json['userId'] as String?,
+      encKey: json['encKey'] as String?,
+      deviceId: json['deviceId'] as String?,
+      privateKey: json['privateKey'] as String?,
+      publickey: json['publickey'] as String?,
+    );
 
 Map<String, dynamic> _$BiometricRegisterModelToJson(
     BiometricRegisterModel instance) {
