@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:injectable/injectable.dart';
-import 'package:super_module/src/core/service/remote_config/data/models/firebase_remote_config_model.dart';
-import 'package:super_module/src/core/service/remote_config/domain/repositories/i_firebase_repository.dart';
+import 'package:super_module/src/features/remote_config/data/models/firebase_remote_config_model.dart';
+import 'package:super_module/src/features/remote_config/domain/repositories/i_firebase_repository.dart';
 
 @Injectable(as: IFirebaseRepository)
 class FirebaseRepository implements IFirebaseRepository {

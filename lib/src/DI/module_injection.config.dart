@@ -12,14 +12,6 @@ import 'package:shared_preferences/shared_preferences.dart' as _i9;
 
 import '../../super_module.dart' as _i34;
 import '../core/service/fcm_service.dart' as _i3;
-import '../core/service/remote_config/data/repositories/firebase_repository.dart'
-    as _i13;
-import '../core/service/remote_config/domain/controller/firebase_controller.dart'
-    as _i28;
-import '../core/service/remote_config/domain/repositories/i_firebase_repository.dart'
-    as _i12;
-import '../core/service/remote_config/presentation/bloc/firebase_bloc.dart'
-    as _i39;
 import '../features/address/data/repository/address_repository.dart' as _i5;
 import '../features/address/domain/controller/i_address_controller.dart'
     as _i22;
@@ -54,6 +46,13 @@ import '../features/chat/data/repositories/chat_repository.dart' as _i27;
 import '../features/chat/domain/controller/chat_controller.dart' as _i41;
 import '../features/chat/domain/repositories/i_chat_repository.dart' as _i26;
 import '../features/chat/presentation/bloc/chat_bloc.dart' as _i48;
+import '../features/remote_config/data/repositories/firebase_repository.dart'
+    as _i13;
+import '../features/remote_config/domain/controller/firebase_controller.dart'
+    as _i28;
+import '../features/remote_config/domain/repositories/i_firebase_repository.dart'
+    as _i12;
+import '../features/remote_config/presentation/bloc/firebase_bloc.dart' as _i39;
 import '../features/user/data/repositories/user_remote_repostiory.dart' as _i18;
 import '../features/user/data/session/app_manager.dart' as _i8;
 import '../features/user/data/session/i_app_manager.dart' as _i7;
