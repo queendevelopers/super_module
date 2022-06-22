@@ -11,7 +11,7 @@ FirebaseRemoteConfigModel _$FirebaseRemoteConfigModelFromJson(
     FirebaseRemoteConfigModel(
       json['latestVersion'] as String,
       json['minimumVersion'] as String,
-      json['releaseNotes'] as String,
+      json['releaseNotes'] as Map<String, dynamic>,
       json['isEnabled'] as bool,
       TitleModel.fromJson(json['title'] as Map<String, dynamic>),
       DescriptionModel.fromJson(json['description'] as Map<String, dynamic>),

@@ -13,7 +13,7 @@ class FirebaseRemoteConfigModel {
   final TitleModel title;
   final DescriptionModel description;
   final ButtonModel button;
-  final String releaseNotes;
+  final Map<String, dynamic> releaseNotes;
   final bool isEnabled;
   final RedirectModel redirect;
 

@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info/package_info.dart';
 import 'package:super_module/src/core/utils/app_launchers.dart';
+import 'package:super_module/src/core/utils/dialog_utils.dart';
 import 'package:super_module/src/features/remote_config/data/models/firebase_remote_config_model.dart';
 
 Future<void> checkForUpdates(
@@ -42,8 +42,33 @@ Future<void> checkForUpdates(
                 title: Text(
                   firebaseRemoteConfigModel.title.titleText[locale],
                 ),
-                content: Text(
-                  firebaseRemoteConfigModel.description.descriptionText[locale],
+                content: Column(
+                  children: [
+                    Text(
+                      firebaseRemoteConfigModel
+                          .description.descriptionText[locale],
+                    ),
+                    Visibility(
+                        visible:
+                            firebaseRemoteConfigModel.releaseNotes.isNotEmpty,
+                        child: TextButton(
+                            onPressed: () {
+                              showAlertDialog(
+                                  context: context,
+                                  title: 'Release Notes',
+                                  message: firebaseRemoteConfigModel
+                                      .releaseNotes[locale],
+                                  okBtnHandler: () {
+                                    Navigator.of(context).pop();
+                                  });
+                            },
+                            child: Text(
+                              'Read Release Notes',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold),
+                            )))
+                  ],
                 ),
                 actions: [
                   TextButton(
