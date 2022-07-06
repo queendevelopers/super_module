@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/features/auth/domain/controller/auth_login_controller.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 

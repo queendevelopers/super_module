@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/features/auth/data/models/user_model.dart';
 import 'package:super_module/src/features/user/data/session/i_session_manager.dart';
 import 'package:super_module/src/features/user/domain/controller/user_controller.dart';

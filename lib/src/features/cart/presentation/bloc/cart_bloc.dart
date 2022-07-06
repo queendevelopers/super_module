@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/features/cart/data/models/cart_list.dart';
 import 'package:super_module/src/features/cart/domain/controller/cart_controller.dart';
 
