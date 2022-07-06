@@ -82,4 +82,17 @@ class AppManager implements IAppManager {
       rethrow;
     }
   }
+
+  @override
+  bool getBool({required String key, bool defValue = false}) {
+    try {
+      final result = sharedPreferences.getBool(key);
+      if (result != null) {
+        return result;
+      }
+      return defValue;
+    } catch (e) {
+      return defValue;
+    }
+  }
 }
