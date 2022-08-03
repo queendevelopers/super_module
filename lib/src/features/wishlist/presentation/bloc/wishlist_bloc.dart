@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 import 'package:super_module/src/features/wishlist/domain/controller/wishlist_controller.dart';
 

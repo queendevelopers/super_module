@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_rest_client/flutter_rest_client.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:super_module/src/features/address/data/model/add_address_model.dart';
 import 'package:super_module/src/features/address/data/model/shipping_address.dart';
 import 'package:super_module/src/features/address/data/request/add_address_request_model.dart';
