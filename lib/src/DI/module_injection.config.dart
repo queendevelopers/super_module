@@ -4,6 +4,7 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter_rest_client/flutter_rest_client.dart' as _i6;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i16;
 import 'package:get_it/get_it.dart' as _i1;
