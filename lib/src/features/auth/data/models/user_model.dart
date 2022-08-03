@@ -6,8 +6,8 @@ import 'package:super_module/src/features/auth/data/models/game_avatar.dart';
 
 part 'user_model.g.dart';
 
-@JsonSerializable(includeIfNull: false)
 @CopyWith()
+@JsonSerializable(includeIfNull: false)
 class UserModel extends BaseRequestModel {
   final GameAvatar? gameAvatar;
   final bool? emailVerified;
