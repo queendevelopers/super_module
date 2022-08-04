@@ -17,6 +17,8 @@ abstract class _$UserModelCWProxy {
 
   UserModel createdAt(String? createdAt);
 
+  UserModel currentStudying(bool? currentStudying);
+
   UserModel email(String? email);
 
   UserModel emailVerified(bool? emailVerified);
@@ -69,6 +71,7 @@ abstract class _$UserModelCWProxy {
     String? avatar,
     Classroom? classroom,
     String? createdAt,
+    bool? currentStudying,
     String? email,
     bool? emailVerified,
     GameAvatar? gameAvatar,
@@ -113,6 +116,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
 
   @override
   UserModel createdAt(String? createdAt) => this(createdAt: createdAt);
+
+  @override
+  UserModel currentStudying(bool? currentStudying) =>
+      this(currentStudying: currentStudying);
 
   @override
   UserModel email(String? email) => this(email: email);
@@ -192,6 +199,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
     Object? avatar = const $CopyWithPlaceholder(),
     Object? classroom = const $CopyWithPlaceholder(),
     Object? createdAt = const $CopyWithPlaceholder(),
+    Object? currentStudying = const $CopyWithPlaceholder(),
     Object? email = const $CopyWithPlaceholder(),
     Object? emailVerified = const $CopyWithPlaceholder(),
     Object? gameAvatar = const $CopyWithPlaceholder(),
@@ -234,6 +242,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.createdAt
           // ignore: cast_nullable_to_non_nullable
           : createdAt as String?,
+      currentStudying: currentStudying == const $CopyWithPlaceholder()
+          ? _value.currentStudying
+          // ignore: cast_nullable_to_non_nullable
+          : currentStudying as bool?,
       email: email == const $CopyWithPlaceholder()
           ? _value.email
           // ignore: cast_nullable_to_non_nullable
@@ -329,6 +341,7 @@ extension $UserModelCopyWith on UserModel {
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       socialLogin: json['socialLogin'] as bool?,
+      currentStudying: json['currentStudying'] as bool?,
       points: json['points'] as int?,
       gameAvatar: json['gameAvatar'] == null
           ? null
@@ -377,6 +390,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('status', instance.status);
   writeNotNull('social', instance.social);
   writeNotNull('socialLogin', instance.socialLogin);
+  writeNotNull('currentStudying', instance.currentStudying);
   writeNotNull('shotsDiscovered', instance.shotsDiscovered);
   writeNotNull('rank', instance.rank);
   writeNotNull('language', instance.language);
