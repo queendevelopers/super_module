@@ -16,6 +16,7 @@ class UserModel extends BaseRequestModel {
   final String? status;
   final bool? social;
   final bool? socialLogin;
+  final bool? currentStudying;
   final int? shotsDiscovered;
   final int? rank;
   final String? language;
@@ -38,6 +39,7 @@ class UserModel extends BaseRequestModel {
 
   UserModel({
     this.socialLogin,
+    this.currentStudying,
     this.points,
     this.gameAvatar,
     this.shotsDiscovered,
