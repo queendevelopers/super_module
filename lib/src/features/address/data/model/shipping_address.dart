@@ -16,6 +16,7 @@ class ShippingAddress {
   final String? addressInfo;
   final String? lat;
   final String? lng;
+  final bool? isDefault;
 
   ShippingAddress(
       this.id,
@@ -28,6 +29,7 @@ class ShippingAddress {
       this.lng,
       this.name,
       this.address,
+      this.isDefault,
       this.region);
 
   factory ShippingAddress.fromJson(Map<String, dynamic> json) =>

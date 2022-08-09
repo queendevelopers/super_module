@@ -19,6 +19,7 @@ class AddAddressRequestModel implements IRequestModel {
   final String? lng;
   final String? googleAddress;
   final String? addressInfo;
+  final bool? isDefault;
 
   AddAddressRequestModel(
       {this.fullName,
@@ -34,6 +35,7 @@ class AddAddressRequestModel implements IRequestModel {
       this.googleAddress,
       this.addressInfo,
       this.lat,
+      this.isDefault,
       this.lng});
 
   factory AddAddressRequestModel.fromJson(Map<String, dynamic> json) =>
