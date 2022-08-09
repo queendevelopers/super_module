@@ -2,7 +2,7 @@ name: super_module
 description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
 repository: https://gitlab.com/swivt/super-module
 homepage: https://gitab.com/swivt/super-module
-version: 0.6.10-prerelease
+version: 0.6.12-prerelease
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -53,6 +53,7 @@ dependencies:
   firebase_remote_config: ^2.0.9
   package_info: ^2.0.2
   firebase_analytics: ^9.1.10
+  copy_with_extension: ^4.0.2
 
 
 dev_dependencies:
@@ -63,3 +64,4 @@ dev_dependencies:
   injectable_generator: ^1.4.1
   flutter_launcher_icons: ^0.9.2
   hive_generator: ^1.1.2
+  copy_with_extension_gen: ^4.0.2

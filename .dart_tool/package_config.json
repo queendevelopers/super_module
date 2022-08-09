@@ -164,6 +164,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "copy_with_extension",
+      "rootUri": "file:///Users/santoshacharya/.pub-cache/hosted/pub.dartlang.org/copy_with_extension-4.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "copy_with_extension_gen",
+      "rootUri": "file:///Users/santoshacharya/.pub-cache/hosted/pub.dartlang.org/copy_with_extension_gen-4.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "country_code_picker",
       "rootUri": "file:///Users/santoshacharya/.pub-cache/hosted/pub.dartlang.org/country_code_picker-2.0.2",
       "packageUri": "lib/",
@@ -1238,7 +1250,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-08-09T07:42:47.446632Z",
+  "generated": "2022-08-09T08:05:55.130350Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
