@@ -43,8 +43,8 @@ export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart'
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/presentation/bloc/chat_bloc.dart';
-export 'package:super_module/src/features/remote_config/presentation/bloc/firebase_bloc.dart';
-export 'package:super_module/src/features/remote_config/presentation/widget/update_alert_dialog.dart';
+export 'package:super_module/src/features/firebase/presentation/bloc/firebase_bloc.dart';
+export 'package:super_module/src/features/firebase/presentation/widget/update_alert_dialog.dart';
 export 'package:super_module/src/features/user/data/model/address_model.dart';
 export 'package:super_module/src/features/user/data/model/page_limit_model.dart';
 export 'package:super_module/src/features/user/data/model/pagination_model.dart';

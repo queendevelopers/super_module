@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:super_module/src/core/utils/app_launchers.dart';
 import 'package:super_module/src/core/utils/dialog_utils.dart';
-import 'package:super_module/src/features/remote_config/data/models/firebase_remote_config_model.dart';
+import 'package:super_module/src/features/firebase/data/models/firebase_remote_config_model.dart';
 
 void checkForUpdates(
     {required BuildContext context,
