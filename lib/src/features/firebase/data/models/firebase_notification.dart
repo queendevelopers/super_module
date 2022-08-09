@@ -13,6 +13,7 @@ class FirebaseNotification {
   final Map<dynamic, dynamic>? payload;
 
   FirebaseNotification({this.title, this.body, this.largeImage, this.payload});
+
   factory FirebaseNotification.fromRemoteNotification(RemoteMessage message) {
     return FirebaseNotification(
       title: message.notification?.title,

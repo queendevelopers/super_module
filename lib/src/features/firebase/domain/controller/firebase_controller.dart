@@ -8,12 +8,16 @@ import '../../data/models/firebase_notification.dart';
 
 abstract class IFirebaseController {
   Future<FirebaseRemoteConfigModel> getFirebaseRemoteConfig();
+
   Future<String?> getFcmToken();
+
   Stream<String> onFcmTokenRefresh();
 
   ///retrive notification after app open from closed state
   Future<FirebaseNotification?> getInitialNotification();
+
   Stream<RemoteMessage> listenNotifications();
+
   Future<FlutterLocalNotificationsPlugin> initializeLocalNotification(
       {bool alert = true,
       bool announcement = false,
@@ -24,6 +28,7 @@ abstract class IFirebaseController {
       bool sound = true,
       void Function(String?)? onSelected,
       String androidNotificationIcon = '@mipmap/ic_launcher'});
+
   Future<void> showNotification(FirebaseNotification notification,
       void Function(dynamic payload) onNotificationClicked,
       {FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin});

@@ -7,7 +7,6 @@ class ListItems {
 
 mixin BaseListAdapter<T> {
   Future<ListItems> getItems(int offset, int limit);
-  
 }
 
 class ListAdapter implements BaseListAdapter {
