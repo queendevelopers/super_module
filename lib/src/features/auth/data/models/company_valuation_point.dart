@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'company_valuation_point.g.dart';
@@ -37,14 +36,6 @@ class CompanyValuationPoint {
       classroomContent: classroomContent ?? this.classroomContent,
       valuationPoint: valuationPoint ?? this.valuationPoint,
     );
-  }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    if (other is! CompanyValuationPoint) return false;
-    final mapEquals = const DeepCollectionEquality().equals;
-    return mapEquals(other.toJson(), toJson());
   }
 
   @override

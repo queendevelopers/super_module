@@ -18,6 +18,7 @@ ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) =>
       json['lng'] as String?,
       json['name'] as String?,
       json['address'] as String?,
+      json['isDefault'] as bool?,
       json['region'] as String?,
     );
 
