@@ -78,6 +78,7 @@ class FirebaseController implements IFirebaseController {
         carPlay: carPlay,
         criticalAlert: criticalAlert,
         provisional: provisional,
+        androidNotificationIcon: androidNotificationIcon,
         sound: sound,
         onSelected: onSelected);
   }

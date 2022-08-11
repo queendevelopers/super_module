@@ -44,3 +44,9 @@ class FirebaseInitialNotificationFetchSuccessState extends FirebaseState {
 
   FirebaseInitialNotificationFetchSuccessState(this.notification);
 }
+
+class FirebaseNotificationClickedState extends FirebaseState {
+  final Map<String, dynamic> payload;
+
+  FirebaseNotificationClickedState(this.payload);
+}
