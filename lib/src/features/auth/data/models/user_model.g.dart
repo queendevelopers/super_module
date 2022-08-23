@@ -38,6 +38,8 @@ abstract class _$UserModelCWProxy {
 
   UserModel nickname(String? nickname);
 
+  UserModel panel(String? panel);
+
   UserModel phone(String? phone);
 
   UserModel phoneVerified(bool? phoneVerified);
@@ -88,6 +90,7 @@ abstract class _$UserModelCWProxy {
     String? language,
     String? name,
     String? nickname,
+    String? panel,
     String? phone,
     bool? phoneVerified,
     int? points,
@@ -163,6 +166,9 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
   UserModel nickname(String? nickname) => this(nickname: nickname);
 
   @override
+  UserModel panel(String? panel) => this(panel: panel);
+
+  @override
   UserModel phone(String? phone) => this(phone: phone);
 
   @override
@@ -232,6 +238,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
     Object? language = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
     Object? nickname = const $CopyWithPlaceholder(),
+    Object? panel = const $CopyWithPlaceholder(),
     Object? phone = const $CopyWithPlaceholder(),
     Object? phoneVerified = const $CopyWithPlaceholder(),
     Object? points = const $CopyWithPlaceholder(),
@@ -309,6 +316,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.nickname
           // ignore: cast_nullable_to_non_nullable
           : nickname as String?,
+      panel: panel == const $CopyWithPlaceholder()
+          ? _value.panel
+          // ignore: cast_nullable_to_non_nullable
+          : panel as String?,
       phone: phone == const $CopyWithPlaceholder()
           ? _value.phone
           // ignore: cast_nullable_to_non_nullable
@@ -371,6 +382,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
 
 extension $UserModelCopyWith on UserModel {
   /// Returns a callable class that can be used as follows: `instanceOfUserModel.copyWith(...)` or like so:`instanceOfUserModel.copyWith.fieldName(...)`.
+  // ignore: library_private_types_in_public_api
   _$UserModelCWProxy get copyWith => _$UserModelCWProxyImpl(this);
 }
 
@@ -421,6 +433,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       classroom: json['classroom'] == null
           ? null
           : Classroom.fromJson(json['classroom'] as Map<String, dynamic>),
+      panel: json['panel'] as String?,
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) {
@@ -461,5 +474,6 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('score', instance.score);
   writeNotNull('classroom', instance.classroom);
+  writeNotNull('panel', instance.panel);
   return val;
 }

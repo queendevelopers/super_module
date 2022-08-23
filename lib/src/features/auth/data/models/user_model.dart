@@ -42,6 +42,7 @@ class UserModel extends BaseRequestModel {
   final String? updatedAt;
   final double? score;
   final Classroom? classroom;
+  final String? panel;
 
   UserModel({
     this.socialLogin,
@@ -73,6 +74,7 @@ class UserModel extends BaseRequestModel {
     this.updatedAt,
     this.score,
     this.classroom,
+    this.panel,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> data) =>

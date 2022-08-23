@@ -35,4 +35,5 @@ Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
       'addressInfo': instance.addressInfo,
       'lat': instance.lat,
       'lng': instance.lng,
+      'isDefault': instance.isDefault,
     };

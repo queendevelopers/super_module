@@ -22,6 +22,7 @@ AddAddressRequestModel _$AddAddressRequestModelFromJson(
       googleAddress: json['googleAddress'] as String?,
       addressInfo: json['addressInfo'] as String?,
       lat: json['lat'] as String?,
+      isDefault: json['isDefault'] as bool?,
       lng: json['lng'] as String?,
     );
 
@@ -49,5 +50,6 @@ Map<String, dynamic> _$AddAddressRequestModelToJson(
   writeNotNull('lng', instance.lng);
   writeNotNull('googleAddress', instance.googleAddress);
   writeNotNull('addressInfo', instance.addressInfo);
+  writeNotNull('isDefault', instance.isDefault);
   return val;
 }
