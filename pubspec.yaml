@@ -5,7 +5,7 @@ homepage: https://gitab.com/swivt/super-module
 version: 0.6.20-prerelease
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,7 +15,7 @@ dependencies:
   flutter_easyloading: ^3.0.5
   jwt_decode: ^0.3.1
   flutter_secure_storage: ^5.0.2
-  google_sign_in: ^5.3.3
+  google_sign_in: ^5.4.0
   json_serializable: ^6.2.0
   injectable: ^1.5.3
   get_it: ^7.2.0
@@ -35,7 +35,7 @@ dependencies:
   photo_view: ^0.14.0
   permission_handler: ^10.0.0
   image_picker: ^0.8.5+3
-  flutter_rest_client: ^0.1.5
+  flutter_rest_client: ^0.1.8
   bloc: ^7.2.1
   intl: ^0.17.0
   json_annotation: ^4.5.0

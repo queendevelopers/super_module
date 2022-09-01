@@ -37,7 +37,6 @@ export 'package:super_module/src/features/auth/presentation/bloc/forgot_password
 export 'package:super_module/src/features/auth/presentation/bloc/forgot_password_bloc/verify_opt_bloc/verify_otp_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/login_bloc/login_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/register_bloc/register_bloc.dart';
-export 'package:super_module/src/features/auth/presentation/bloc/register_phone_by_otp_bloc/register_phone_by_otp_bloc.dart';
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
 export 'package:super_module/src/features/cart/data/models/cart_list.dart';
 export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart';
