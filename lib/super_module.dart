@@ -61,3 +61,6 @@ export 'package:super_module/src/features/user/domain/entity/store_recent_search
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
 export 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 export 'package:super_module/src/features/wishlist/presentation/bloc/wishlist_bloc.dart';
+export 'package:shared_preferences/shared_preferences.dart';
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:get_it/get_it.dart';

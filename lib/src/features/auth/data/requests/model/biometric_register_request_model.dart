@@ -17,3 +17,7 @@ class BiometricRegisterRequestModel extends BaseRequestModel {
 
   Map<String, dynamic> toJson() => _$BiometricRegisterRequestModelToJson(this);
 }
+
+
+
+
