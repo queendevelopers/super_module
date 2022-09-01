@@ -4,7 +4,6 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter_rest_client/flutter_rest_client.dart' as _i6;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i16;
 import 'package:get_it/get_it.dart' as _i1;
@@ -45,13 +44,13 @@ import '../features/chat/data/repositories/chat_repository.dart' as _i26;
 import '../features/chat/domain/controller/chat_controller.dart' as _i40;
 import '../features/chat/domain/repositories/i_chat_repository.dart' as _i25;
 import '../features/chat/presentation/bloc/chat_bloc.dart' as _i47;
-import '../features/remote_config/data/repositories/firebase_repository.dart'
+import '../features/firebase/data/repositories/firebase_repository.dart'
     as _i13;
-import '../features/remote_config/domain/controller/firebase_controller.dart'
+import '../features/firebase/domain/controller/firebase_controller.dart'
     as _i27;
-import '../features/remote_config/domain/repositories/i_firebase_repository.dart'
+import '../features/firebase/domain/repositories/i_firebase_repository.dart'
     as _i12;
-import '../features/remote_config/presentation/bloc/firebase_bloc.dart' as _i38;
+import '../features/firebase/presentation/bloc/firebase_bloc.dart' as _i38;
 import '../features/user/data/repositories/user_remote_repostiory.dart' as _i18;
 import '../features/user/data/session/app_manager.dart' as _i8;
 import '../features/user/data/session/i_app_manager.dart' as _i7;

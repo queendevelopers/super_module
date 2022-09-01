@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:super_module/src/features/remote_config/data/models/submodel/button_model.dart';
-import 'package:super_module/src/features/remote_config/data/models/submodel/description_model.dart';
-import 'package:super_module/src/features/remote_config/data/models/submodel/redirect_model.dart';
-import 'package:super_module/src/features/remote_config/data/models/submodel/title_model.dart';
+import 'package:super_module/src/features/firebase/data/models/submodel/button_model.dart';
+import 'package:super_module/src/features/firebase/data/models/submodel/description_model.dart';
+import 'package:super_module/src/features/firebase/data/models/submodel/redirect_model.dart';
+import 'package:super_module/src/features/firebase/data/models/submodel/title_model.dart';
 
 part 'firebase_remote_config_model.g.dart';
 

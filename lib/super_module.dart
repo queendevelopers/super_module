@@ -21,6 +21,7 @@ export 'package:super_module/src/core/utils/validator.dart';
 export 'package:super_module/src/core/widget/app_country_picker.dart';
 export 'package:super_module/src/core/widget/app_image_provider.dart';
 export 'package:super_module/src/core/widget/full_screen_image_widget.dart';
+export 'package:super_module/src/features/address/data/model/shipping_address.dart';
 export 'package:super_module/src/features/address/presentation/bloc/address_bloc.dart';
 export 'package:super_module/src/features/auth/biometric/bloc/biometric_bloc.dart';
 // export 'package:super_module/src/features/auth/biometric/encryption/rsa_util.dart';
@@ -42,8 +43,10 @@ export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart'
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/presentation/bloc/chat_bloc.dart';
-export 'package:super_module/src/features/remote_config/presentation/bloc/firebase_bloc.dart';
-export 'package:super_module/src/features/remote_config/presentation/widget/update_alert_dialog.dart';
+export 'package:super_module/src/features/firebase/domain/controller/firebase_controller.dart';
+export 'package:super_module/src/features/firebase/presentation/bloc/firebase_bloc.dart';
+export 'package:super_module/src/features/firebase/presentation/bloc/firebase_bloc.dart';
+export 'package:super_module/src/features/firebase/presentation/widget/update_alert_dialog.dart';
 export 'package:super_module/src/features/user/data/model/address_model.dart';
 export 'package:super_module/src/features/user/data/model/page_limit_model.dart';
 export 'package:super_module/src/features/user/data/model/pagination_model.dart';
@@ -57,3 +60,6 @@ export 'package:super_module/src/features/user/domain/entity/store_recent_search
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
 export 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 export 'package:super_module/src/features/wishlist/presentation/bloc/wishlist_bloc.dart';
+export 'package:shared_preferences/shared_preferences.dart';
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:get_it/get_it.dart';

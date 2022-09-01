@@ -10,7 +10,7 @@ RegisterRequestModel _$RegisterRequestModelFromJson(
         Map<String, dynamic> json) =>
     RegisterRequestModel(
       name: json['name'] as String?,
-      email: json['email'] as String,
+      email: json['email'] as String?,
       phone: json['phone'] as String?,
       address: json['address'] as String?,
       password: json['password'] as String,
@@ -18,6 +18,7 @@ RegisterRequestModel _$RegisterRequestModelFromJson(
       role: json['role'] as String?,
       subrole: json['subrole'] as String?,
       schoolId: json['schoolId'] as String?,
+      panel: json['panel'] as String?,
     );
 
 Map<String, dynamic> _$RegisterRequestModelToJson(
@@ -32,4 +33,5 @@ Map<String, dynamic> _$RegisterRequestModelToJson(
       'role': instance.role,
       'subrole': instance.subrole,
       'schoolId': instance.schoolId,
+      'panel': instance.panel,
     };

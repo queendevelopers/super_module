@@ -55,3 +55,26 @@ String? validateNotEmpty(String? value, String type) {
     return null;
   }
 }
+
+String toBeginningOfSentenceCase(String input) {
+  if (input.isEmpty) return input;
+  return '${input.substring(1).toUpperCase()}${input.substring(input.indexOf(input.substring(2)), input.length)}';
+}
+
+String? validateName(String? name,
+    {String fieldName = 'Name', int minLen = 1, int maxLength = 40}) {
+  if (name == null || name.isEmpty) {
+    return 'Please Enter $fieldName';
+  } else if (name.length < minLen) {
+    return fieldName + ' must be $minLen characters long';
+  } else if (name.length > maxLength) {
+    return fieldName + ' must be less than $maxLength characters';
+  } else {
+    final regx = RegExp(r'^[a-z]+$').hasMatch(name);
+    if (regx) {
+      return null;
+    } else {
+      return fieldName + ' must contain letters only';
+    }
+  }
+}

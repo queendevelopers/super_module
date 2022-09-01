@@ -6,24 +6,26 @@ abstract class RegisterEvent {}
 class RegisterButtonTapEvent extends RegisterEvent {
   final String? username;
   final String? fullName;
-  final String email;
+  final String? email;
   final String password;
-  final String phone;
+  final String? phone;
   final String? address;
   final String? role;
   final String? subRole;
   final String? schoolId;
+  final String? panel;
 
   RegisterButtonTapEvent({
     this.username,
     this.fullName,
-    required this.email,
+     this.email,
     required this.password,
     this.address,
-    required this.phone,
+     this.phone,
     this.role,
     this.subRole,
     this.schoolId,
+    this.panel,
   });
 }
 

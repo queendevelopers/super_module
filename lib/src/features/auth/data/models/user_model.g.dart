@@ -15,13 +15,20 @@ abstract class _$UserModelCWProxy {
 
   UserModel classroom(Classroom? classroom);
 
+  UserModel companyValuationPoint(
+      List<CompanyValuationPoint>? companyValuationPoint);
+
   UserModel createdAt(String? createdAt);
+
+  UserModel currentStudying(String? currentStudying);
 
   UserModel email(String? email);
 
   UserModel emailVerified(bool? emailVerified);
 
   UserModel gameAvatar(GameAvatar? gameAvatar);
+
+  UserModel growthTrend(List<GrowthTrend>? growthTrend);
 
   UserModel id(String? id);
 
@@ -30,6 +37,8 @@ abstract class _$UserModelCWProxy {
   UserModel name(String? name);
 
   UserModel nickname(String? nickname);
+
+  UserModel panel(String? panel);
 
   UserModel phone(String? phone);
 
@@ -51,6 +60,8 @@ abstract class _$UserModelCWProxy {
 
   UserModel status(String? status);
 
+  UserModel studentGrades(List<int>? studentGrades);
+
   UserModel subscribedCountries(List<String>? subscribedCountries);
 
   UserModel updatedAt(String? updatedAt);
@@ -68,14 +79,18 @@ abstract class _$UserModelCWProxy {
     String? address,
     String? avatar,
     Classroom? classroom,
+    List<CompanyValuationPoint>? companyValuationPoint,
     String? createdAt,
+    String? currentStudying,
     String? email,
     bool? emailVerified,
     GameAvatar? gameAvatar,
+    List<GrowthTrend>? growthTrend,
     String? id,
     String? language,
     String? name,
     String? nickname,
+    String? panel,
     String? phone,
     bool? phoneVerified,
     int? points,
@@ -86,6 +101,7 @@ abstract class _$UserModelCWProxy {
     bool? social,
     bool? socialLogin,
     String? status,
+    List<int>? studentGrades,
     List<String>? subscribedCountries,
     String? updatedAt,
     String? username,
@@ -112,7 +128,16 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
   UserModel classroom(Classroom? classroom) => this(classroom: classroom);
 
   @override
+  UserModel companyValuationPoint(
+          List<CompanyValuationPoint>? companyValuationPoint) =>
+      this(companyValuationPoint: companyValuationPoint);
+
+  @override
   UserModel createdAt(String? createdAt) => this(createdAt: createdAt);
+
+  @override
+  UserModel currentStudying(String? currentStudying) =>
+      this(currentStudying: currentStudying);
 
   @override
   UserModel email(String? email) => this(email: email);
@@ -125,6 +150,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
   UserModel gameAvatar(GameAvatar? gameAvatar) => this(gameAvatar: gameAvatar);
 
   @override
+  UserModel growthTrend(List<GrowthTrend>? growthTrend) =>
+      this(growthTrend: growthTrend);
+
+  @override
   UserModel id(String? id) => this(id: id);
 
   @override
@@ -135,6 +164,9 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
 
   @override
   UserModel nickname(String? nickname) => this(nickname: nickname);
+
+  @override
+  UserModel panel(String? panel) => this(panel: panel);
 
   @override
   UserModel phone(String? phone) => this(phone: phone);
@@ -169,6 +201,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
   UserModel status(String? status) => this(status: status);
 
   @override
+  UserModel studentGrades(List<int>? studentGrades) =>
+      this(studentGrades: studentGrades);
+
+  @override
   UserModel subscribedCountries(List<String>? subscribedCountries) =>
       this(subscribedCountries: subscribedCountries);
 
@@ -191,14 +227,18 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
     Object? address = const $CopyWithPlaceholder(),
     Object? avatar = const $CopyWithPlaceholder(),
     Object? classroom = const $CopyWithPlaceholder(),
+    Object? companyValuationPoint = const $CopyWithPlaceholder(),
     Object? createdAt = const $CopyWithPlaceholder(),
+    Object? currentStudying = const $CopyWithPlaceholder(),
     Object? email = const $CopyWithPlaceholder(),
     Object? emailVerified = const $CopyWithPlaceholder(),
     Object? gameAvatar = const $CopyWithPlaceholder(),
+    Object? growthTrend = const $CopyWithPlaceholder(),
     Object? id = const $CopyWithPlaceholder(),
     Object? language = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
     Object? nickname = const $CopyWithPlaceholder(),
+    Object? panel = const $CopyWithPlaceholder(),
     Object? phone = const $CopyWithPlaceholder(),
     Object? phoneVerified = const $CopyWithPlaceholder(),
     Object? points = const $CopyWithPlaceholder(),
@@ -209,6 +249,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
     Object? social = const $CopyWithPlaceholder(),
     Object? socialLogin = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
+    Object? studentGrades = const $CopyWithPlaceholder(),
     Object? subscribedCountries = const $CopyWithPlaceholder(),
     Object? updatedAt = const $CopyWithPlaceholder(),
     Object? username = const $CopyWithPlaceholder(),
@@ -230,10 +271,19 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.classroom
           // ignore: cast_nullable_to_non_nullable
           : classroom as Classroom?,
+      companyValuationPoint:
+          companyValuationPoint == const $CopyWithPlaceholder()
+              ? _value.companyValuationPoint
+              // ignore: cast_nullable_to_non_nullable
+              : companyValuationPoint as List<CompanyValuationPoint>?,
       createdAt: createdAt == const $CopyWithPlaceholder()
           ? _value.createdAt
           // ignore: cast_nullable_to_non_nullable
           : createdAt as String?,
+      currentStudying: currentStudying == const $CopyWithPlaceholder()
+          ? _value.currentStudying
+          // ignore: cast_nullable_to_non_nullable
+          : currentStudying as String?,
       email: email == const $CopyWithPlaceholder()
           ? _value.email
           // ignore: cast_nullable_to_non_nullable
@@ -246,6 +296,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.gameAvatar
           // ignore: cast_nullable_to_non_nullable
           : gameAvatar as GameAvatar?,
+      growthTrend: growthTrend == const $CopyWithPlaceholder()
+          ? _value.growthTrend
+          // ignore: cast_nullable_to_non_nullable
+          : growthTrend as List<GrowthTrend>?,
       id: id == const $CopyWithPlaceholder()
           ? _value.id
           // ignore: cast_nullable_to_non_nullable
@@ -262,6 +316,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.nickname
           // ignore: cast_nullable_to_non_nullable
           : nickname as String?,
+      panel: panel == const $CopyWithPlaceholder()
+          ? _value.panel
+          // ignore: cast_nullable_to_non_nullable
+          : panel as String?,
       phone: phone == const $CopyWithPlaceholder()
           ? _value.phone
           // ignore: cast_nullable_to_non_nullable
@@ -302,6 +360,10 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.status
           // ignore: cast_nullable_to_non_nullable
           : status as String?,
+      studentGrades: studentGrades == const $CopyWithPlaceholder()
+          ? _value.studentGrades
+          // ignore: cast_nullable_to_non_nullable
+          : studentGrades as List<int>?,
       subscribedCountries: subscribedCountries == const $CopyWithPlaceholder()
           ? _value.subscribedCountries
           // ignore: cast_nullable_to_non_nullable
@@ -320,6 +382,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
 
 extension $UserModelCopyWith on UserModel {
   /// Returns a callable class that can be used as follows: `instanceOfUserModel.copyWith(...)` or like so:`instanceOfUserModel.copyWith.fieldName(...)`.
+  // ignore: library_private_types_in_public_api
   _$UserModelCWProxy get copyWith => _$UserModelCWProxyImpl(this);
 }
 
@@ -329,6 +392,7 @@ extension $UserModelCopyWith on UserModel {
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       socialLogin: json['socialLogin'] as bool?,
+      currentStudying: json['currentStudying'] as String?,
       points: json['points'] as int?,
       gameAvatar: json['gameAvatar'] == null
           ? null
@@ -340,6 +404,16 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
           .toList(),
       activeCountries: json['activeCountries'] as int?,
       username: json['username'] as String?,
+      companyValuationPoint: (json['companyValuationPoint'] as List<dynamic>?)
+          ?.map(
+              (e) => CompanyValuationPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      studentGrades: (json['studentGrades'] as List<dynamic>?)
+          ?.map((e) => e as int)
+          .toList(),
+      growthTrend: (json['growthTrend'] as List<dynamic>?)
+          ?.map((e) => GrowthTrend.fromJson(e as Map<String, dynamic>))
+          .toList(),
       emailVerified: json['emailVerified'] as bool?,
       nickname: json['nickname'] as String?,
       phoneVerified: json['phoneVerified'] as bool?,
@@ -359,6 +433,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       classroom: json['classroom'] == null
           ? null
           : Classroom.fromJson(json['classroom'] as Map<String, dynamic>),
+      panel: json['panel'] as String?,
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) {
@@ -377,6 +452,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('status', instance.status);
   writeNotNull('social', instance.social);
   writeNotNull('socialLogin', instance.socialLogin);
+  writeNotNull('currentStudying', instance.currentStudying);
   writeNotNull('shotsDiscovered', instance.shotsDiscovered);
   writeNotNull('rank', instance.rank);
   writeNotNull('language', instance.language);
@@ -386,6 +462,9 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('nickname', instance.nickname);
   writeNotNull('points', instance.points);
   writeNotNull('subscribedCountries', instance.subscribedCountries);
+  writeNotNull('growthTrend', instance.growthTrend);
+  writeNotNull('companyValuationPoint', instance.companyValuationPoint);
+  writeNotNull('studentGrades', instance.studentGrades);
   writeNotNull('activeCountries', instance.activeCountries);
   writeNotNull('phone', instance.phone);
   writeNotNull('avatar', instance.avatar);
@@ -395,5 +474,6 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('score', instance.score);
   writeNotNull('classroom', instance.classroom);
+  writeNotNull('panel', instance.panel);
   return val;
 }
