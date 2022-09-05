@@ -46,8 +46,12 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
       final response =
           await httpHelper.request(AuthLoginRequestEndPoint(), requestModel);
       debugPrint(response.toString());
-      LoginModel model = LoginModel.fromJson(response);
-      return model;
+      if (response != null) {
+        LoginModel model = LoginModel.fromJson(response);
+        return model;
+      } else {
+        throw Exception('Network Error');
+      }
     } catch (e) {
       debugPrint(e.toString());
       rethrow;
