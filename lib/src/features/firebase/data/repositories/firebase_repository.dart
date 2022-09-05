@@ -92,7 +92,9 @@ class FirebaseRepository implements IFirebaseRepository {
       {FlutterLocalNotificationsPlugin?
           flutterLocalNotificationsPlugin}) async {
     var android = new AndroidNotificationDetails('channel id', 'channel NAME',
-        priority: Priority.high, importance: Importance.max);
+        priority: Priority.high,
+        importance: Importance.max,
+        styleInformation: BigTextStyleInformation(''));
     var iOS = new IOSNotificationDetails();
     var platform = new NotificationDetails(android: android, iOS: iOS);
     final flutterLocalNotifications = flutterLocalNotificationsPlugin ??
