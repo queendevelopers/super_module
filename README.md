@@ -25,6 +25,13 @@ As per project architecture we have divided into 3 categories:
 ### Data Layer
 - Data layer should contain the data which only comminutes with network such as data mapping and error handling task are executed.
 
+## Usage
+- initalize BLoC provider in UI 
+** For Example **
+` ExampleBloc exampleBloc = getIt<ExampleBloc>();
+exampleBloc..add(YourEvent());
+' 
+
 
 ## Following are the few boiler-plate features that this packages includes.
 
