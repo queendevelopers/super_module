@@ -27,10 +27,11 @@ As per project architecture we have divided into 3 categories:
 
 ## Usage
 - initalize BLoC provider in UI 
-** For Example **
-` ExampleBloc exampleBloc = getIt<ExampleBloc>();
+**For Example**
+```
+ExampleBloc exampleBloc = getIt<ExampleBloc>();
 exampleBloc..add(YourEvent());
-' 
+```
 
 
 ## Following are the few boiler-plate features that this packages includes.
