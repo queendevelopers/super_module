@@ -4,8 +4,10 @@ part of 'login_bloc.dart';
 abstract class LoginEvent {}
 
 class LoginButtonTapEvent extends LoginEvent {
-  final String email;
+  final String? email;
   final String password;
+  final String? phone;
+  final String? role;
 
-  LoginButtonTapEvent({required this.email, required this.password});
+  LoginButtonTapEvent({ this.email, required this.password,this.phone,this.role});
 }

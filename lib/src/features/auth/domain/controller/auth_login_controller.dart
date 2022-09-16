@@ -17,18 +17,19 @@ import 'package:super_module/src/features/user/data/session/i_session_manager.da
 
 abstract class IAuthLoginController {
   Future<LoginModel> authLogin(
-      {required String email, required String password});
+      { String? email, required String password,String? phone,String? role});
 
   Future<LoginModel> registerUser({
     String? username,
-    required String name,
-    required String email,
-    required String phone,
+     String? name,
+     String? email,
+     String? phone,
     String? address,
     required String password,
     String? role,
     String? subRole,
     String? schoolId,
+    String? panel
   });
 
   Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByPhone({
@@ -68,8 +69,8 @@ class AuthLoginController implements IAuthLoginController {
 
   @override
   Future<LoginModel> authLogin(
-      {required String email, required String password}) async {
-    final model = UserLoginRequestModel(email: email, password: password);
+      { String? email, required String password,String? phone,String? role }) async {
+    final model = UserLoginRequestModel(email: email, password: password,phone:phone,role:role);
     //change string of data into model
     final data = await iAuthRemoteRepository.authLogin(model);
     if (data.ok) {
@@ -83,14 +84,15 @@ class AuthLoginController implements IAuthLoginController {
   @override
   Future<LoginModel> registerUser({
     String? username,
-    required String name,
-    required String email,
-    required String phone,
+     String? name,
+     String? email,
+     String? phone,
     String? address,
     required String password,
     String? role,
     String? subRole,
     String? schoolId,
+    String? panel,
   }) async {
     final model = RegisterRequestModel(
       name: name,
@@ -101,6 +103,8 @@ class AuthLoginController implements IAuthLoginController {
       role: role,
       subrole: subRole,
       schoolId: schoolId,
+      panel: panel
+
     );
     final data = await iAuthRemoteRepository.registerUser(model);
     return data;
