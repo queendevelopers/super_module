@@ -64,6 +64,18 @@ abstract class _$UserModelCWProxy {
 
   UserModel subscribedCountries(List<String>? subscribedCountries);
 
+  UserModel totalCampnayValuation(double? totalCampnayValuation);
+
+  UserModel totalCash(double? totalCash);
+
+  UserModel totalcompanyBudget(double? totalcompanyBudget);
+
+  UserModel totalcompanyReputation(double? totalcompanyReputation);
+
+  UserModel totalemployNumber(double? totalemployNumber);
+
+  UserModel totalemploySatisfaction(double? totalemploySatisfaction);
+
   UserModel updatedAt(String? updatedAt);
 
   UserModel username(String? username);
@@ -103,6 +115,12 @@ abstract class _$UserModelCWProxy {
     String? status,
     List<int>? studentGrades,
     List<String>? subscribedCountries,
+    double? totalCampnayValuation,
+    double? totalCash,
+    double? totalcompanyBudget,
+    double? totalcompanyReputation,
+    double? totalemployNumber,
+    double? totalemploySatisfaction,
     String? updatedAt,
     String? username,
   });
@@ -209,6 +227,29 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
       this(subscribedCountries: subscribedCountries);
 
   @override
+  UserModel totalCampnayValuation(double? totalCampnayValuation) =>
+      this(totalCampnayValuation: totalCampnayValuation);
+
+  @override
+  UserModel totalCash(double? totalCash) => this(totalCash: totalCash);
+
+  @override
+  UserModel totalcompanyBudget(double? totalcompanyBudget) =>
+      this(totalcompanyBudget: totalcompanyBudget);
+
+  @override
+  UserModel totalcompanyReputation(double? totalcompanyReputation) =>
+      this(totalcompanyReputation: totalcompanyReputation);
+
+  @override
+  UserModel totalemployNumber(double? totalemployNumber) =>
+      this(totalemployNumber: totalemployNumber);
+
+  @override
+  UserModel totalemploySatisfaction(double? totalemploySatisfaction) =>
+      this(totalemploySatisfaction: totalemploySatisfaction);
+
+  @override
   UserModel updatedAt(String? updatedAt) => this(updatedAt: updatedAt);
 
   @override
@@ -251,6 +292,12 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
     Object? status = const $CopyWithPlaceholder(),
     Object? studentGrades = const $CopyWithPlaceholder(),
     Object? subscribedCountries = const $CopyWithPlaceholder(),
+    Object? totalCampnayValuation = const $CopyWithPlaceholder(),
+    Object? totalCash = const $CopyWithPlaceholder(),
+    Object? totalcompanyBudget = const $CopyWithPlaceholder(),
+    Object? totalcompanyReputation = const $CopyWithPlaceholder(),
+    Object? totalemployNumber = const $CopyWithPlaceholder(),
+    Object? totalemploySatisfaction = const $CopyWithPlaceholder(),
     Object? updatedAt = const $CopyWithPlaceholder(),
     Object? username = const $CopyWithPlaceholder(),
   }) {
@@ -368,6 +415,33 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
           ? _value.subscribedCountries
           // ignore: cast_nullable_to_non_nullable
           : subscribedCountries as List<String>?,
+      totalCampnayValuation:
+          totalCampnayValuation == const $CopyWithPlaceholder()
+              ? _value.totalCampnayValuation
+              // ignore: cast_nullable_to_non_nullable
+              : totalCampnayValuation as double?,
+      totalCash: totalCash == const $CopyWithPlaceholder()
+          ? _value.totalCash
+          // ignore: cast_nullable_to_non_nullable
+          : totalCash as double?,
+      totalcompanyBudget: totalcompanyBudget == const $CopyWithPlaceholder()
+          ? _value.totalcompanyBudget
+          // ignore: cast_nullable_to_non_nullable
+          : totalcompanyBudget as double?,
+      totalcompanyReputation:
+          totalcompanyReputation == const $CopyWithPlaceholder()
+              ? _value.totalcompanyReputation
+              // ignore: cast_nullable_to_non_nullable
+              : totalcompanyReputation as double?,
+      totalemployNumber: totalemployNumber == const $CopyWithPlaceholder()
+          ? _value.totalemployNumber
+          // ignore: cast_nullable_to_non_nullable
+          : totalemployNumber as double?,
+      totalemploySatisfaction:
+          totalemploySatisfaction == const $CopyWithPlaceholder()
+              ? _value.totalemploySatisfaction
+              // ignore: cast_nullable_to_non_nullable
+              : totalemploySatisfaction as double?,
       updatedAt: updatedAt == const $CopyWithPlaceholder()
           ? _value.updatedAt
           // ignore: cast_nullable_to_non_nullable
@@ -392,6 +466,15 @@ extension $UserModelCopyWith on UserModel {
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       socialLogin: json['socialLogin'] as bool?,
+      totalCampnayValuation:
+          (json['totalCampnayValuation'] as num?)?.toDouble(),
+      totalCash: (json['totalCash'] as num?)?.toDouble(),
+      totalcompanyBudget: (json['totalcompanyBudget'] as num?)?.toDouble(),
+      totalcompanyReputation:
+          (json['totalcompanyReputation'] as num?)?.toDouble(),
+      totalemployNumber: (json['totalemployNumber'] as num?)?.toDouble(),
+      totalemploySatisfaction:
+          (json['totalemploySatisfaction'] as num?)?.toDouble(),
       currentStudying: json['currentStudying'] as String?,
       points: json['points'] as int?,
       gameAvatar: json['gameAvatar'] == null
@@ -473,6 +556,12 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) {
   writeNotNull('createdAt', instance.createdAt);
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('score', instance.score);
+  writeNotNull('totalCampnayValuation', instance.totalCampnayValuation);
+  writeNotNull('totalCash', instance.totalCash);
+  writeNotNull('totalcompanyBudget', instance.totalcompanyBudget);
+  writeNotNull('totalcompanyReputation', instance.totalcompanyReputation);
+  writeNotNull('totalemployNumber', instance.totalemployNumber);
+  writeNotNull('totalemploySatisfaction', instance.totalemploySatisfaction);
   writeNotNull('classroom', instance.classroom);
   writeNotNull('panel', instance.panel);
   return val;
