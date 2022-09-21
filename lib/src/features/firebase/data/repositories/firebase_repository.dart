@@ -68,13 +68,13 @@ class FirebaseRepository implements IFirebaseRepository {
       bool provisional = false,
       void Function(String?)? onSelected,
       sound: true,
-      String androidNotificationIcon = '@mipmap/ic_launcher'}) async {
+      String androidNotificationIcon = '@mipmap/launcher_icon'}) async {
     var flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = new AndroidInitializationSettings(androidNotificationIcon);
     var iOS = new IOSInitializationSettings();
     var initSettings = new InitializationSettings(android: android, iOS: iOS);
     flutterLocalNotificationsPlugin.initialize(initSettings,
-        onSelectNotification: (value) {});
+        onSelectNotification: onSelected);
     await FirebaseMessaging.instance.requestPermission(
         alert: alert,
         announcement: announcement,

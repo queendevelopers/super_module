@@ -23,7 +23,7 @@ abstract class IFirebaseController {
       bool provisional = false,
       bool sound = true,
       void Function(String?)? onSelected,
-      String androidNotificationIcon = '@mipmap/ic_launcher'});
+      String androidNotificationIcon = '@mipmap/launcher_icon'});
   Future<void> showNotification(FirebaseNotification notification,
       void Function(dynamic payload) onNotificationClicked,
       {FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin});
@@ -70,7 +70,7 @@ class FirebaseController implements IFirebaseController {
       bool provisional = false,
       bool sound = true,
       void Function(String? p1)? onSelected,
-      String androidNotificationIcon = '@mipmap/ic_launcher'}) {
+      String androidNotificationIcon = '@mipmap/launcher_icon'}) {
     return repository.initializeLocalNotification(
         alert: alert,
         announcement: announcement,
