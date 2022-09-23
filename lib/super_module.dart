@@ -1,7 +1,10 @@
 library super_module;
 
 export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:flutter_easyloading/flutter_easyloading.dart';
 export 'package:get_it/get_it.dart';
+export 'package:get_it/get_it.dart';
+export 'package:shared_preferences/shared_preferences.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 // export 'package:super_module/src/features/auth/data/repositories/auth_remote_repository.dart';
 export 'package:super_module/src/DI/module_injection.dart';
