@@ -50,7 +50,8 @@ class AuthRemoteRepository implements IAuthRemoteRepository {
         LoginModel model = LoginModel.fromJson(response);
         return model;
       } else {
-        throw Exception('Network Error');
+        throw Exception(
+            'No Internet. Please check your internet connection and try again');
       }
     } catch (e) {
       debugPrint(e.toString());
