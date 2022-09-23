@@ -70,6 +70,7 @@ class FirebaseBloc extends Bloc<FirebaseEvent, FirebaseState> {
       emit(FirebaseNotificationClickedState(event.payload));
     });
   }
+
   void _listenNotification() {
     controller.listenNotifications().listen((event) {
       add(FirebaseNewNotificationReceivedEvent(

@@ -41,10 +41,23 @@ class UserModel extends BaseRequestModel {
   final String? createdAt;
   final String? updatedAt;
   final double? score;
+  final double? totalCampnayValuation;
+  final double? totalCash;
+  final double? totalcompanyBudget;
+  final double? totalcompanyReputation;
+  final double? totalemployNumber;
+  final double? totalemploySatisfaction;
   final Classroom? classroom;
+  final String? panel;
 
   UserModel({
     this.socialLogin,
+    this.totalCampnayValuation,
+    this.totalCash,
+    this.totalcompanyBudget,
+    this.totalcompanyReputation,
+    this.totalemployNumber,
+    this.totalemploySatisfaction,
     this.currentStudying,
     this.points,
     this.gameAvatar,
@@ -73,6 +86,7 @@ class UserModel extends BaseRequestModel {
     this.updatedAt,
     this.score,
     this.classroom,
+    this.panel,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> data) =>

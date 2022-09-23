@@ -5,12 +5,16 @@ import 'package:super_module/src/features/firebase/data/models/firebase_remote_c
 
 abstract class IFirebaseRepository {
   Future<FirebaseRemoteConfigModel> getFirebaseRemoteConfig();
+
   Future<String?> getFcmToken();
+
   Stream<String> onFcmTokenRefresh();
 
   ///retrive notification after app open from closed state
   Future<FirebaseNotification?> getInitialNotification();
+
   Stream<RemoteMessage> listenNotifications();
+
   Future<FlutterLocalNotificationsPlugin> initializeLocalNotification(
       {bool alert = true,
       bool announcement = false,
@@ -20,7 +24,8 @@ abstract class IFirebaseRepository {
       bool provisional = false,
       bool sound = true,
       void Function(String?)? onSelected,
-      String androidNotificationIcon = '@mipmap/ic_launcher'});
+      String androidNotificationIcon = '@mipmap/launcher_icon'});
+
   Future<void> showNotification(FirebaseNotification notification,
       void Function(dynamic payload) onNotificationClicked,
       {FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin});

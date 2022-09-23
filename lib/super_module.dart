@@ -1,5 +1,8 @@
 library super_module;
 
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:get_it/get_it.dart';
+export 'package:shared_preferences/shared_preferences.dart';
 // export 'package:super_module/src/features/auth/data/repositories/auth_remote_repository.dart';
 export 'package:super_module/src/DI/module_injection.dart';
 export 'package:super_module/src/core/extension/cap_extension.dart';
@@ -37,7 +40,6 @@ export 'package:super_module/src/features/auth/presentation/bloc/forgot_password
 export 'package:super_module/src/features/auth/presentation/bloc/forgot_password_bloc/verify_opt_bloc/verify_otp_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/login_bloc/login_bloc.dart';
 export 'package:super_module/src/features/auth/presentation/bloc/register_bloc/register_bloc.dart';
-export 'package:super_module/src/features/auth/presentation/bloc/register_phone_by_otp_bloc/register_phone_by_otp_bloc.dart';
 export 'package:super_module/src/features/auth/social/presentation/social_bloc.dart';
 export 'package:super_module/src/features/cart/data/models/cart_list.dart';
 export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart';

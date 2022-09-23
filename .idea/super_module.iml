@@ -441,6 +441,9 @@
       <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/.fvm/flutter_sdk/dev/integration_tests/android_embedding_v2_smoke_test/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/.fvm/flutter_sdk/dev/integration_tests/android_embedding_v2_smoke_test/build" />
       <excludeFolder url="file://$MODULE_DIR$/builds/sUzgkDVF/0/swivt/super-module/.fvm/flutter_sdk/dev/integration_tests/android_embedding_v2_smoke_test/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.fvm/flutter_sdk/dev/tools/gen_defaults/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.fvm/flutter_sdk/dev/tools/gen_defaults/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.fvm/flutter_sdk/dev/tools/gen_defaults/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

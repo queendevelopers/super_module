@@ -25,7 +25,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       yield LoginLoadingState();
       try {
         final response = await controller.authLogin(
-            email: event.email, password: event.password);
+            email: event.email, password: event.password,phone: event.phone, role: event.role);
         if (response.ok) {
           final localUser = await sessionManager.getCurrentUser();
           if (response.user?.id != localUser?.id) {

@@ -12,7 +12,9 @@ import '../../domain/repositories/i_firebase_repository.dart';
 @Injectable(as: IFirebaseRepository)
 class FirebaseRepository implements IFirebaseRepository {
   late final FirebaseMessaging message;
+
   FirebaseRepository() : message = FirebaseMessaging.instance;
+
   @override
   Future<FirebaseRemoteConfigModel> getFirebaseRemoteConfig() async {
     try {
