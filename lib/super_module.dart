@@ -1,5 +1,11 @@
 library super_module;
 
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:flutter_easyloading/flutter_easyloading.dart';
+export 'package:get_it/get_it.dart';
+export 'package:get_it/get_it.dart';
+export 'package:shared_preferences/shared_preferences.dart';
+export 'package:shared_preferences/shared_preferences.dart';
 // export 'package:super_module/src/features/auth/data/repositories/auth_remote_repository.dart';
 export 'package:super_module/src/DI/module_injection.dart';
 export 'package:super_module/src/core/extension/cap_extension.dart';
@@ -43,6 +49,7 @@ export 'package:super_module/src/features/cart/presentation/bloc/cart_bloc.dart'
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/domain/controller/chat_controller.dart';
 export 'package:super_module/src/features/chat/presentation/bloc/chat_bloc.dart';
+export 'package:super_module/src/features/firebase/data/models/firebase_notification.dart';
 export 'package:super_module/src/features/firebase/domain/controller/firebase_controller.dart';
 export 'package:super_module/src/features/firebase/presentation/bloc/firebase_bloc.dart';
 export 'package:super_module/src/features/firebase/presentation/bloc/firebase_bloc.dart';
@@ -60,6 +67,3 @@ export 'package:super_module/src/features/user/domain/entity/store_recent_search
 export 'package:super_module/src/features/user/presentation/bloc/user_bloc.dart';
 export 'package:super_module/src/features/wishlist/data/models/wish_list.dart';
 export 'package:super_module/src/features/wishlist/presentation/bloc/wishlist_bloc.dart';
-export 'package:shared_preferences/shared_preferences.dart';
-export 'package:flutter_easyloading/flutter_easyloading.dart';
-export 'package:get_it/get_it.dart';

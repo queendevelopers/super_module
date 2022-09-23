@@ -70,13 +70,13 @@ class FirebaseRepository implements IFirebaseRepository {
       bool provisional = false,
       void Function(String?)? onSelected,
       sound: true,
-      String androidNotificationIcon = '@mipmap/ic_launcher'}) async {
+      String androidNotificationIcon = '@mipmap/launcher_icon'}) async {
     var flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = new AndroidInitializationSettings(androidNotificationIcon);
     var iOS = new IOSInitializationSettings();
     var initSettings = new InitializationSettings(android: android, iOS: iOS);
     flutterLocalNotificationsPlugin.initialize(initSettings,
-        onSelectNotification: (value) {});
+        onSelectNotification: onSelected);
     await FirebaseMessaging.instance.requestPermission(
         alert: alert,
         announcement: announcement,
@@ -94,7 +94,9 @@ class FirebaseRepository implements IFirebaseRepository {
       {FlutterLocalNotificationsPlugin?
           flutterLocalNotificationsPlugin}) async {
     var android = new AndroidNotificationDetails('channel id', 'channel NAME',
-        priority: Priority.high, importance: Importance.max);
+        priority: Priority.high,
+        importance: Importance.max,
+        styleInformation: BigTextStyleInformation(''));
     var iOS = new IOSNotificationDetails();
     var platform = new NotificationDetails(android: android, iOS: iOS);
     final flutterLocalNotifications = flutterLocalNotificationsPlugin ??
