@@ -32,7 +32,7 @@ class UserModel extends BaseRequestModel {
   final List<String>? subscribedCountries;
   List<GrowthTrend>? growthTrend;
   List<CompanyValuationPoint>? companyValuationPoint;
-  List<int>? studentGrades;
+  List<double>? studentGrades;
   final int? activeCountries;
   final String? phone;
   final String? avatar;
