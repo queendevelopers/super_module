@@ -17,20 +17,19 @@ import 'package:super_module/src/features/user/data/session/i_session_manager.da
 
 abstract class IAuthLoginController {
   Future<LoginModel> authLogin(
-      { String? email, required String password,String? phone,String? role});
+      {String? email, required String password, String? phone, String? role});
 
-  Future<LoginModel> registerUser({
-    String? username,
-     String? name,
-     String? email,
-     String? phone,
-    String? address,
-    required String password,
-    String? role,
-    String? subRole,
-    String? schoolId,
-    String? panel
-  });
+  Future<LoginModel> registerUser(
+      {String? username,
+      String? name,
+      String? email,
+      String? phone,
+      String? address,
+      required String password,
+      String? role,
+      String? subRole,
+      String? schoolId,
+      String? panel});
 
   Future<ForgotPasswordPinVerificationResponseModel> resetPasswordByPhone({
     required String phone,
@@ -69,13 +68,20 @@ class AuthLoginController implements IAuthLoginController {
 
   @override
   Future<LoginModel> authLogin(
-      { String? email, required String password,String? phone,String? role }) async {
-    final model = UserLoginRequestModel(email: email, password: password,phone:phone,role:role);
+      {String? email,
+      required String password,
+      String? phone,
+      String? role}) async {
+    final model = UserLoginRequestModel(
+        email: email, password: password, phone: phone, role: role);
     //change string of data into model
     final data = await iAuthRemoteRepository.authLogin(model);
     if (data.ok) {
       debugPrint('saved token to local storage');
       iSessionManager.saveToken(accessToken: data.accessToken!);
+      if (data.refreshToken != null) {
+        iSessionManager.saveRefreshToken(refreshToken: data.refreshToken!);
+      }
       iSessionManager.saveCurrentUser(user: data.user!);
     }
     return data;
@@ -84,9 +90,9 @@ class AuthLoginController implements IAuthLoginController {
   @override
   Future<LoginModel> registerUser({
     String? username,
-     String? name,
-     String? email,
-     String? phone,
+    String? name,
+    String? email,
+    String? phone,
     String? address,
     required String password,
     String? role,
@@ -95,17 +101,15 @@ class AuthLoginController implements IAuthLoginController {
     String? panel,
   }) async {
     final model = RegisterRequestModel(
-      name: name,
-      email: email,
-      phone: phone,
-      password: password,
-      username: username,
-      role: role,
-      subrole: subRole,
-      schoolId: schoolId,
-      panel: panel
-
-    );
+        name: name,
+        email: email,
+        phone: phone,
+        password: password,
+        username: username,
+        role: role,
+        subrole: subRole,
+        schoolId: schoolId,
+        panel: panel);
     final data = await iAuthRemoteRepository.registerUser(model);
     return data;
   }

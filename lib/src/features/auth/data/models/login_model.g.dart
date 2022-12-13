@@ -14,12 +14,14 @@ LoginModel _$LoginModelFromJson(Map<String, dynamic> json) => LoginModel(
           ? null
           : UserModel.fromJson(json['user'] as Map<String, dynamic>),
       json['key'] as String?,
+      json['refreshToken'] as String?,
     );
 
 Map<String, dynamic> _$LoginModelToJson(LoginModel instance) =>
     <String, dynamic>{
       'ok': instance.ok,
       'accessToken': instance.accessToken,
+      'refreshToken': instance.refreshToken,
       'message': instance.message,
       'key': instance.key,
       'user': instance.user?.toJson(),
