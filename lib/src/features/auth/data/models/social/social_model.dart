@@ -8,11 +8,16 @@ part 'social_model.g.dart';
 class SocialModel {
   bool ok;
   String? accessToken;
+  final String? refreshToken;
   UserModel? user;
   String? message;
 
   SocialModel(
-      {required this.ok, this.accessToken, this.user, required this.message});
+      {required this.ok,
+      this.accessToken,
+      this.user,
+      required this.message,
+      this.refreshToken});
 
   factory SocialModel.fromJson(Map<String, dynamic> json) =>
       _$SocialModelFromJson(json);

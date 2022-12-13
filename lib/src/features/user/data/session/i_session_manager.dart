@@ -7,6 +7,9 @@ abstract class ISessionManager {
 
   Future<String?> getToken();
 
+  Future<void> saveRefreshToken({required String refreshToken});
+  Future<String?> getRefreshToken();
+
   Future<void> clearSession();
 
   Future<bool> get isAuthenticated;

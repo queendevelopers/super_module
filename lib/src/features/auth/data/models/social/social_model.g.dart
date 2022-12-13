@@ -13,12 +13,14 @@ SocialModel _$SocialModelFromJson(Map<String, dynamic> json) => SocialModel(
           ? null
           : UserModel.fromJson(json['user'] as Map<String, dynamic>),
       message: json['message'] as String?,
+      refreshToken: json['refreshToken'] as String?,
     );
 
 Map<String, dynamic> _$SocialModelToJson(SocialModel instance) =>
     <String, dynamic>{
       'ok': instance.ok,
       'accessToken': instance.accessToken,
+      'refreshToken': instance.refreshToken,
       'user': instance.user?.toJson(),
       'message': instance.message,
     };

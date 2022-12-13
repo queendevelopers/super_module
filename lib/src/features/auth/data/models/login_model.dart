@@ -7,11 +7,13 @@ part 'login_model.g.dart';
 class LoginModel {
   final bool ok;
   final String? accessToken;
+  final String? refreshToken;
   final String? message;
   final String? key;
   final UserModel? user;
 
-  LoginModel(this.ok, this.accessToken, this.message, this.user, this.key);
+  LoginModel(this.ok, this.accessToken, this.message, this.user, this.key,
+      this.refreshToken);
 
   factory LoginModel.fromJson(Map<String, dynamic> json) =>
       _$LoginModelFromJson(json);

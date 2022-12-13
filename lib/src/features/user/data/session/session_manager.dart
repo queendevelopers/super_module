@@ -54,6 +54,7 @@ class SessionManager implements ISessionManager {
     try {
       await _secureStorage.delete(key: SuperKeys.userKey);
       await _secureStorage.delete(key: SuperKeys.tokenKey);
+      await _secureStorage.delete(key: SuperKeys.refreshToken);
       debugPrint('session cleared successfully!!');
     } on Exception {
       rethrow;
@@ -198,5 +199,27 @@ class SessionManager implements ISessionManager {
       {required String productId, required bool isWishlist}) async {
     final box = await Hive.openBox<bool>(SuperKeys.wishlistBox);
     box.put(productId, isWishlist);
+  }
+
+  @override
+  Future<String?> getRefreshToken() async {
+    try {
+      await _secureStorage.read(
+        key: SuperKeys.refreshToken,
+      );
+    } on Exception {
+      rethrow;
+    }
+    return null;
+  }
+
+  @override
+  Future<void> saveRefreshToken({required String refreshToken}) async {
+    try {
+      await _secureStorage.write(
+          key: SuperKeys.refreshToken, value: refreshToken);
+    } on Exception {
+      rethrow;
+    }
   }
 }

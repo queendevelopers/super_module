@@ -43,6 +43,10 @@ class SocialBloc extends Bloc<SocialEvent, SocialState> {
         if (socialModel.user != null) {
           await iSessionManager.saveCurrentUser(user: socialModel.user!);
         }
+        if (socialModel.refreshToken != null) {
+          iSessionManager.saveRefreshToken(
+              refreshToken: socialModel.refreshToken!);
+        }
         yield SocialStateSuccess(socialModel: socialModel);
         return;
       }
