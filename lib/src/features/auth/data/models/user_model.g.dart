@@ -60,7 +60,7 @@ abstract class _$UserModelCWProxy {
 
   UserModel status(String? status);
 
-  UserModel studentGrades(List<int>? studentGrades);
+  UserModel studentGrades(List<double>? studentGrades);
 
   UserModel subscribedCountries(List<String>? subscribedCountries);
 
@@ -113,7 +113,7 @@ abstract class _$UserModelCWProxy {
     bool? social,
     bool? socialLogin,
     String? status,
-    List<int>? studentGrades,
+    List<double>? studentGrades,
     List<String>? subscribedCountries,
     double? totalCampnayValuation,
     double? totalCash,
@@ -219,7 +219,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
   UserModel status(String? status) => this(status: status);
 
   @override
-  UserModel studentGrades(List<int>? studentGrades) =>
+  UserModel studentGrades(List<double>? studentGrades) =>
       this(studentGrades: studentGrades);
 
   @override
@@ -410,7 +410,7 @@ class _$UserModelCWProxyImpl implements _$UserModelCWProxy {
       studentGrades: studentGrades == const $CopyWithPlaceholder()
           ? _value.studentGrades
           // ignore: cast_nullable_to_non_nullable
-          : studentGrades as List<int>?,
+          : studentGrades as List<double>?,
       subscribedCountries: subscribedCountries == const $CopyWithPlaceholder()
           ? _value.subscribedCountries
           // ignore: cast_nullable_to_non_nullable
@@ -492,7 +492,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
               (e) => CompanyValuationPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
       studentGrades: (json['studentGrades'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toDouble())
           .toList(),
       growthTrend: (json['growthTrend'] as List<dynamic>?)
           ?.map((e) => GrowthTrend.fromJson(e as Map<String, dynamic>))
