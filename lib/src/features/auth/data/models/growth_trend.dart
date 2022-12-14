@@ -7,7 +7,7 @@ class GrowthTrend {
   @JsonKey(name: '_id')
   final String id;
   final double cashGrowth;
-  final int companyBudgetGrowth;
+  final double companyBudgetGrowth;
   final double companyReputationGrowth;
   final double employNumberGrowth;
   final double employSatisfactionGrowth;
@@ -35,7 +35,7 @@ class GrowthTrend {
   GrowthTrend copyWith({
     String? id,
     double? cashGrowth,
-    int? companyBudgetGrowth,
+    double? companyBudgetGrowth,
     double? companyReputationGrowth,
     double? employNumberGrowth,
     double? employSatisfactionGrowth,
