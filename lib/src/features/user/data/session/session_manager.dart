@@ -204,9 +204,10 @@ class SessionManager implements ISessionManager {
   @override
   Future<String?> getRefreshToken() async {
     try {
-      await _secureStorage.read(
+     final token= await _secureStorage.read(
         key: SuperKeys.refreshToken,
       );
+      return token;
     } on Exception {
       rethrow;
     }
