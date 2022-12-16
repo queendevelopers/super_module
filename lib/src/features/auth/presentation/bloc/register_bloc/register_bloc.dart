@@ -45,7 +45,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         }
          if (response.refreshToken != null) {
           await sessionManager.saveRefreshToken(
-              refreshToken: response.refreshToken);
+              refreshToken: response.refreshToken!);
         }
         
 
