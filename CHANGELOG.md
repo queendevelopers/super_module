@@ -89,3 +89,9 @@
 
 # [0.7.0] - 14 Dec 2022
 - back to old
+- 
+# [0.7.1] - 14 Dec 2022
+- fixed refresh token issue
+
+# [0.7.1] - 15 Dec 2022
+- Null check issue fixed

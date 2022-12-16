@@ -47,12 +47,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           await sessionManager.saveRefreshToken(
               refreshToken: response.refreshToken!);
         }
-        
-
-          
-        }
-       
-        yield RegisterSuccessState(response);
+         yield RegisterSuccessState(response);
         return;
       }
       yield RegisterFailureState(errorMessage: response.message!);
