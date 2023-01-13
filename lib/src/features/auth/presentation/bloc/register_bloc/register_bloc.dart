@@ -43,18 +43,14 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         if (response.accessToken != null) {
           await sessionManager.saveToken(accessToken: response.accessToken!);
         }
-         if (response.refreshToken != null) {
+        if (response.refreshToken != null) {
           await sessionManager.saveRefreshToken(
               refreshToken: response.refreshToken!);
         }
-        
-
-          
-        }
-       
         yield RegisterSuccessState(response);
         return;
       }
+
       yield RegisterFailureState(errorMessage: response.message!);
     } else if (event is CheckUserNameAvailability) {
       yield UsernameCheckingState();

@@ -4,6 +4,7 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter_rest_client/flutter_rest_client.dart' as _i6;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i16;
 import 'package:get_it/get_it.dart' as _i1;
@@ -71,9 +72,16 @@ import '../features/wishlist/presentation/bloc/wishlist_bloc.dart'
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
-_i1.GetIt $initModuleGetIt(_i1.GetIt get,
-    {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
-  final gh = _i2.GetItHelper(get, environment, environmentFilter);
+_i1.GetIt $initModuleGetIt(
+  _i1.GetIt get, {
+  String? environment,
+  _i2.EnvironmentFilter? environmentFilter,
+}) {
+  final gh = _i2.GetItHelper(
+    get,
+    environment,
+    environmentFilter,
+  );
   gh.factory<_i3.FirebaseNotificationService>(
       () => _i3.FirebaseNotificationService());
   gh.factory<_i4.IAddressRepository>(
@@ -86,13 +94,17 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
   gh.factory<_i14.ISessionManager>(
       () => _i15.SessionManager(get<_i16.FlutterSecureStorage>()));
   gh.factory<_i17.IUserRemoteRepository>(() => _i18.UserRemoteRepository(
-      get<_i6.IHttpHelper>(), get<_i14.ISessionManager>()));
+        get<_i6.IHttpHelper>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i19.IWishlistRepository>(
       () => _i20.WishlistRepositories(get<_i6.IHttpHelper>()));
   gh.factory<_i21.IAddressController>(
       () => _i21.CheckoutController(get<_i4.IAddressRepository>()));
   gh.factory<_i22.IAuthRemoteRepository>(() => _i23.AuthRemoteRepository(
-      get<_i6.IHttpHelper>(), get<_i14.ISessionManager>()));
+        get<_i6.IHttpHelper>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i24.ICartController>(
       () => _i24.CartController(get<_i10.ICartRepository>()));
   gh.factory<_i25.IChatRepository>(
@@ -106,9 +118,13 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
   gh.factory<_i31.IWishlistController>(
       () => _i31.WishlistController(get<_i19.IWishlistRepository>()));
   gh.factory<_i32.SocialBloc>(() => _i32.SocialBloc(
-      get<_i28.ISocialAuthRepository>(), get<_i33.ISessionManager>()));
-  gh.factory<_i34.UserBloc>(() =>
-      _i34.UserBloc(get<_i30.IUserController>(), get<_i14.ISessionManager>()));
+        get<_i28.ISocialAuthRepository>(),
+        get<_i33.ISessionManager>(),
+      ));
+  gh.factory<_i34.UserBloc>(() => _i34.UserBloc(
+        get<_i30.IUserController>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i35.WishlistBloc>(
       () => _i35.WishlistBloc(get<_i31.IWishlistController>()));
   gh.factory<_i36.AddressBloc>(
@@ -117,26 +133,38 @@ _i1.GetIt $initModuleGetIt(_i1.GetIt get,
   gh.factory<_i38.FirebaseBloc>(
       () => _i38.FirebaseBloc(get<_i27.IFirebaseController>()));
   gh.factory<_i39.IAuthLoginController>(() => _i39.AuthLoginController(
-      get<_i22.IAuthRemoteRepository>(),
-      get<_i14.ISessionManager>(),
-      get<_i7.IAppManager>()));
+        get<_i22.IAuthRemoteRepository>(),
+        get<_i14.ISessionManager>(),
+        get<_i7.IAppManager>(),
+      ));
   gh.factory<_i40.IChatController>(() => _i40.ChatController(
-      get<_i25.IChatRepository>(), get<_i14.ISessionManager>()));
+        get<_i25.IChatRepository>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i41.LoginBloc>(() => _i41.LoginBloc(
-      get<_i39.IAuthLoginController>(), get<_i14.ISessionManager>()));
+        get<_i39.IAuthLoginController>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i42.RegisterBloc>(() => _i42.RegisterBloc(
-      get<_i39.IAuthLoginController>(), get<_i14.ISessionManager>()));
+        get<_i39.IAuthLoginController>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i43.ResetPasswordBloc>(
       () => _i43.ResetPasswordBloc(get<_i39.IAuthLoginController>()));
   gh.factory<_i44.VerifyOtpBloc>(() => _i44.VerifyOtpBloc(
-      get<_i39.IAuthLoginController>(), get<_i14.ISessionManager>()));
+        get<_i39.IAuthLoginController>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i45.BiometricBloc>(() => _i45.BiometricBloc(
-      get<_i33.IAuthRemoteRepository>(),
-      get<_i33.ISessionManager>(),
-      get<_i39.IAuthLoginController>(),
-      get<_i33.IAppManager>()));
+        get<_i33.IAuthRemoteRepository>(),
+        get<_i33.ISessionManager>(),
+        get<_i39.IAuthLoginController>(),
+        get<_i33.IAppManager>(),
+      ));
   gh.factory<_i46.ChangeForgotPasswordBloc>(() => _i46.ChangeForgotPasswordBloc(
-      get<_i39.IAuthLoginController>(), get<_i14.ISessionManager>()));
+        get<_i39.IAuthLoginController>(),
+        get<_i14.ISessionManager>(),
+      ));
   gh.factory<_i47.ChatBloc>(() => _i47.ChatBloc(get<_i40.IChatController>()));
   return get;
 }

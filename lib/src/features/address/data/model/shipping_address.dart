@@ -17,6 +17,7 @@ class ShippingAddress {
   final String? lat;
   final String? lng;
   final bool? isDefault;
+  final String? type;
 
   ShippingAddress(
       this.id,
@@ -30,7 +31,8 @@ class ShippingAddress {
       this.name,
       this.address,
       this.isDefault,
-      this.region);
+      this.region,
+      this.type);
 
   factory ShippingAddress.fromJson(Map<String, dynamic> json) =>
       _$ShippingAddressFromJson(json);

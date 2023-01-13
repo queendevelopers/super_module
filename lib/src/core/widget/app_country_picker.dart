@@ -15,20 +15,20 @@ class _AppCountryPickerState extends State<AppCountryPicker> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: CarrierInfo.isoCountryCode,
-      builder: (BuildContext context, AsyncSnapshot<String?> snapshot) {
+      future: CarrierInfo.getAndroidInfo(),
+      builder:
+          (BuildContext context, AsyncSnapshot<AndroidCarrierData?> snapshot) {
         if (snapshot.hasData) {
           return CountryCodePicker(
             onChanged: widget.onCountryPicked,
-            initialSelection: snapshot.data,
+            initialSelection: snapshot.data?.telephonyInfo.first.isoCountryCode,
             showFlagDialog: false,
             onInit: widget.onCountryPicked,
           );
         } else {
           return CountryCodePicker(
             onChanged: widget.onCountryPicked,
-            initialSelection:
-                WidgetsBinding.instance?.window.locale.countryCode,
+            initialSelection: WidgetsBinding.instance.window.locale.countryCode,
             showFlagDialog: false,
             onInit: widget.onCountryPicked,
           );
