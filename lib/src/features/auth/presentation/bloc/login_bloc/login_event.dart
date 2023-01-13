@@ -11,5 +11,5 @@ class LoginButtonTapEvent extends LoginEvent {
   final String? panel; 
 
         
-  LoginButtonTapEvent({ this.email, required this.password,this.phone,this.role,this.panel,},);
+  LoginButtonTapEvent({ this.email, required this.password,this.phone,this.role,this.panel,});
 }

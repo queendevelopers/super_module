@@ -20,6 +20,7 @@ ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) =>
       json['address'] as String?,
       json['isDefault'] as bool?,
       json['region'] as String?,
+      json['type'] as String?,
     );
 
 Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
@@ -36,4 +37,5 @@ Map<String, dynamic> _$ShippingAddressToJson(ShippingAddress instance) =>
       'lat': instance.lat,
       'lng': instance.lng,
       'isDefault': instance.isDefault,
+      'type': instance.type,
     };

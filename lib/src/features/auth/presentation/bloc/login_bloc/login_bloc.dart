@@ -29,7 +29,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
             password: event.password,
             phone: event.phone,
             role: event.role,
-            panel: event.panel);
+            panel:event.panel);
         if (response.ok) {
           final localUser = await sessionManager.getCurrentUser();
           if (response.user?.id != localUser?.id) {

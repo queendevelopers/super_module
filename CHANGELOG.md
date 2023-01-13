@@ -95,3 +95,7 @@
 
 # [0.7.1] - 15 Dec 2022
 - Null check issue fixed
+- rest client update
+- 
+# [0.7.2] - 21 Dec 2022
+- Added role/panel in auth

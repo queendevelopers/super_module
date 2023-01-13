@@ -32,22 +32,27 @@ class AddAddressEvent extends AddressEvent {
   final String? lng;
   final String? googleAddress;
   final String? additionalInfo;
+  final bool? isDefault;
+  final String? type;
 
-  AddAddressEvent(
-      {this.fullName,
-      this.phone,
-      this.name,
-      this.region,
-      this.address,
-      this.city,
-      this.road,
-      this.building,
-      this.floor,
-      this.room,
-      this.googleAddress,
-      this.additionalInfo,
-      this.lat,
-      this.lng});
+  AddAddressEvent({
+    this.fullName,
+    this.phone,
+    this.name,
+    this.region,
+    this.address,
+    this.city,
+    this.road,
+    this.building,
+    this.floor,
+    this.room,
+    this.googleAddress,
+    this.additionalInfo,
+    this.lat,
+    this.lng,
+    this.isDefault,
+    this.type,
+  });
 }
 
 class UpdateAddressEvent extends AddressEvent {
@@ -66,6 +71,8 @@ class UpdateAddressEvent extends AddressEvent {
   final String? lng;
   final String? googleAddress;
   final String? additionalInfo;
+  final bool? isDefault;
+  final String? type;
 
   UpdateAddressEvent(this.addressId,
       {this.fullName,
@@ -81,7 +88,9 @@ class UpdateAddressEvent extends AddressEvent {
       this.googleAddress,
       this.additionalInfo,
       this.lat,
-      this.lng});
+      this.lng,
+      this.isDefault,
+      this.type});
 }
 
 class GetAddressEvent extends AddressEvent {}
