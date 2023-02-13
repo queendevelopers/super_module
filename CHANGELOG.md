@@ -99,3 +99,6 @@
 - 
 # [0.7.2] - 21 Dec 2022
 - Added role/panel in auth
+
+# [0.7.3] - 21 Dec 2022
+- Change in address
