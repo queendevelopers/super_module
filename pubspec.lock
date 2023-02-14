@@ -141,13 +141,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-  carrier_info:
-    dependency: "direct main"
-    description:
-      name: carrier_info
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.8"
   characters:
     dependency: transitive
     description:
@@ -225,13 +218,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.4"
-  country_code_picker:
-    dependency: "direct main"
-    description:
-      name: country_code_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.2"
   cross_file:
     dependency: transitive
     description:
@@ -330,27 +316,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.2+7"
-  firebase_app_check:
-    dependency: "direct main"
-    description:
-      name: firebase_app_check
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.9+1"
-  firebase_app_check_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_app_check_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.5+1"
-  firebase_app_check_web:
-    dependency: transitive
-    description:
-      name: firebase_app_check_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.7+1"
   firebase_core:
     dependency: "direct main"
     description:
@@ -372,20 +337,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.3"
-  firebase_crashlytics:
-    dependency: "direct main"
-    description:
-      name: firebase_crashlytics
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.9.0"
-  firebase_crashlytics_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_crashlytics_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.3.0"
   firebase_messaging:
     dependency: "direct main"
     description:
@@ -544,7 +495,7 @@ packages:
       name: flutter_rest_client
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.0"
+    version: "0.2.2-prerelease"
   flutter_secure_storage:
     dependency: "direct main"
     description:
@@ -891,13 +842,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  modal_bottom_sheet:
-    dependency: transitive
-    description:
-      name: modal_bottom_sheet
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.2"
   nested:
     dependency: transitive
     description:
@@ -1337,13 +1281,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.1"
-  universal_platform:
-    dependency: transitive
-    description:
-      name: universal_platform
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0+1"
   url_launcher:
     dependency: "direct main"
     description:

@@ -122,12 +122,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "carrier_info",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/carrier_info-2.0.8",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "characters",
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
@@ -190,12 +184,6 @@
     {
       "name": "copy_with_extension_gen",
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/copy_with_extension_gen-4.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "country_code_picker",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/country_code_picker-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -284,24 +272,6 @@
       "languageVersion": "2.16"
     },
     {
-      "name": "firebase_app_check",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_app_check-0.0.9+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "firebase_app_check_platform_interface",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_app_check_platform_interface-0.0.5+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "firebase_app_check_web",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_app_check_web-0.0.7+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
       "name": "firebase_core",
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.24.0",
       "packageUri": "lib/",
@@ -316,18 +286,6 @@
     {
       "name": "firebase_core_web",
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "firebase_crashlytics",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_crashlytics-2.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "firebase_crashlytics_platform_interface",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/firebase_crashlytics_platform_interface-3.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
@@ -465,7 +423,7 @@
     },
     {
       "name": "flutter_rest_client",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/flutter_rest_client-0.2.0",
+      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/flutter_rest_client-0.2.2-prerelease",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -768,12 +726,6 @@
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/mime-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
-    },
-    {
-      "name": "modal_bottom_sheet",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-2.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
     },
     {
       "name": "nested",
@@ -1154,12 +1106,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "universal_platform",
-      "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/universal_platform-1.0.0+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "url_launcher",
       "rootUri": "file:///Users/amirsuwal/.pub-cache/hosted/pub.dartlang.org/url_launcher-6.1.7",
       "packageUri": "lib/",
@@ -1262,7 +1208,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2023-01-13T05:09:37.192040Z",
+  "generated": "2023-02-14T05:58:52.466258Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }

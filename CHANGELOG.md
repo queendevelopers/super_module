@@ -102,3 +102,7 @@
 
 # [0.7.3] - 21 Dec 2022
 - Change in address
+# [0.7.5-prerelease] - 13 FEB 2022
+- Change in global response
+# [0.7.6-prerelease] - 14 FEB 2022
+- Removed unused dependencies
