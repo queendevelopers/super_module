@@ -17,7 +17,7 @@ import 'package:super_module/src/features/user/data/session/i_session_manager.da
 
 abstract class IAuthLoginController {
   Future<LoginModel> authLogin(
-      {String? email, required String password, String? phone, String? role});
+  {String? email, required String password, String? phone, String? role,String? panel, });
 
   Future<LoginModel> registerUser(
       {String? username,
@@ -71,7 +71,7 @@ class AuthLoginController implements IAuthLoginController {
       {String? email,
       required String password,
       String? phone,
-      String? role}) async {
+      String? role, String? panel,}) async {
     final model = UserLoginRequestModel(
         email: email, password: password, phone: phone, role: role);
     //change string of data into model

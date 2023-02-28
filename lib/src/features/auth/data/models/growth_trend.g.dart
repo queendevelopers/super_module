@@ -9,7 +9,7 @@ part of 'growth_trend.dart';
 GrowthTrend _$GrowthTrendFromJson(Map<String, dynamic> json) => GrowthTrend(
       id: json['_id'] as String,
       cashGrowth: (json['cashGrowth'] as num).toDouble(),
-      companyBudgetGrowth: json['companyBudgetGrowth'] as int,
+      companyBudgetGrowth: (json['companyBudgetGrowth'] as num).toDouble(),
       companyReputationGrowth:
           (json['companyReputationGrowth'] as num).toDouble(),
       employNumberGrowth: (json['employNumberGrowth'] as num).toDouble(),

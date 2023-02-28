@@ -2,7 +2,7 @@ name: super_module
 description: A super module using bloc and clean architecture that is common in every app such as authentication, utils, extension and common widgets.
 repository: https://gitlab.com/swivt/super-module
 homepage: https://gitab.com/swivt/super-module
-version: 0.6.20-prerelease
+version: 0.7.6-prerelease
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
@@ -35,7 +35,7 @@ dependencies:
   photo_view: ^0.14.0
   permission_handler: ^10.0.0
   image_picker: ^0.8.5+3
-  flutter_rest_client: ^0.1.8
+  flutter_rest_client: ^0.2.2-prerelease
   bloc: ^7.2.1
   intl: ^0.17.0
   json_annotation: ^4.5.0
@@ -43,8 +43,6 @@ dependencies:
   device_info: ^2.0.3
   cached_network_image: ^3.2.0
   hive: ^2.2.2
-  carrier_info: ^2.0.5
-  country_code_picker: ^2.0.2
   hive_flutter: ^1.1.0
   socket_io_client: ^2.0.0-beta.4-nullsafety.0
   firebase_core: ^2.7.0

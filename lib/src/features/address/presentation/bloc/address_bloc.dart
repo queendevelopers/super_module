@@ -51,22 +51,23 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
       if (state is! AddAddressPostState) {
         yield AddAddressPostState();
         final requestModel = AddAddressRequestModel(
-            fullName: event.fullName,
-            name: event.name,
-            address: event.address,
-            region: event.region,
-            phone: event.phone,
-            city: event.city,
-            road: event.road,
-            building: event.building,
-            addressInfo: event.additionalInfo,
-            googleAddress: event.googleAddress,
-            floor: event.floor,
-            type: event.type,
-            room: event.room,
-            lat: event.lat,
-            lng: event.lng,
-            isDefault: event.isDefault);
+          fullName: event.fullName,
+          name: event.name,
+          address: event.address,
+          region: event.region,
+          phone: event.phone,
+          city: event.city,
+          road: event.road,
+          building: event.building,
+          addressInfo: event.additionalInfo,
+          googleAddress: event.googleAddress,
+          floor: event.floor,
+          type: event.type,
+          room: event.room,
+          isDefault: event.isDefault,
+          lat: event.lat,
+          lng: event.lng,
+        );
         final response = await controller.addAddress(requestModel);
         if (response.ok!) {
           yield AddAddressPostSuccessState(addAddressModel: response);
@@ -91,8 +92,8 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
             floor: event.floor,
             room: event.room,
             lat: event.lat,
-            lng: event.lng,
             isDefault: event.isDefault,
+            lng: event.lng,
             type: event.type);
         final response = await controller.updateAddress(
             requestModel: requestModel, id: event.addressId);

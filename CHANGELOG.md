@@ -86,3 +86,23 @@
 # [0.6.0] - 20 JUN 2022
 - Updated library to latest version
 - Added firebase remote config
+
+# [0.7.0] - 14 Dec 2022
+- back to old
+- 
+# [0.7.1] - 14 Dec 2022
+- fixed refresh token issue
+
+# [0.7.1] - 15 Dec 2022
+- Null check issue fixed
+- rest client update
+- 
+# [0.7.2] - 21 Dec 2022
+- Added role/panel in auth
+
+# [0.7.3] - 21 Dec 2022
+- Change in address
+# [0.7.5-prerelease] - 13 FEB 2022
+- Change in global response
+# [0.7.6-prerelease] - 14 FEB 2022
+- Removed unused dependencies
