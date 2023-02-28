@@ -64,6 +64,7 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
           floor: event.floor,
           type: event.type,
           room: event.room,
+          isDefault: event.isDefault,
           lat: event.lat,
           lng: event.lng,
         );
@@ -91,6 +92,7 @@ class AddressBloc extends Bloc<AddressEvent, AddressState>
             floor: event.floor,
             room: event.room,
             lat: event.lat,
+            isDefault: event.isDefault,
             lng: event.lng,
             type: event.type);
         final response = await controller.updateAddress(

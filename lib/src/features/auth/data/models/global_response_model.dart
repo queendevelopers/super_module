@@ -14,14 +14,15 @@ class GlobalResponseModel {
   final int? otp;
   final UserModel? user;
   final String? encryptedAccessToken;
-   num? amount;
+  num? amount;
 
   GlobalResponseModel(
       this.user, this.code, this.field, this.encryptedAccessToken,
       {required this.ok,
       this.message = "Process Complete",
       this.key,
-      this.otp,this.amount});
+      this.otp,
+      this.amount});
 
   factory GlobalResponseModel.fromJson(Map<String, dynamic> data) =>
       _$GlobalResponseModelFromJson(data);
