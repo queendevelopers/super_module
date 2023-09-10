@@ -18,10 +18,10 @@ class FirebaseNotificationService {
       String androidNotificationIcon = '@mipmap/ic_launcher'}) async {
     flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = new AndroidInitializationSettings(androidNotificationIcon);
-    var iOS = new IOSInitializationSettings();
+    var iOS = new DarwinInitializationSettings();
     var initSettings = new InitializationSettings(android: android, iOS: iOS);
     flutterLocalNotificationsPlugin.initialize(initSettings,
-        onSelectNotification: (value) {});
+        onDidReceiveNotificationResponse: (value) {},onDidReceiveBackgroundNotificationResponse: ((details) => {}));
     // if (Platform.isIOS) {
     fcm.requestPermission(
         alert: alert,

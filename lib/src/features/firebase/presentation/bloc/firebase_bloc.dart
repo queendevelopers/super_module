@@ -1,12 +1,12 @@
 import 'dart:convert';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:injectable/injectable.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:super_module/src/features/firebase/data/models/firebase_notification.dart';
-import 'package:super_module/src/features/firebase/data/models/firebase_remote_config_model.dart';
 import 'package:super_module/src/features/firebase/domain/controller/firebase_controller.dart';
+import 'package:super_module/src/features/firebase/data/models/firebase_remote_config_model.dart';
+
 
 part 'firebase_event.dart';
 part 'firebase_state.dart';
@@ -84,7 +84,7 @@ class FirebaseBloc extends Bloc<FirebaseEvent, FirebaseState> {
     });
   }
 
-  void onNotificationSelected(String? payload) {
-    add(FirebaseOnNotificationClickedEvent(jsonDecode(payload ?? '')));
+  void onNotificationSelected(NotificationResponse? payload) {
+    add(FirebaseOnNotificationClickedEvent(jsonDecode(payload.toString() ?? '')));
   }
 }

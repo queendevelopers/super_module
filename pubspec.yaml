@@ -14,30 +14,31 @@ dependencies:
   local_auth: ^2.1.0
   flutter_easyloading: ^3.0.5
   jwt_decode: ^0.3.1
-  flutter_secure_storage: ^5.0.2
-  google_sign_in: ^5.4.0
+  flutter_secure_storage: ^9.0.0
+  google_sign_in: ^6.1.5
   json_serializable: ^6.2.0
-  injectable: ^1.5.3
+  injectable: ^2.3.0
   get_it: ^7.2.0
-  flutter_bloc: ^7.2.0
+  flutter_bloc: ^8.1.3
   shared_preferences: ^2.0.15
   pointycastle: ^3.6.0
   asn1lib: ^1.1.0
-  flutter_svg: ^1.0.3
-  sign_in_with_apple: ^4.0.0
+  flutter_svg: ^2.0.7
+  sign_in_with_apple: ^5.0.0
   flutter_facebook_auth: ^4.3.4+2
   firebase_messaging: ^14.2.5
-  flutter_local_notifications: ^9.5.3+1
-  flutter_image_compress: ^1.1.0
+  flutter_local_notifications: ^15.1.1
+  flutter_image_compress: ^2.0.4
   path_provider: ^2.0.11
   url_launcher: ^6.1.3
   flutter_cache_manager: ^3.3.0
   photo_view: ^0.14.0
   permission_handler: ^10.0.0
-  image_picker: ^0.8.5+3
-  flutter_rest_client: ^0.2.2-prerelease
-  bloc: ^7.2.1
-  intl: ^0.17.0
+  image_picker: ^1.0.4
+  flutter_rest_client:
+    path: /Users/dev/apps/rest-client
+  bloc: ^8.1.2
+  intl: ^0.18.1
   json_annotation: ^4.5.0
   dio: ^4.0.6
   device_info: ^2.0.3
@@ -47,16 +48,16 @@ dependencies:
   socket_io_client: ^2.0.0-beta.4-nullsafety.0
   firebase_core: ^2.7.0
   firebase_crashlytics: ^3.0.15
-  firebase_remote_config: ^3.0.13
+  firebase_remote_config: ^4.2.5
   package_info: ^2.0.2
   firebase_analytics: ^10.1.4
-  copy_with_extension: ^4.0.2
+  copy_with_extension: ^5.0.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   build_runner: ^2.1.11
-  injectable_generator: ^1.4.1
-  flutter_launcher_icons: ^0.9.2
-  hive_generator: ^1.1.2
-  copy_with_extension_gen: ^4.0.2
+  injectable_generator: ^2.4.0
+  flutter_launcher_icons: ^0.13.1
+  hive_generator: ^2.0.1
+  copy_with_extension_gen: ^5.0.4

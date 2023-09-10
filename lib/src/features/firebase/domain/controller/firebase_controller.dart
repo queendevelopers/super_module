@@ -64,17 +64,18 @@ class FirebaseController implements IFirebaseController {
     return repository.onFcmTokenRefresh();
   }
 
+
+
   @override
-  Future<FlutterLocalNotificationsPlugin> initializeLocalNotification(
-      {bool alert = true,
-      bool announcement = false,
-      bool badge = true,
-      bool carPlay = false,
-      bool criticalAlert = false,
-      bool provisional = false,
-      bool sound = true,
-      void Function(String? p1)? onSelected,
-      String androidNotificationIcon = '@mipmap/launcher_icon'}) {
+  Future<void> showNotification(FirebaseNotification notification,
+      void Function(dynamic payload) onNotificationClicked,
+      {FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin}) {
+    return repository.showNotification(notification, onNotificationClicked,
+        flutterLocalNotificationsPlugin: flutterLocalNotificationsPlugin);
+  }
+  
+  @override
+  Future<FlutterLocalNotificationsPlugin> initializeLocalNotification({bool alert = true, bool announcement = false, bool badge = true, bool carPlay = false, bool criticalAlert = false, bool provisional = false, bool sound = true, void Function(String? p1)? onSelected, String androidNotificationIcon = '@mipmap/launcher_icon'}) {
     return repository.initializeLocalNotification(
         alert: alert,
         announcement: announcement,
@@ -85,13 +86,5 @@ class FirebaseController implements IFirebaseController {
         androidNotificationIcon: androidNotificationIcon,
         sound: sound,
         onSelected: onSelected);
-  }
-
-  @override
-  Future<void> showNotification(FirebaseNotification notification,
-      void Function(dynamic payload) onNotificationClicked,
-      {FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin}) {
-    return repository.showNotification(notification, onNotificationClicked,
-        flutterLocalNotificationsPlugin: flutterLocalNotificationsPlugin);
   }
 }
