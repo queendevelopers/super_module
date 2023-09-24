@@ -36,7 +36,9 @@ dependencies:
   permission_handler: ^10.0.0
   image_picker: ^1.0.4
   flutter_rest_client:
-    path: /Users/dev/apps/rest-client
+    git:
+      url: git@github.com:queendevelopers/rest_client.git
+      ref: v1.1
   bloc: ^8.1.2
   intl: ^0.18.1
   json_annotation: ^4.5.0
