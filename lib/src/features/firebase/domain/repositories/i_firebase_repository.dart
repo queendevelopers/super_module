@@ -16,14 +16,14 @@ abstract class IFirebaseRepository {
   Stream<RemoteMessage> listenNotifications();
 
   Future<FlutterLocalNotificationsPlugin> initializeLocalNotification(
-      {bool alert = true,
+      {bool alert: true,
       bool announcement = false,
       bool badge = true,
       bool carPlay = false,
       bool criticalAlert = false,
       bool provisional = false,
-      bool sound = true,
-      void Function(String?)? onSelected,
+      void Function(NotificationResponse?)? onSelected,
+      sound: true,
       String androidNotificationIcon = '@mipmap/launcher_icon'});
 
   Future<void> showNotification(FirebaseNotification notification,

@@ -57,7 +57,7 @@ class FirebaseNotificationService {
   showNotification(Map<String, dynamic> message) async {
     var android = new AndroidNotificationDetails('channel id', 'channel NAME',
         priority: Priority.high, importance: Importance.max);
-    var iOS = new IOSNotificationDetails();
+    var iOS = new DarwinNotificationDetails();
     var platform = new NotificationDetails(android: android, iOS: iOS);
     await flutterLocalNotificationsPlugin.show(
         0,

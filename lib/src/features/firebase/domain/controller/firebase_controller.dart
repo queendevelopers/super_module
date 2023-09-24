@@ -1,10 +1,10 @@
+import 'package:injectable/injectable.dart';
+import '../../data/models/firebase_notification.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:injectable/injectable.dart';
 import 'package:super_module/src/features/firebase/data/models/firebase_remote_config_model.dart';
 import 'package:super_module/src/features/firebase/domain/repositories/i_firebase_repository.dart';
 
-import '../../data/models/firebase_notification.dart';
 
 abstract class IFirebaseController {
   Future<FirebaseRemoteConfigModel> getFirebaseRemoteConfig();
@@ -26,7 +26,7 @@ abstract class IFirebaseController {
       bool criticalAlert = false,
       bool provisional = false,
       bool sound = true,
-      void Function(String?)? onSelected,
+      void Function(NotificationResponse?)? onSelected,
       String androidNotificationIcon = '@mipmap/launcher_icon'});
   Future<void> showNotification(FirebaseNotification notification,
       void Function(dynamic payload) onNotificationClicked,
@@ -75,7 +75,7 @@ class FirebaseController implements IFirebaseController {
   }
   
   @override
-  Future<FlutterLocalNotificationsPlugin> initializeLocalNotification({bool alert = true, bool announcement = false, bool badge = true, bool carPlay = false, bool criticalAlert = false, bool provisional = false, bool sound = true, void Function(String? p1)? onSelected, String androidNotificationIcon = '@mipmap/launcher_icon'}) {
+  Future<FlutterLocalNotificationsPlugin> initializeLocalNotification({bool alert = true, bool announcement = false, bool badge = true, bool carPlay = false, bool criticalAlert = false, bool provisional = false, bool sound = true, void Function(NotificationResponse? p1)? onSelected, String androidNotificationIcon = '@mipmap/launcher_icon'}) {
     return repository.initializeLocalNotification(
         alert: alert,
         announcement: announcement,

@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:flutter/widgets.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:flutter_image_compress/flutter_image_compress.dart';
+
 
 extension StringExtension on String {
   String capitalize() {
@@ -41,9 +41,7 @@ extension ImageCompression on File {
     );
 
     debugPrint(this.lengthSync().toString());
-    debugPrint(result?.lengthSync().toString());
-
-    return result;
+    return File(result!.path);
   }
 
   Future<Uint8List?> compressToUint8List(

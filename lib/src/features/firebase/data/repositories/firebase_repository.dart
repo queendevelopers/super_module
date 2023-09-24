@@ -1,13 +1,13 @@
 import 'dart:convert';
-
+import 'package:injectable/injectable.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import '../../domain/repositories/i_firebase_repository.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:injectable/injectable.dart';
 import 'package:super_module/src/features/firebase/data/models/firebase_notification.dart';
 import 'package:super_module/src/features/firebase/data/models/firebase_remote_config_model.dart';
 
-import '../../domain/repositories/i_firebase_repository.dart';
+
 
 @Injectable(as: IFirebaseRepository)
 class FirebaseRepository implements IFirebaseRepository {
@@ -68,15 +68,15 @@ class FirebaseRepository implements IFirebaseRepository {
       bool carPlay = false,
       bool criticalAlert = false,
       bool provisional = false,
-      void Function(String?)? onSelected,
+      void Function(NotificationResponse?)? onSelected,
       sound: true,
       String androidNotificationIcon = '@mipmap/launcher_icon'}) async {
     var flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = new AndroidInitializationSettings(androidNotificationIcon);
-    var iOS = new IOSInitializationSettings();
+    var iOS = new DarwinInitializationSettings();
     var initSettings = new InitializationSettings(android: android, iOS: iOS);
     flutterLocalNotificationsPlugin.initialize(initSettings,
-        onSelectNotification: onSelected);
+        onDidReceiveNotificationResponse: onSelected);
     await FirebaseMessaging.instance.requestPermission(
         alert: alert,
         announcement: announcement,
@@ -97,7 +97,7 @@ class FirebaseRepository implements IFirebaseRepository {
         priority: Priority.high,
         importance: Importance.max,
         styleInformation: BigTextStyleInformation(''));
-    var iOS = new IOSNotificationDetails();
+    var iOS = new DarwinNotificationDetails();
     var platform = new NotificationDetails(android: android, iOS: iOS);
     final flutterLocalNotifications = flutterLocalNotificationsPlugin ??
         await initializeLocalNotification(onSelected: onNotificationClicked);

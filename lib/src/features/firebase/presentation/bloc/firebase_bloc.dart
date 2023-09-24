@@ -83,7 +83,7 @@ class FirebaseBloc extends Bloc<FirebaseEvent, FirebaseState> {
       add(FirebaseFcmTokenChanged(event));
     });
   }
-
+ ///ToDo Could throw an exception. due jsonDecode in String.. (Updated only to fix the IDE inline error after upgrade.) 
   void onNotificationSelected(NotificationResponse? payload) {
     add(FirebaseOnNotificationClickedEvent(jsonDecode(payload.toString() ?? '')));
   }
